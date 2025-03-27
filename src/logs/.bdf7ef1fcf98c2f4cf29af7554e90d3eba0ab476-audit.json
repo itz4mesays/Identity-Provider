@@ -1,0 +1,25 @@
+{
+    "keep": {
+        "days": true,
+        "amount": 30
+    },
+    "auditLog": "/Users/sfteam/Documents/nodeApps/Identity Provider/src/logs/.bdf7ef1fcf98c2f4cf29af7554e90d3eba0ab476-audit.json",
+    "files": [
+        {
+            "date": 1742853056007,
+            "name": "/Users/sfteam/Documents/nodeApps/Identity Provider/src/logs/app-log-2025-03-24.txt",
+            "hash": "b5161d00ba22a12c02fc305e98912a4203a2d8430435b00cb57cf04ec10b6f2a"
+        },
+        {
+            "date": 1742857208815,
+            "name": "/Users/sfteam/Documents/nodeApps/Identity Provider/src/logs/app-log-2025-03-25.txt",
+            "hash": "ea9888e34cbf3a17e2c9c920deaf67a516e707d6f0d8dbe31ae74e66abe94744"
+        },
+        {
+            "date": 1743030151466,
+            "name": "/Users/sfteam/Documents/nodeApps/Identity Provider/src/logs/app-log-2025-03-27.txt",
+            "hash": "b4c35255e1e3aff6891dce0613c3f5b6466d2377a276213ba8aa9c7cdb3d7717"
+        }
+    ],
+    "hashType": "sha256"
+}

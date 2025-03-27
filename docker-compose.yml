@@ -1,0 +1,50 @@
+version: "3.8"
+services:
+  idp-app:
+    container_name: idp-service-app
+    restart: always
+    build:
+      context: .
+      dockerfile: Dockerfile
+    working_dir: /app
+    volumes:
+      - ./:/app
+    env_file:
+      - .env
+    ports:
+      - "${APP_PORT}:${APP_PORT}"
+    networks:
+      - idp-app-network
+    command: >
+      sh -c "sleep 10 && npx prisma db push && npm run dev"
+
+  idp_app_db:
+    image: mysql:8.0
+    container_name: idp_app_db
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: "${DB_PASSWORD}"
+      MYSQL_DATABASE: "${DB_DATABASE}"
+      MYSQL_USER: "${NON_ROOT_USERNAME}"  # New user
+      MYSQL_PASSWORD: "${DB_PASSWORD}"  # Password for the new user
+    ports:
+      - "3394:${DB_PORT}"
+    volumes:
+      - ./data/my.cnf:/etc/mysql/my.cnf
+      - idp_app_volume:/var/lib/mysql
+    networks:
+      - idp-app-network
+
+  mailpit:
+    image: axllent/mailpit  # Use the correct Mailpit image
+    ports:
+      - "1026:1025"
+    networks:
+      - idp-app-network
+
+networks:
+  idp-app-network:
+    driver: bridge 
+
+volumes:
+   idp_app_volume:
