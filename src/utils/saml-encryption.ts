@@ -116,6 +116,7 @@ class SamlEncryptor {
             throw new Error(`SAML encryption failed: ${error instanceof Error ? error.message : 'Unknown error'}`);
         }
     }
+
 }
 
 export default SamlEncryptor;

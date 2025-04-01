@@ -30,9 +30,9 @@ export type ProfileObj = {
 }
 
 export type User = {
-    id: string;
-    email: string;
-    role: string;
+    id?: string;
+    email?: string;
+    role?: string;
 }
 
 export type IndividualPayload = {
@@ -62,4 +62,10 @@ export type CompleteSignUpPayload = {
     business_type: string;        // max 255 chars
     tax_lga_area: string;
     tax_station: string;
+}
+
+
+export interface SamlResponse {
+    user: User;
+    // Add other SAML response fields as needed
 }

@@ -19,7 +19,9 @@ interface EnvironmentVariablePayload {
     MAIL_ENCRYPTION?: string | null
     MAIL_FROM_ADDRESS: string
     APP_NAME: string
-    RELAY_STATE: string
+    RELAY_STATE: string,
+    IDP_PRIVATE_KEY_B64: string,
+    IDP_CERTIFICATE_B64: string
 }
 
 
@@ -45,6 +47,8 @@ const envSchema: Joi.ObjectSchema = Joi.object<EnvironmentVariablePayload>({
     MAIL_FROM_ADDRESS: Joi.string().required(),
     RELAY_STATE: Joi.string().required(),
     APP_NAME: Joi.string().required(),
+    IDP_CERTIFICATE_B64: Joi.string().required(),
+    IDP_PRIVATE_KEY_B64: Joi.string().required(),
 
 })
     .unknown() // Allow additional environment variables not specified in the schema

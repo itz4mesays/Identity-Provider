@@ -3,7 +3,6 @@ dotenv.config()
 import express, { Application, NextFunction, Request, Response } from 'express'
 import morgan from 'morgan'
 import cors from 'cors'
-import { handleError, successResponse } from './utils/responseHandler'
 import envVars from './validations/validateEnv'
 import { logger } from './utils/logger'
 import bodyParser from 'body-parser'
@@ -27,7 +26,7 @@ import mainRoute from './routes/main.router'
 const app: Application = express();
 
 // Define the list of allowed origins
-const allowedOrigins = ['http://localhost:4014', 'http://localhost:4015'];
+const allowedOrigins = ['http://localhost:8000', 'http://localhost:7001'];
 
 // Configure CORS
 app.use(cors({
@@ -102,7 +101,7 @@ app.use('/docs', swaggerUi.serve, swaggerUi.setup(swaggerSpecs, { explorer: true
 logger;
 
 // Set the port, ensuring it’s a number or string
-const port: string | number = envVars.APP_PORT || 4015;
+const port: string | number = envVars.APP_PORT || 7001;
 
 // Check if files exist and are readable
 try {
