@@ -1,0 +1,480 @@
+2025-04-03 23:05:39: 
+2025-04-03 23:05:39: > single_sign_on@1.0.0 dev
+2025-04-03 23:05:39: > cross-env NODE_ENV=development nodemon --watch 'src/**/*.ts' --exec 'ts-node' src/index.ts
+2025-04-03 23:05:39: 
+2025-04-03 23:05:40: [33m[nodemon] 3.1.9[39m
+2025-04-03 23:05:40: [33m[nodemon] to restart at any time, enter `rs`[39m
+2025-04-03 23:05:40: [33m[nodemon] watching path(s): src/**/*.ts[39m
+2025-04-03 23:05:40: [33m[nodemon] watching extensions: ts[39m
+2025-04-03 23:05:40: [32m[nodemon] starting `ts-node src/index.ts`[39m
+2025-04-03 23:05:41: === PRIVATE KEY VALIDATION ===
+2025-04-03 23:05:41: Key starts with: -----BEGIN PRIVATE KEY-----
+2025-04-03 23:05:41: MIIEvAIBADANBgkqhkiG9w
+2025-04-03 23:05:41: Key ends with: 9QyPOvPF1gbPFeyDGtntug==
+2025-04-03 23:05:41: -----END PRIVATE KEY-----
+2025-04-03 23:05:41: Key length: 1703
+2025-04-03 23:05:41: Key test signature successful! Length: 256
+2025-04-03 23:05:41: Identity Provider Service is up and running on 7001
+2025-04-03 23:09:04: 
+2025-04-03 23:09:04: > single_sign_on@1.0.0 dev
+2025-04-03 23:09:04: > cross-env NODE_ENV=development nodemon --watch 'src/**/*.ts' --exec 'ts-node' src/index.ts
+2025-04-03 23:09:04: 
+2025-04-03 23:09:04: [33m[nodemon] 3.1.9[39m
+2025-04-03 23:09:04: [33m[nodemon] to restart at any time, enter `rs`[39m
+2025-04-03 23:09:04: [33m[nodemon] watching path(s): src/**/*.ts[39m
+2025-04-03 23:09:04: [33m[nodemon] watching extensions: ts[39m
+2025-04-03 23:09:04: [32m[nodemon] starting `ts-node src/index.ts`[39m
+2025-04-03 23:09:06: === PRIVATE KEY VALIDATION ===
+2025-04-03 23:09:06: Key starts with: -----BEGIN PRIVATE KEY-----
+2025-04-03 23:09:06: MIIEvAIBADANBgkqhkiG9w
+2025-04-03 23:09:06: Key ends with: 9QyPOvPF1gbPFeyDGtntug==
+2025-04-03 23:09:06: -----END PRIVATE KEY-----
+2025-04-03 23:09:06: Key length: 1703
+2025-04-03 23:09:06: Key test signature successful! Length: 256
+2025-04-03 23:09:09: [31m[nodemon] app crashed - waiting for file changes before starting...[39m
+2025-04-03 23:09:47: 
+2025-04-03 23:09:47: > single_sign_on@1.0.0 dev
+2025-04-03 23:09:47: > cross-env NODE_ENV=development nodemon --watch 'src/**/*.ts' --exec 'ts-node' src/index.ts
+2025-04-03 23:09:47: 
+2025-04-03 23:09:47: [33m[nodemon] 3.1.9[39m
+2025-04-03 23:09:47: [33m[nodemon] to restart at any time, enter `rs`[39m
+2025-04-03 23:09:47: [33m[nodemon] watching path(s): src/**/*.ts[39m
+2025-04-03 23:09:47: [33m[nodemon] watching extensions: ts[39m
+2025-04-03 23:09:47: [32m[nodemon] starting `ts-node src/index.ts`[39m
+2025-04-03 23:09:48: === PRIVATE KEY VALIDATION ===
+2025-04-03 23:09:48: Key starts with: -----BEGIN PRIVATE KEY-----
+2025-04-03 23:09:48: MIIEvAIBADANBgkqhkiG9w
+2025-04-03 23:09:48: Key ends with: 9QyPOvPF1gbPFeyDGtntug==
+2025-04-03 23:09:48: -----END PRIVATE KEY-----
+2025-04-03 23:09:48: Key length: 1703
+2025-04-03 23:09:48: Key test signature successful! Length: 256
+2025-04-03 23:09:48: Identity Provider Service is up and running on 7001
+2025-04-03 23:09:58: ::1 - - [03/Apr/2025:22:09:58 +0000] "GET /login HTTP/1.1" 404 144 "-" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0"
+2025-04-03 23:12:20: [32m[nodemon] restarting due to changes...[39m
+2025-04-03 23:12:20: [32m[nodemon] starting `ts-node src/index.ts`[39m
+2025-04-03 23:12:22: === PRIVATE KEY VALIDATION ===
+2025-04-03 23:12:22: Key starts with: -----BEGIN PRIVATE KEY-----
+2025-04-03 23:12:22: MIIEvAIBADANBgkqhkiG9w
+2025-04-03 23:12:22: Key ends with: 9QyPOvPF1gbPFeyDGtntug==
+2025-04-03 23:12:22: -----END PRIVATE KEY-----
+2025-04-03 23:12:22: Key length: 1703
+2025-04-03 23:12:22: Key test signature successful! Length: 256
+2025-04-03 23:12:22: Identity Provider Service is up and running on 7001
+2025-04-03 23:13:18: [32m[nodemon] restarting due to changes...[39m
+2025-04-03 23:13:18: [32m[nodemon] starting `ts-node src/index.ts`[39m
+2025-04-03 23:13:19: === PRIVATE KEY VALIDATION ===
+2025-04-03 23:13:19: Key starts with: -----BEGIN PRIVATE KEY-----
+2025-04-03 23:13:19: MIIEvAIBADANBgkqhkiG9w
+2025-04-03 23:13:19: Key ends with: 9QyPOvPF1gbPFeyDGtntug==
+2025-04-03 23:13:19: -----END PRIVATE KEY-----
+2025-04-03 23:13:19: Key length: 1703
+2025-04-03 23:13:19: Key test signature successful! Length: 256
+2025-04-03 23:13:22: [31m[nodemon] app crashed - waiting for file changes before starting...[39m
+2025-04-03 23:14:08: [32m[nodemon] restarting due to changes...[39m
+2025-04-03 23:14:08: [32m[nodemon] starting `ts-node src/index.ts`[39m
+2025-04-03 23:14:09: === PRIVATE KEY VALIDATION ===
+2025-04-03 23:14:09: Key starts with: -----BEGIN PRIVATE KEY-----
+2025-04-03 23:14:09: MIIEvAIBADANBgkqhkiG9w
+2025-04-03 23:14:09: Key ends with: 9QyPOvPF1gbPFeyDGtntug==
+2025-04-03 23:14:09: -----END PRIVATE KEY-----
+2025-04-03 23:14:09: Key length: 1703
+2025-04-03 23:14:09: Key test signature successful! Length: 256
+2025-04-03 23:14:10: Identity Provider Service is up and running on 7001
+2025-04-03 23:15:02: 
+2025-04-03 23:15:02: > single_sign_on@1.0.0 dev
+2025-04-03 23:15:02: > cross-env NODE_ENV=development nodemon --watch 'src/**/*.ts' --exec 'ts-node' src/index.ts
+2025-04-03 23:15:02: 
+2025-04-03 23:15:03: [33m[nodemon] 3.1.9[39m
+2025-04-03 23:15:03: [33m[nodemon] to restart at any time, enter `rs`[39m
+2025-04-03 23:15:03: [33m[nodemon] watching path(s): src/**/*.ts[39m
+2025-04-03 23:15:03: [33m[nodemon] watching extensions: ts[39m
+2025-04-03 23:15:03: [32m[nodemon] starting `ts-node src/index.ts`[39m
+2025-04-03 23:15:04: === PRIVATE KEY VALIDATION ===
+2025-04-03 23:15:04: Key starts with: -----BEGIN PRIVATE KEY-----
+2025-04-03 23:15:04: MIIEvAIBADANBgkqhkiG9w
+2025-04-03 23:15:04: Key ends with: 9QyPOvPF1gbPFeyDGtntug==
+2025-04-03 23:15:04: -----END PRIVATE KEY-----
+2025-04-03 23:15:04: Key length: 1703
+2025-04-03 23:15:04: Key test signature successful! Length: 256
+2025-04-03 23:15:07: [31m[nodemon] app crashed - waiting for file changes before starting...[39m
+2025-04-03 23:19:30: [32m[nodemon] restarting due to changes...[39m
+2025-04-03 23:19:30: [32m[nodemon] starting `ts-node src/index.ts`[39m
+2025-04-03 23:19:35: [31m[nodemon] app crashed - waiting for file changes before starting...[39m
+2025-04-03 23:19:40: [32m[nodemon] restarting due to changes...[39m
+2025-04-03 23:19:40: [32m[nodemon] starting `ts-node src/index.ts`[39m
+2025-04-03 23:19:42: === PRIVATE KEY VALIDATION ===
+2025-04-03 23:19:42: Key starts with: -----BEGIN PRIVATE KEY-----
+2025-04-03 23:19:42: MIIEvAIBADANBgkqhkiG9w
+2025-04-03 23:19:42: Key ends with: 9QyPOvPF1gbPFeyDGtntug==
+2025-04-03 23:19:42: -----END PRIVATE KEY-----
+2025-04-03 23:19:42: Key length: 1703
+2025-04-03 23:19:42: Key test signature successful! Length: 256
+2025-04-03 23:19:45: [31m[nodemon] app crashed - waiting for file changes before starting...[39m
+2025-04-03 23:20:12: [32m[nodemon] restarting due to changes...[39m
+2025-04-03 23:20:12: [32m[nodemon] starting `ts-node src/index.ts`[39m
+2025-04-03 23:20:14: === PRIVATE KEY VALIDATION ===
+2025-04-03 23:20:14: Key starts with: -----BEGIN PRIVATE KEY-----
+2025-04-03 23:20:14: MIIEvAIBADANBgkqhkiG9w
+2025-04-03 23:20:14: Key ends with: 9QyPOvPF1gbPFeyDGtntug==
+2025-04-03 23:20:14: -----END PRIVATE KEY-----
+2025-04-03 23:20:14: Key length: 1703
+2025-04-03 23:20:14: Key test signature successful! Length: 256
+2025-04-03 23:20:17: [31m[nodemon] app crashed - waiting for file changes before starting...[39m
+2025-04-03 23:21:23: 
+2025-04-03 23:21:23: > single_sign_on@1.0.0 dev
+2025-04-03 23:21:23: > cross-env NODE_ENV=development nodemon --watch 'src/**/*.ts' --exec 'ts-node' src/index.ts
+2025-04-03 23:21:23: 
+2025-04-03 23:21:23: [33m[nodemon] 3.1.9[39m
+2025-04-03 23:21:23: [33m[nodemon] to restart at any time, enter `rs`[39m
+2025-04-03 23:21:23: [33m[nodemon] watching path(s): src/**/*.ts[39m
+2025-04-03 23:21:23: [33m[nodemon] watching extensions: ts[39m
+2025-04-03 23:21:23: [32m[nodemon] starting `ts-node src/index.ts`[39m
+2025-04-03 23:21:25: === PRIVATE KEY VALIDATION ===
+2025-04-03 23:21:25: Key starts with: -----BEGIN PRIVATE KEY-----
+2025-04-03 23:21:25: MIIEvAIBADANBgkqhkiG9w
+2025-04-03 23:21:25: Key ends with: 9QyPOvPF1gbPFeyDGtntug==
+2025-04-03 23:21:25: -----END PRIVATE KEY-----
+2025-04-03 23:21:25: Key length: 1703
+2025-04-03 23:21:25: Key test signature successful! Length: 256
+2025-04-03 23:21:25: Identity Provider Service is up and running on 7001
+2025-04-03 23:22:43: [32m[nodemon] restarting due to changes...[39m
+2025-04-03 23:22:43: [32m[nodemon] starting `ts-node src/index.ts`[39m
+2025-04-03 23:22:45: === PRIVATE KEY VALIDATION ===
+2025-04-03 23:22:45: Key starts with: -----BEGIN PRIVATE KEY-----
+2025-04-03 23:22:45: MIIEvAIBADANBgkqhkiG9w
+2025-04-03 23:22:45: Key ends with: 9QyPOvPF1gbPFeyDGtntug==
+2025-04-03 23:22:45: -----END PRIVATE KEY-----
+2025-04-03 23:22:45: Key length: 1703
+2025-04-03 23:22:45: Key test signature successful! Length: 256
+2025-04-03 23:22:45: Identity Provider Service is up and running on 7001
+2025-04-03 23:23:10: ::1 - - [03/Apr/2025:22:23:10 +0000] "GET /metada HTTP/1.1" 404 145 "-" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0"
+2025-04-03 23:23:15: ::1 - - [03/Apr/2025:22:23:15 +0000] "GET /metadata HTTP/1.1" 200 1803 "-" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0"
+2025-04-03 23:23:15: ::1 - - [03/Apr/2025:22:23:15 +0000] "GET /favicon.ico HTTP/1.1" 404 150 "http://localhost:7001/metadata" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0"
+2025-04-03 23:27:04: ::1 - - [03/Apr/2025:22:27:04 +0000] "GET /api-docs HTTP/1.1" 404 147 "-" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0"
+2025-04-03 23:27:09: ::1 - - [03/Apr/2025:22:27:09 +0000] "GET /docs HTTP/1.1" 301 154 "-" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0"
+2025-04-03 23:27:09: ::1 - - [03/Apr/2025:22:27:09 +0000] "GET /docs/ HTTP/1.1" 200 3047 "-" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0"
+2025-04-03 23:27:09: ::1 - - [03/Apr/2025:22:27:09 +0000] "GET /docs/swagger-ui-init.js HTTP/1.1" 200 41977 "http://localhost:7001/docs/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0"
+2025-04-03 23:27:09: ::1 - - [03/Apr/2025:22:27:09 +0000] "GET /docs/swagger-ui.css HTTP/1.1" 200 154985 "http://localhost:7001/docs/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0"
+2025-04-03 23:27:09: ::1 - - [03/Apr/2025:22:27:09 +0000] "GET /docs/swagger-ui-standalone-preset.js HTTP/1.1" 200 229223 "http://localhost:7001/docs/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0"
+2025-04-03 23:27:09: ::1 - - [03/Apr/2025:22:27:09 +0000] "GET /docs/swagger-ui-bundle.js HTTP/1.1" 200 1466741 "http://localhost:7001/docs/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0"
+2025-04-03 23:27:09: ::1 - - [03/Apr/2025:22:27:09 +0000] "GET /docs/favicon-32x32.png HTTP/1.1" 200 628 "http://localhost:7001/docs/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0"
+2025-04-03 23:29:16: [32m[nodemon] restarting due to changes...[39m
+2025-04-03 23:29:16: [32m[nodemon] starting `ts-node src/index.ts`[39m
+2025-04-03 23:29:18: === PRIVATE KEY VALIDATION ===
+2025-04-03 23:29:18: Key starts with: -----BEGIN PRIVATE KEY-----
+2025-04-03 23:29:18: MIIEvAIBADANBgkqhkiG9w
+2025-04-03 23:29:18: Key ends with: 9QyPOvPF1gbPFeyDGtntug==
+2025-04-03 23:29:18: -----END PRIVATE KEY-----
+2025-04-03 23:29:18: Key length: 1703
+2025-04-03 23:29:18: Key test signature successful! Length: 256
+2025-04-03 23:29:18: Identity Provider Service is up and running on 7001
+2025-04-03 23:30:00: [32m[nodemon] restarting due to changes...[39m
+2025-04-03 23:30:00: [32m[nodemon] starting `ts-node src/index.ts`[39m
+2025-04-03 23:30:02: === PRIVATE KEY VALIDATION ===
+2025-04-03 23:30:02: Key starts with: -----BEGIN PRIVATE KEY-----
+2025-04-03 23:30:02: MIIEvAIBADANBgkqhkiG9w
+2025-04-03 23:30:02: Key ends with: 9QyPOvPF1gbPFeyDGtntug==
+2025-04-03 23:30:02: -----END PRIVATE KEY-----
+2025-04-03 23:30:02: Key length: 1703
+2025-04-03 23:30:02: Key test signature successful! Length: 256
+2025-04-03 23:30:02: Identity Provider Service is up and running on 7001
+2025-04-03 23:30:17: [32m[nodemon] restarting due to changes...[39m
+2025-04-03 23:30:17: [32m[nodemon] starting `ts-node src/index.ts`[39m
+2025-04-03 23:30:18: [31m[nodemon] app crashed - waiting for file changes before starting...[39m
+2025-04-03 23:30:42: [32m[nodemon] restarting due to changes...[39m
+2025-04-03 23:30:42: [32m[nodemon] starting `ts-node src/index.ts`[39m
+2025-04-03 23:30:44: === PRIVATE KEY VALIDATION ===
+2025-04-03 23:30:44: Key starts with: -----BEGIN PRIVATE KEY-----
+2025-04-03 23:30:44: MIIEvAIBADANBgkqhkiG9w
+2025-04-03 23:30:44: Key ends with: 9QyPOvPF1gbPFeyDGtntug==
+2025-04-03 23:30:44: -----END PRIVATE KEY-----
+2025-04-03 23:30:44: Key length: 1703
+2025-04-03 23:30:44: Key test signature successful! Length: 256
+2025-04-03 23:30:44: Identity Provider Service is up and running on 7001
+2025-04-03 23:38:52: [32m[nodemon] restarting due to changes...[39m
+2025-04-03 23:38:52: [32m[nodemon] starting `ts-node src/index.ts`[39m
+2025-04-03 23:38:53: === PRIVATE KEY VALIDATION ===
+2025-04-03 23:38:53: Key starts with: -----BEGIN PRIVATE KEY-----
+2025-04-03 23:38:53: MIIEvAIBADANBgkqhkiG9w
+2025-04-03 23:38:53: Key ends with: 9QyPOvPF1gbPFeyDGtntug==
+2025-04-03 23:38:53: -----END PRIVATE KEY-----
+2025-04-03 23:38:53: Key length: 1703
+2025-04-03 23:38:53: Key test signature successful! Length: 256
+2025-04-03 23:38:53: Identity Provider Service is up and running on 7001
+2025-04-03 23:39:14: [32m[nodemon] restarting due to changes...[39m
+2025-04-03 23:39:14: [32m[nodemon] starting `ts-node src/index.ts`[39m
+2025-04-03 23:39:19: [32m[nodemon] restarting due to changes...[39m
+2025-04-03 23:39:19: [32m[nodemon] starting `ts-node src/index.ts`[39m
+2025-04-03 23:39:20: === PRIVATE KEY VALIDATION ===
+2025-04-03 23:39:20: Key starts with: -----BEGIN PRIVATE KEY-----
+2025-04-03 23:39:20: MIIEvAIBADANBgkqhkiG9w
+2025-04-03 23:39:20: Key ends with: 9QyPOvPF1gbPFeyDGtntug==
+2025-04-03 23:39:20: -----END PRIVATE KEY-----
+2025-04-03 23:39:20: Key length: 1703
+2025-04-03 23:39:20: Key test signature successful! Length: 256
+2025-04-03 23:39:20: Identity Provider Service is up and running on 7001
+2025-04-03 23:39:32: [32m[nodemon] restarting due to changes...[39m
+2025-04-03 23:39:32: [32m[nodemon] starting `ts-node src/index.ts`[39m
+2025-04-03 23:39:34: === PRIVATE KEY VALIDATION ===
+2025-04-03 23:39:34: Key starts with: -----BEGIN PRIVATE KEY-----
+2025-04-03 23:39:34: MIIEvAIBADANBgkqhkiG9w
+2025-04-03 23:39:34: Key ends with: 9QyPOvPF1gbPFeyDGtntug==
+2025-04-03 23:39:34: -----END PRIVATE KEY-----
+2025-04-03 23:39:34: Key length: 1703
+2025-04-03 23:39:34: Key test signature successful! Length: 256
+2025-04-03 23:39:34: Identity Provider Service is up and running on 7001
+2025-04-03 23:41:00: [32m[nodemon] restarting due to changes...[39m
+2025-04-03 23:41:00: [32m[nodemon] starting `ts-node src/index.ts`[39m
+2025-04-03 23:41:01: === PRIVATE KEY VALIDATION ===
+2025-04-03 23:41:01: Key starts with: -----BEGIN PRIVATE KEY-----
+2025-04-03 23:41:01: MIIEvAIBADANBgkqhkiG9w
+2025-04-03 23:41:01: Key ends with: 9QyPOvPF1gbPFeyDGtntug==
+2025-04-03 23:41:01: -----END PRIVATE KEY-----
+2025-04-03 23:41:01: Key length: 1703
+2025-04-03 23:41:01: Key test signature successful! Length: 256
+2025-04-03 23:41:02: Identity Provider Service is up and running on 7001
+2025-04-03 23:41:42: ::1 - - [03/Apr/2025:22:41:42 +0000] "POST /sso/login HTTP/1.1" 500 33 "-" "PostmanRuntime/7.43.2"
+2025-04-03 23:42:24: ::1 - - [03/Apr/2025:22:42:24 +0000] "POST /sso/login HTTP/1.1" 500 33 "-" "PostmanRuntime/7.43.2"
+2025-04-03 23:43:37: ::1 - - [03/Apr/2025:22:43:37 +0000] "POST /sso/login HTTP/1.1" 200 7039 "-" "PostmanRuntime/7.43.2"
+2025-04-03 23:44:42: [32m[nodemon] restarting due to changes...[39m
+2025-04-03 23:44:42: [32m[nodemon] starting `ts-node src/index.ts`[39m
+2025-04-03 23:44:44: === PRIVATE KEY VALIDATION ===
+2025-04-03 23:44:44: Key starts with: -----BEGIN PRIVATE KEY-----
+2025-04-03 23:44:44: MIIEvAIBADANBgkqhkiG9w
+2025-04-03 23:44:44: Key ends with: 9QyPOvPF1gbPFeyDGtntug==
+2025-04-03 23:44:44: -----END PRIVATE KEY-----
+2025-04-03 23:44:44: Key length: 1703
+2025-04-03 23:44:44: Key test signature successful! Length: 256
+2025-04-03 23:44:44: Identity Provider Service is up and running on 7001
+2025-04-03 23:46:21: [32m[nodemon] restarting due to changes...[39m
+2025-04-03 23:46:21: [32m[nodemon] starting `ts-node src/index.ts`[39m
+2025-04-03 23:46:23: === PRIVATE KEY VALIDATION ===
+2025-04-03 23:46:23: Key starts with: -----BEGIN PRIVATE KEY-----
+2025-04-03 23:46:23: MIIEvAIBADANBgkqhkiG9w
+2025-04-03 23:46:23: Key ends with: 9QyPOvPF1gbPFeyDGtntug==
+2025-04-03 23:46:23: -----END PRIVATE KEY-----
+2025-04-03 23:46:23: Key length: 1703
+2025-04-03 23:46:23: Key test signature successful! Length: 256
+2025-04-03 23:46:23: Identity Provider Service is up and running on 7001
+2025-04-03 23:46:30: [32m[nodemon] restarting due to changes...[39m
+2025-04-03 23:46:30: [32m[nodemon] starting `ts-node src/index.ts`[39m
+2025-04-03 23:46:31: === PRIVATE KEY VALIDATION ===
+2025-04-03 23:46:31: Key starts with: -----BEGIN PRIVATE KEY-----
+2025-04-03 23:46:31: MIIEvAIBADANBgkqhkiG9w
+2025-04-03 23:46:31: Key ends with: 9QyPOvPF1gbPFeyDGtntug==
+2025-04-03 23:46:31: -----END PRIVATE KEY-----
+2025-04-03 23:46:31: Key length: 1703
+2025-04-03 23:46:31: Key test signature successful! Length: 256
+2025-04-03 23:46:31: Identity Provider Service is up and running on 7001
+2025-04-03 23:46:37: [32m[nodemon] restarting due to changes...[39m
+2025-04-03 23:46:37: [32m[nodemon] starting `ts-node src/index.ts`[39m
+2025-04-03 23:46:39: === PRIVATE KEY VALIDATION ===
+2025-04-03 23:46:39: Key starts with: -----BEGIN PRIVATE KEY-----
+2025-04-03 23:46:39: MIIEvAIBADANBgkqhkiG9w
+2025-04-03 23:46:39: Key ends with: 9QyPOvPF1gbPFeyDGtntug==
+2025-04-03 23:46:39: -----END PRIVATE KEY-----
+2025-04-03 23:46:39: Key length: 1703
+2025-04-03 23:46:39: Key test signature successful! Length: 256
+2025-04-03 23:46:39: Identity Provider Service is up and running on 7001
+2025-04-03 23:47:08: [32m[nodemon] restarting due to changes...[39m
+2025-04-03 23:47:08: [32m[nodemon] starting `ts-node src/index.ts`[39m
+2025-04-03 23:47:09: === PRIVATE KEY VALIDATION ===
+2025-04-03 23:47:09: Key starts with: -----BEGIN PRIVATE KEY-----
+2025-04-03 23:47:09: MIIEvAIBADANBgkqhkiG9w
+2025-04-03 23:47:09: Key ends with: 9QyPOvPF1gbPFeyDGtntug==
+2025-04-03 23:47:09: -----END PRIVATE KEY-----
+2025-04-03 23:47:09: Key length: 1703
+2025-04-03 23:47:09: Key test signature successful! Length: 256
+2025-04-03 23:47:09: Identity Provider Service is up and running on 7001
+2025-04-03 23:47:14: ::1 - - [03/Apr/2025:22:47:14 +0000] "POST /sso/login HTTP/1.1" 200 4071 "-" "PostmanRuntime/7.43.2"
+2025-04-03 23:47:29: ::1 - - [03/Apr/2025:22:47:29 +0000] "POST /saml/idp HTTP/1.1" 404 148 "-" "PostmanRuntime/7.43.2"
+2025-04-03 23:48:52: ::ffff:127.0.0.1 - - [03/Apr/2025:22:48:52 +0000] "GET /saml/idp HTTP/1.1" 200 1803 "-" "insomnia/11.0.2"
+2025-04-03 23:53:19: [32m[nodemon] restarting due to changes...[39m
+2025-04-03 23:53:19: [32m[nodemon] starting `ts-node src/index.ts`[39m
+2025-04-03 23:53:21: === PRIVATE KEY VALIDATION ===
+2025-04-03 23:53:21: Key starts with: -----BEGIN PRIVATE KEY-----
+2025-04-03 23:53:21: MIIEvAIBADANBgkqhkiG9w
+2025-04-03 23:53:21: Key ends with: 9QyPOvPF1gbPFeyDGtntug==
+2025-04-03 23:53:21: -----END PRIVATE KEY-----
+2025-04-03 23:53:21: Key length: 1703
+2025-04-03 23:53:21: Key test signature successful! Length: 256
+2025-04-03 23:53:21: Identity Provider Service is up and running on 7001
+2025-04-03 23:53:33: [32m[nodemon] restarting due to changes...[39m
+2025-04-03 23:53:33: [32m[nodemon] starting `ts-node src/index.ts`[39m
+2025-04-03 23:53:35: === PRIVATE KEY VALIDATION ===
+2025-04-03 23:53:35: Key starts with: -----BEGIN PRIVATE KEY-----
+2025-04-03 23:53:35: MIIEvAIBADANBgkqhkiG9w
+2025-04-03 23:53:35: Key ends with: 9QyPOvPF1gbPFeyDGtntug==
+2025-04-03 23:53:35: -----END PRIVATE KEY-----
+2025-04-03 23:53:35: Key length: 1703
+2025-04-03 23:53:35: Key test signature successful! Length: 256
+2025-04-03 23:53:35: Identity Provider Service is up and running on 7001
+2025-04-03 23:55:16: [32m[nodemon] restarting due to changes...[39m
+2025-04-03 23:55:16: [32m[nodemon] starting `ts-node src/index.ts`[39m
+2025-04-03 23:55:17: === PRIVATE KEY VALIDATION ===
+2025-04-03 23:55:17: Key starts with: -----BEGIN PRIVATE KEY-----
+2025-04-03 23:55:17: MIIEvAIBADANBgkqhkiG9w
+2025-04-03 23:55:17: Key ends with: 9QyPOvPF1gbPFeyDGtntug==
+2025-04-03 23:55:17: -----END PRIVATE KEY-----
+2025-04-03 23:55:17: Key length: 1703
+2025-04-03 23:55:17: Key test signature successful! Length: 256
+2025-04-03 23:55:17: Identity Provider Service is up and running on 7001
+2025-04-03 23:55:37: [32m[nodemon] restarting due to changes...[39m
+2025-04-03 23:55:37: [32m[nodemon] starting `ts-node src/index.ts`[39m
+2025-04-03 23:55:39: === PRIVATE KEY VALIDATION ===
+2025-04-03 23:55:39: Key starts with: -----BEGIN PRIVATE KEY-----
+2025-04-03 23:55:39: MIIEvAIBADANBgkqhkiG9w
+2025-04-03 23:55:39: Key ends with: 9QyPOvPF1gbPFeyDGtntug==
+2025-04-03 23:55:39: -----END PRIVATE KEY-----
+2025-04-03 23:55:39: Key length: 1703
+2025-04-03 23:55:39: Key test signature successful! Length: 256
+2025-04-03 23:55:39: Identity Provider Service is up and running on 7001
+2025-04-03 23:56:14: ::ffff:127.0.0.1 - - [03/Apr/2025:22:56:14 +0000] "GET /saml/idp HTTP/1.1" 200 1808 "-" "insomnia/11.0.2"
+2025-04-03 23:57:52: [32m[nodemon] restarting due to changes...[39m
+2025-04-03 23:57:52: [32m[nodemon] starting `ts-node src/index.ts`[39m
+2025-04-03 23:57:54: === PRIVATE KEY VALIDATION ===
+2025-04-03 23:57:54: Key starts with: -----BEGIN PRIVATE KEY-----
+2025-04-03 23:57:54: MIIEvAIBADANBgkqhkiG9w
+2025-04-03 23:57:54: Key ends with: 9QyPOvPF1gbPFeyDGtntug==
+2025-04-03 23:57:54: -----END PRIVATE KEY-----
+2025-04-03 23:57:54: Key length: 1703
+2025-04-03 23:57:54: Key test signature successful! Length: 256
+2025-04-03 23:57:54: Identity Provider Service is up and running on 7001
+2025-04-04 00:00:55: [32m[nodemon] restarting due to changes...[39m
+2025-04-04 00:00:55: [32m[nodemon] starting `ts-node src/index.ts`[39m
+2025-04-04 00:00:56: === PRIVATE KEY VALIDATION ===
+2025-04-04 00:00:56: Key starts with: -----BEGIN PRIVATE KEY-----
+2025-04-04 00:00:56: MIIEvAIBADANBgkqhkiG9w
+2025-04-04 00:00:56: Key ends with: 9QyPOvPF1gbPFeyDGtntug==
+2025-04-04 00:00:56: -----END PRIVATE KEY-----
+2025-04-04 00:00:56: Key length: 1703
+2025-04-04 00:00:56: Key test signature successful! Length: 256
+2025-04-04 00:00:56: Identity Provider Service is up and running on 7001
+2025-04-04 01:37:44: ::1 - - [04/Apr/2025:00:37:44 +0000] "GET /saml/idp/login?SAMLRequest=fVJNi9swFPwrRvfEn1nbwvGSJpQGtq1J3B72sijy80YgS66evJv%2B%2B8reZMkhDQgEw2hm3ugVj6dOem9gUGi1JOE8II9lsRrsUe3gzwBoPUdQuCSDUVQzFEgV6wCp5XS%2F%2Bv5Eo3lAe6Ot5lqSDzJF1sn7LxgiGOs8iff7Yu5w4m03S%2FKSJ3kWp4sof4jSQ5zHYRQ3PGt5mDfxIkqzYBFlQZjEh8Q9QBxgq9AyZZ1GEC1mQeJOHQQ0TmmSzB%2Fy6Jl4GzeLUMxOVkdre%2Br7UnMmjxotTYMg9MfYvmh6h78Kl2x1CbnWCocOzB7Mm%2BDwa%2Fd0QyL7lMDeZxyJV51r%2BSJUI9Tr%2FUYOHySk3%2Bq6mlU%2F9zXxvmrDYfqMJWmZRCBlMTrQaWhT3s1Q%2BNfU4odz3G4qLQX%2FOwp3zP4%2FUDgPJ0Q0s3ai0kFhD1y0AhpXjJT6fW2AWVgSawYgflmc9wWaKbCrzMLJemvd9cwIHFuHE%2BP2MsI1ay3dPuygLe%2BuDKd85Dm4cte7Ns1YMHBnWRvm8mljz0PfFC%2F8mxEdfr3v5T8%3D&RelayState=%2Fdashboard HTTP/1.1" 404 153 "-" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0"
+2025-04-04 01:40:04: ::ffff:127.0.0.1 - - [04/Apr/2025:00:40:04 +0000] "POST /saml/idp/login HTTP/1.1" 400 40 "-" "insomnia/11.0.2"
+2025-04-04 01:42:20: [32m[nodemon] restarting due to changes...[39m
+2025-04-04 01:42:20: [32m[nodemon] starting `ts-node src/index.ts`[39m
+2025-04-04 01:42:24: [31m[nodemon] app crashed - waiting for file changes before starting...[39m
+2025-04-04 01:45:01: [32m[nodemon] restarting due to changes...[39m
+2025-04-04 01:45:01: [32m[nodemon] starting `ts-node src/index.ts`[39m
+2025-04-04 01:45:05: [31m[nodemon] app crashed - waiting for file changes before starting...[39m
+2025-04-04 01:47:12: [32m[nodemon] restarting due to changes...[39m
+2025-04-04 01:47:12: [32m[nodemon] starting `ts-node src/index.ts`[39m
+2025-04-04 01:47:18: [31m[nodemon] app crashed - waiting for file changes before starting...[39m
+2025-04-04 01:47:42: [32m[nodemon] restarting due to changes...[39m
+2025-04-04 01:47:42: [32m[nodemon] starting `ts-node src/index.ts`[39m
+2025-04-04 01:47:47: [31m[nodemon] app crashed - waiting for file changes before starting...[39m
+2025-04-04 01:48:04: [32m[nodemon] restarting due to changes...[39m
+2025-04-04 01:48:04: [32m[nodemon] starting `ts-node src/index.ts`[39m
+2025-04-04 01:48:09: [31m[nodemon] app crashed - waiting for file changes before starting...[39m
+2025-04-04 01:49:58: [32m[nodemon] restarting due to changes...[39m
+2025-04-04 01:49:58: [32m[nodemon] starting `ts-node src/index.ts`[39m
+2025-04-04 01:50:03: [31m[nodemon] app crashed - waiting for file changes before starting...[39m
+2025-04-04 01:50:43: [32m[nodemon] restarting due to changes...[39m
+2025-04-04 01:50:43: [32m[nodemon] starting `ts-node src/index.ts`[39m
+2025-04-04 01:50:48: [31m[nodemon] app crashed - waiting for file changes before starting...[39m
+2025-04-04 01:54:04: [32m[nodemon] restarting due to changes...[39m
+2025-04-04 01:54:04: [32m[nodemon] starting `ts-node src/index.ts`[39m
+2025-04-04 01:54:08: [31m[nodemon] app crashed - waiting for file changes before starting...[39m
+2025-04-04 01:54:13: [32m[nodemon] restarting due to changes...[39m
+2025-04-04 01:54:13: [32m[nodemon] starting `ts-node src/index.ts`[39m
+2025-04-04 01:54:18: [31m[nodemon] app crashed - waiting for file changes before starting...[39m
+2025-04-04 01:55:01: [32m[nodemon] restarting due to changes...[39m
+2025-04-04 01:55:01: [32m[nodemon] starting `ts-node src/index.ts`[39m
+2025-04-04 01:55:05: [31m[nodemon] app crashed - waiting for file changes before starting...[39m
+2025-04-04 01:55:48: [32m[nodemon] restarting due to changes...[39m
+2025-04-04 01:55:48: [32m[nodemon] starting `ts-node src/index.ts`[39m
+2025-04-04 01:55:52: [31m[nodemon] app crashed - waiting for file changes before starting...[39m
+2025-04-04 01:56:01: [32m[nodemon] restarting due to changes...[39m
+2025-04-04 01:56:01: [32m[nodemon] starting `ts-node src/index.ts`[39m
+2025-04-04 01:56:06: [31m[nodemon] app crashed - waiting for file changes before starting...[39m
+2025-04-04 01:56:33: [32m[nodemon] restarting due to changes...[39m
+2025-04-04 01:56:33: [32m[nodemon] starting `ts-node src/index.ts`[39m
+2025-04-04 01:56:38: [31m[nodemon] app crashed - waiting for file changes before starting...[39m
+2025-04-04 01:56:54: [32m[nodemon] restarting due to changes...[39m
+2025-04-04 01:56:54: [32m[nodemon] starting `ts-node src/index.ts`[39m
+2025-04-04 01:56:59: [31m[nodemon] app crashed - waiting for file changes before starting...[39m
+2025-04-04 01:57:07: [32m[nodemon] restarting due to changes...[39m
+2025-04-04 01:57:07: [32m[nodemon] starting `ts-node src/index.ts`[39m
+2025-04-04 01:57:08: Identity Provider Service is up and running on 7001
+2025-04-04 01:57:30: ::ffff:127.0.0.1 - - [04/Apr/2025:00:57:30 +0000] "POST /saml/idp/login HTTP/1.1" 500 1549 "-" "insomnia/11.0.2"
+2025-04-04 01:58:14: [32m[nodemon] restarting due to changes...[39m
+2025-04-04 01:58:14: [32m[nodemon] starting `ts-node src/index.ts`[39m
+2025-04-04 01:58:15: Identity Provider Service is up and running on 7001
+2025-04-04 01:59:04: [32m[nodemon] restarting due to changes...[39m
+2025-04-04 01:59:04: [32m[nodemon] starting `ts-node src/index.ts`[39m
+2025-04-04 01:59:05: Identity Provider Service is up and running on 7001
+2025-04-04 01:59:31: [32m[nodemon] restarting due to changes...[39m
+2025-04-04 01:59:31: [32m[nodemon] starting `ts-node src/index.ts`[39m
+2025-04-04 01:59:33: Identity Provider Service is up and running on 7001
+2025-04-04 01:59:53: [32m[nodemon] restarting due to changes...[39m
+2025-04-04 01:59:53: [32m[nodemon] starting `ts-node src/index.ts`[39m
+2025-04-04 01:59:55: Identity Provider Service is up and running on 7001
+2025-04-04 02:00:05: ::ffff:127.0.0.1 - - [04/Apr/2025:01:00:05 +0000] "POST /saml/idp/login HTTP/1.1" 500 1549 "-" "insomnia/11.0.2"
+2025-04-04 02:01:24: [32m[nodemon] restarting due to changes...[39m
+2025-04-04 02:01:24: [32m[nodemon] starting `ts-node src/index.ts`[39m
+2025-04-04 02:01:26: Identity Provider Service is up and running on 7001
+2025-04-04 02:01:42: [32m[nodemon] restarting due to changes...[39m
+2025-04-04 02:01:42: [32m[nodemon] starting `ts-node src/index.ts`[39m
+2025-04-04 02:01:46: [31m[nodemon] app crashed - waiting for file changes before starting...[39m
+2025-04-04 02:03:42: [32m[nodemon] restarting due to changes...[39m
+2025-04-04 02:03:42: [32m[nodemon] starting `ts-node src/index.ts`[39m
+2025-04-04 02:03:47: [31m[nodemon] app crashed - waiting for file changes before starting...[39m
+2025-04-04 02:04:09: [32m[nodemon] restarting due to changes...[39m
+2025-04-04 02:04:09: [32m[nodemon] starting `ts-node src/index.ts`[39m
+2025-04-04 02:04:11: Identity Provider Service is up and running on 7001
+2025-04-04 02:04:15: ::ffff:127.0.0.1 - - [04/Apr/2025:01:04:15 +0000] "POST /saml/idp/login HTTP/1.1" 500 1555 "-" "insomnia/11.0.2"
+2025-04-04 02:04:43: [32m[nodemon] restarting due to changes...[39m
+2025-04-04 02:04:43: [32m[nodemon] starting `ts-node src/index.ts`[39m
+2025-04-04 02:04:45: Identity Provider Service is up and running on 7001
+2025-04-04 02:04:47: ::ffff:127.0.0.1 - - [04/Apr/2025:01:04:47 +0000] "POST /saml/idp/login HTTP/1.1" 500 1549 "-" "insomnia/11.0.2"
+2025-04-04 02:05:06: [32m[nodemon] restarting due to changes...[39m
+2025-04-04 02:05:06: [32m[nodemon] starting `ts-node src/index.ts`[39m
+2025-04-04 02:05:08: Identity Provider Service is up and running on 7001
+2025-04-04 02:05:14: ::ffff:127.0.0.1 - - [04/Apr/2025:01:05:14 +0000] "POST /saml/idp/login HTTP/1.1" 500 1549 "-" "insomnia/11.0.2"
+2025-04-04 02:07:49: [32m[nodemon] restarting due to changes...[39m
+2025-04-04 02:07:49: [32m[nodemon] starting `ts-node src/index.ts`[39m
+2025-04-04 02:07:54: [31m[nodemon] app crashed - waiting for file changes before starting...[39m
+2025-04-04 02:08:27: [32m[nodemon] restarting due to changes...[39m
+2025-04-04 02:08:27: [32m[nodemon] starting `ts-node src/index.ts`[39m
+2025-04-04 02:08:32: [31m[nodemon] app crashed - waiting for file changes before starting...[39m
+2025-04-04 02:08:34: [32m[nodemon] restarting due to changes...[39m
+2025-04-04 02:08:34: [32m[nodemon] starting `ts-node src/index.ts`[39m
+2025-04-04 02:08:38: [31m[nodemon] app crashed - waiting for file changes before starting...[39m
+2025-04-04 02:08:42: [32m[nodemon] restarting due to changes...[39m
+2025-04-04 02:08:42: [32m[nodemon] starting `ts-node src/index.ts`[39m
+2025-04-04 02:08:47: [31m[nodemon] app crashed - waiting for file changes before starting...[39m
+2025-04-04 02:09:01: [32m[nodemon] restarting due to changes...[39m
+2025-04-04 02:09:01: [32m[nodemon] starting `ts-node src/index.ts`[39m
+2025-04-04 02:09:03: Identity Provider Service is up and running on 7001
+2025-04-04 02:09:28: [32m[nodemon] restarting due to changes...[39m
+2025-04-04 02:09:28: [32m[nodemon] starting `ts-node src/index.ts`[39m
+2025-04-04 02:09:30: Identity Provider Service is up and running on 7001
+2025-04-04 02:09:36: ::ffff:127.0.0.1 - - [04/Apr/2025:01:09:36 +0000] "POST /saml/idp/login HTTP/1.1" 500 1520 "-" "insomnia/11.0.2"
+2025-04-04 02:10:35: [32m[nodemon] restarting due to changes...[39m
+2025-04-04 02:10:35: [32m[nodemon] starting `ts-node src/index.ts`[39m
+2025-04-04 02:10:37: Identity Provider Service is up and running on 7001
+2025-04-04 02:10:42: ::ffff:127.0.0.1 - - [04/Apr/2025:01:10:42 +0000] "POST /saml/idp/login HTTP/1.1" 500 1520 "-" "insomnia/11.0.2"
+2025-04-04 02:11:05: [32m[nodemon] restarting due to changes...[39m
+2025-04-04 02:11:05: [32m[nodemon] starting `ts-node src/index.ts`[39m
+2025-04-04 02:11:07: Identity Provider Service is up and running on 7001
+2025-04-04 02:11:10: [32m[nodemon] restarting due to changes...[39m
+2025-04-04 02:11:11: [32m[nodemon] starting `ts-node src/index.ts`[39m
+2025-04-04 02:11:12: Identity Provider Service is up and running on 7001
+2025-04-04 02:11:15: ::ffff:127.0.0.1 - - [04/Apr/2025:01:11:15 +0000] "POST /saml/idp/login HTTP/1.1" 500 1541 "-" "insomnia/11.0.2"
+2025-04-04 02:12:20: [32m[nodemon] restarting due to changes...[39m
+2025-04-04 02:12:20: [32m[nodemon] starting `ts-node src/index.ts`[39m
+2025-04-04 02:12:21: Identity Provider Service is up and running on 7001
+2025-04-04 02:12:24: ::ffff:127.0.0.1 - - [04/Apr/2025:01:12:24 +0000] "POST /saml/idp/login HTTP/1.1" 500 1541 "-" "insomnia/11.0.2"
+2025-04-04 02:14:26: [32m[nodemon] restarting due to changes...[39m
+2025-04-04 02:14:26: [32m[nodemon] starting `ts-node src/index.ts`[39m
+2025-04-04 02:14:31: [31m[nodemon] app crashed - waiting for file changes before starting...[39m
+2025-04-04 02:14:32: [32m[nodemon] restarting due to changes...[39m
+2025-04-04 02:14:32: [32m[nodemon] starting `ts-node src/index.ts`[39m
+2025-04-04 02:14:34: Identity Provider Service is up and running on 7001
+2025-04-04 02:14:40: ::ffff:127.0.0.1 - - [04/Apr/2025:01:14:40 +0000] "POST /saml/idp/login HTTP/1.1" 500 1541 "-" "insomnia/11.0.2"
+2025-04-05 07:56:28: ::1 - - [05/Apr/2025:06:56:28 +0000] "GET /saml/sp/login HTTP/1.1" 404 152 "-" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.3.1 Safari/605.1.15"
+2025-04-05 07:56:34: ::1 - - [05/Apr/2025:06:56:34 +0000] "GET /apple-touch-icon-precomposed.png HTTP/1.1" 404 171 "-" "com.apple.WebKit.Networking/20620.2.4.11.6 Network/4277.81.1 macOS/15.3.2"
+2025-04-05 07:56:34: ::1 - - [05/Apr/2025:06:56:34 +0000] "GET /apple-touch-icon.png HTTP/1.1" 404 159 "-" "com.apple.WebKit.Networking/20620.2.4.11.6 Network/4277.81.1 macOS/15.3.2"
+2025-04-05 07:56:34: ::1 - - [05/Apr/2025:06:56:34 +0000] "GET /favicon.ico HTTP/1.1" 404 150 "-" "com.apple.WebKit.Networking/20620.2.4.11.6 Network/4277.81.1 macOS/15.3.2"
+2025-04-05 07:56:45: ::1 - - [05/Apr/2025:06:56:45 +0000] "POST /saml/idp/login HTTP/1.1" 500 1541 "http://localhost:8000/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0"

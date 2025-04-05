@@ -1,0 +1,72 @@
+2025-04-03 23:19:32 [ERROR]: uncaughtException: ⨯ Unable to compile TypeScript:
+src/routes/main.router.ts(71,26): error TS1003: Identifier expected.
+
+TSError: ⨯ Unable to compile TypeScript:
+src/routes/main.router.ts(71,26): error TS1003: Identifier expected.
+
+    at createTSError (/Users/sfteam/Documents/nodeApps/Identity Provider/node_modules/ts-node/src/index.ts:859:12)
+    at reportTSError (/Users/sfteam/Documents/nodeApps/Identity Provider/node_modules/ts-node/src/index.ts:863:19)
+    at getOutput (/Users/sfteam/Documents/nodeApps/Identity Provider/node_modules/ts-node/src/index.ts:1077:36)
+    at Object.compile (/Users/sfteam/Documents/nodeApps/Identity Provider/node_modules/ts-node/src/index.ts:1433:41)
+    at Module.m._compile (/Users/sfteam/Documents/nodeApps/Identity Provider/node_modules/ts-node/src/index.ts:1617:30)
+    at node:internal/modules/cjs/loader:1905:10
+    at Object.require.extensions.<computed> [as .ts] (/Users/sfteam/Documents/nodeApps/Identity Provider/node_modules/ts-node/src/index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1474:32)
+    at Function._load (node:internal/modules/cjs/loader:1286:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+2025-04-03 23:19:32 [ERROR]: uncaughtException: ⨯ Unable to compile TypeScript:
+src/routes/main.router.ts(71,26): error TS1003: Identifier expected.
+
+TSError: ⨯ Unable to compile TypeScript:
+src/routes/main.router.ts(71,26): error TS1003: Identifier expected.
+
+    at createTSError (/Users/sfteam/Documents/nodeApps/Identity Provider/node_modules/ts-node/src/index.ts:859:12)
+    at reportTSError (/Users/sfteam/Documents/nodeApps/Identity Provider/node_modules/ts-node/src/index.ts:863:19)
+    at getOutput (/Users/sfteam/Documents/nodeApps/Identity Provider/node_modules/ts-node/src/index.ts:1077:36)
+    at Object.compile (/Users/sfteam/Documents/nodeApps/Identity Provider/node_modules/ts-node/src/index.ts:1433:41)
+    at Module.m._compile (/Users/sfteam/Documents/nodeApps/Identity Provider/node_modules/ts-node/src/index.ts:1617:30)
+    at node:internal/modules/cjs/loader:1905:10
+    at Object.require.extensions.<computed> [as .ts] (/Users/sfteam/Documents/nodeApps/Identity Provider/node_modules/ts-node/src/index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1474:32)
+    at Function._load (node:internal/modules/cjs/loader:1286:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+2025-04-03 23:19:42 [ERROR]: uncaughtException: listen EADDRINUSE: address already in use :::7001
+Error: listen EADDRINUSE: address already in use :::7001
+    at Server.setupListenHandle [as _listen2] (node:net:1937:16)
+    at listenInCluster (node:net:1994:12)
+    at Server.listen (node:net:2099:7)
+    at Function.listen (/Users/sfteam/Documents/nodeApps/Identity Provider/node_modules/express/lib/application.js:635:24)
+    at Object.<anonymous> (/Users/sfteam/Documents/nodeApps/Identity Provider/src/index.ts:127:5)
+    at Module._compile (node:internal/modules/cjs/loader:1740:14)
+    at Module.m._compile (/Users/sfteam/Documents/nodeApps/Identity Provider/node_modules/ts-node/src/index.ts:1618:23)
+    at node:internal/modules/cjs/loader:1905:10
+    at Object.require.extensions.<computed> [as .ts] (/Users/sfteam/Documents/nodeApps/Identity Provider/node_modules/ts-node/src/index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1474:32)
+2025-04-03 23:20:14 [ERROR]: uncaughtException: listen EADDRINUSE: address already in use :::7001
+Error: listen EADDRINUSE: address already in use :::7001
+    at Server.setupListenHandle [as _listen2] (node:net:1937:16)
+    at listenInCluster (node:net:1994:12)
+    at Server.listen (node:net:2099:7)
+    at Function.listen (/Users/sfteam/Documents/nodeApps/Identity Provider/node_modules/express/lib/application.js:635:24)
+    at Object.<anonymous> (/Users/sfteam/Documents/nodeApps/Identity Provider/src/index.ts:127:5)
+    at Module._compile (node:internal/modules/cjs/loader:1740:14)
+    at Module.m._compile (/Users/sfteam/Documents/nodeApps/Identity Provider/node_modules/ts-node/src/index.ts:1618:23)
+    at node:internal/modules/cjs/loader:1905:10
+    at Object.require.extensions.<computed> [as .ts] (/Users/sfteam/Documents/nodeApps/Identity Provider/node_modules/ts-node/src/index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1474:32)
+2025-04-03 23:39:16 [ERROR]: uncaughtException: ⨯ Unable to compile TypeScript:
+src/config/saml.ts(157,28): error TS1003: Identifier expected.
+
+TSError: ⨯ Unable to compile TypeScript:
+src/config/saml.ts(157,28): error TS1003: Identifier expected.
+
+    at createTSError (/Users/sfteam/Documents/nodeApps/Identity Provider/node_modules/ts-node/src/index.ts:859:12)
+    at reportTSError (/Users/sfteam/Documents/nodeApps/Identity Provider/node_modules/ts-node/src/index.ts:863:19)
+    at getOutput (/Users/sfteam/Documents/nodeApps/Identity Provider/node_modules/ts-node/src/index.ts:1077:36)
+    at Object.compile (/Users/sfteam/Documents/nodeApps/Identity Provider/node_modules/ts-node/src/index.ts:1433:41)
+    at Module.m._compile (/Users/sfteam/Documents/nodeApps/Identity Provider/node_modules/ts-node/src/index.ts:1617:30)
+    at node:internal/modules/cjs/loader:1905:10
+    at Object.require.extensions.<computed> [as .ts] (/Users/sfteam/Documents/nodeApps/Identity Provider/node_modules/ts-node/src/index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1474:32)
+    at Function._load (node:internal/modules/cjs/loader:1286:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14)

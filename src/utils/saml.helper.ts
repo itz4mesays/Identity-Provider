@@ -4,6 +4,7 @@ import envVars from "../validations/validateEnv";
 import { Response } from 'express'
 import * as xmlenc from 'xml-encryption';
 import * as crypto from 'crypto';
+import { loadFile } from "../config/config";
 
 // 1. Define strict types for encryption algorithms
 type EncryptionAlgorithm = 'http://www.w3.org/2001/04/xmlenc#aes256-cbc';
@@ -139,8 +140,8 @@ export const loadAndValidateCertificate = (filePath: string, type: 'cert' | 'key
 
 export const encryptSamlResponse = async (xml: string): Promise<string> => {
     const certPaths = {
-        spCert: path.join(process.cwd(), 'certs', 'sp-cert.pem'),
-        idpKey: path.join(process.cwd(), 'certs', 'idp-key.pem')
+        spCert: loadFile('sp-cert.pem'),
+        idpKey: loadFile('idp-private-key.pem')
     };
 
     try {

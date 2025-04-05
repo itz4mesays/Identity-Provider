@@ -1,0 +1,104 @@
+
+> single_sign_on@1.0.0 dev
+> cross-env NODE_ENV=development nodemon --watch 'src/**/*.ts' --exec 'ts-node' src/index.ts
+
+[33m[nodemon] 3.1.9[39m
+[33m[nodemon] to restart at any time, enter `rs`[39m
+[33m[nodemon] watching path(s): src/**/*.ts[39m
+[33m[nodemon] watching extensions: ts[39m
+[32m[nodemon] starting `ts-node src/index.ts`[39m
+=== PRIVATE KEY VALIDATION ===
+Key starts with: -----BEGIN PRIVATE KEY-----
+MIIEvAIBADANBgkqhkiG9w
+Key ends with: 9QyPOvPF1gbPFeyDGtntug==
+-----END PRIVATE KEY-----
+Key length: 1703
+Key test signature successful! Length: 256
+Identity Provider Service is up and running on 7001
+
+> single_sign_on@1.0.0 dev
+> cross-env NODE_ENV=development nodemon --watch 'src/**/*.ts' --exec 'ts-node' src/index.ts
+
+[33m[nodemon] 3.1.9[39m
+[33m[nodemon] to restart at any time, enter `rs`[39m
+[33m[nodemon] watching path(s): src/**/*.ts[39m
+[33m[nodemon] watching extensions: ts[39m
+[32m[nodemon] starting `ts-node src/index.ts`[39m
+=== PRIVATE KEY VALIDATION ===
+Key starts with: -----BEGIN PRIVATE KEY-----
+MIIEvAIBADANBgkqhkiG9w
+Key ends with: 9QyPOvPF1gbPFeyDGtntug==
+-----END PRIVATE KEY-----
+Key length: 1703
+Key test signature successful! Length: 256
+[31m[nodemon] app crashed - waiting for file changes before starting...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `ts-node src/index.ts`[39m
+=== PRIVATE KEY VALIDATION ===
+Key starts with: -----BEGIN PRIVATE KEY-----
+MIIEvAIBADANBgkqhkiG9w
+Key ends with: 9QyPOvPF1gbPFeyDGtntug==
+-----END PRIVATE KEY-----
+Key length: 1703
+Key test signature successful! Length: 256
+[31m[nodemon] app crashed - waiting for file changes before starting...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `ts-node src/index.ts`[39m
+=== PRIVATE KEY VALIDATION ===
+Key starts with: -----BEGIN PRIVATE KEY-----
+MIIEvAIBADANBgkqhkiG9w
+Key ends with: 9QyPOvPF1gbPFeyDGtntug==
+-----END PRIVATE KEY-----
+Key length: 1703
+Key test signature successful! Length: 256
+Identity Provider Service is up and running on 7001
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `ts-node src/index.ts`[39m
+=== PRIVATE KEY VALIDATION ===
+Key starts with: -----BEGIN PRIVATE KEY-----
+MIIEvAIBADANBgkqhkiG9w
+Key ends with: 9QyPOvPF1gbPFeyDGtntug==
+-----END PRIVATE KEY-----
+Key length: 1703
+Key test signature successful! Length: 256
+[31m[nodemon] app crashed - waiting for file changes before starting...[39m
+
+> single_sign_on@1.0.0 dev
+> cross-env NODE_ENV=development nodemon --watch 'src/**/*.ts' --exec 'ts-node' src/index.ts
+
+[33m[nodemon] 3.1.9[39m
+[33m[nodemon] to restart at any time, enter `rs`[39m
+[33m[nodemon] watching path(s): src/**/*.ts[39m
+[33m[nodemon] watching extensions: ts[39m
+[32m[nodemon] starting `ts-node src/index.ts`[39m
+=== PRIVATE KEY VALIDATION ===
+Key starts with: -----BEGIN PRIVATE KEY-----
+MIIEvAIBADANBgkqhkiG9w
+Key ends with: 9QyPOvPF1gbPFeyDGtntug==
+-----END PRIVATE KEY-----
+Key length: 1703
+Key test signature successful! Length: 256
+Identity Provider Service is up and running on 7001
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `ts-node src/index.ts`[39m
+[31m[nodemon] app crashed - waiting for file changes before starting...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `ts-node src/index.ts`[39m
+=== PRIVATE KEY VALIDATION ===
+Key starts with: -----BEGIN PRIVATE KEY-----
+MIIEvAIBADANBgkqhkiG9w
+Key ends with: 9QyPOvPF1gbPFeyDGtntug==
+-----END PRIVATE KEY-----
+Key length: 1703
+Key test signature successful! Length: 256
+Identity Provider Service is up and running on 7001
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `ts-node src/index.ts`[39m
+=== PRIVATE KEY VALIDATION ===
+Key starts with: -----BEGIN PRIVATE KEY-----
+MIIEvAIBADANBgkqhkiG9w
+Key ends with: 9QyPOvPF1gbPFeyDGtntug==
+-----END PRIVATE KEY-----
+Key length: 1703
+Key test signature successful! Length: 256
+Identity Provider Service is up and running on 7001

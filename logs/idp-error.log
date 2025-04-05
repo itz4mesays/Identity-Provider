@@ -1,0 +1,179 @@
+2025-04-03 23:30:18: /Users/sfteam/Documents/nodeApps/Identity Provider/node_modules/ts-node/src/index.ts:859
+2025-04-03 23:30:18:     return new TSError(diagnosticText, diagnosticCodes, diagnostics);
+2025-04-03 23:30:18:            ^
+2025-04-03 23:30:18: TSError: ⨯ Unable to compile TypeScript:
+2025-04-03 23:30:18: src/index.ts(25,14): error TS1003: Identifier expected.
+2025-04-03 23:30:18: 
+2025-04-03 23:30:18:     at createTSError (/Users/sfteam/Documents/nodeApps/Identity Provider/node_modules/ts-node/src/index.ts:859:12)
+2025-04-03 23:30:18:     at reportTSError (/Users/sfteam/Documents/nodeApps/Identity Provider/node_modules/ts-node/src/index.ts:863:19)
+2025-04-03 23:30:18:     at getOutput (/Users/sfteam/Documents/nodeApps/Identity Provider/node_modules/ts-node/src/index.ts:1077:36)
+2025-04-03 23:30:18:     at Object.compile (/Users/sfteam/Documents/nodeApps/Identity Provider/node_modules/ts-node/src/index.ts:1433:41)
+2025-04-03 23:30:18:     at Module.m._compile (/Users/sfteam/Documents/nodeApps/Identity Provider/node_modules/ts-node/src/index.ts:1617:30)
+2025-04-03 23:30:18:     at node:internal/modules/cjs/loader:1905:10
+2025-04-03 23:30:18:     at Object.require.extensions.<computed> [as .ts] (/Users/sfteam/Documents/nodeApps/Identity Provider/node_modules/ts-node/src/index.ts:1621:12)
+2025-04-03 23:30:18:     at Module.load (node:internal/modules/cjs/loader:1474:32)
+2025-04-03 23:30:18:     at Function._load (node:internal/modules/cjs/loader:1286:12)
+2025-04-03 23:30:18:     at TracingChannel.traceSync (node:diagnostics_channel:322:14) {
+2025-04-03 23:30:18:   diagnosticCodes: [ 1003 ]
+2025-04-03 23:30:18: }
+2025-04-03 23:41:42: Authentication Error: PrismaClientInitializationError: 
+2025-04-03 23:41:42: Invalid `prisma.user.findUnique()` invocation in
+2025-04-03 23:41:42: /Users/sfteam/Documents/nodeApps/Identity Provider/src/services/account.service.ts:5:30
+2025-04-03 23:41:42: 
+2025-04-03 23:41:42:   2 import prisma from "../utils/client"
+2025-04-03 23:41:42:   3 
+2025-04-03 23:41:42:   4 export const getUserByTaxId = async (taxId: string): Promise<User | null> => {
+2025-04-03 23:41:42: → 5     return await prisma.user.findUnique(
+2025-04-03 23:41:42: Can't reach database server at `localhost:3306`
+2025-04-03 23:41:42: 
+2025-04-03 23:41:42: Please make sure your database server is running at `localhost:3306`.
+2025-04-03 23:41:42:     at Wn.handleRequestError (/Users/sfteam/Documents/nodeApps/Identity Provider/node_modules/@prisma/client/runtime/library.js:121:7835)
+2025-04-03 23:41:42:     at Wn.handleAndLogRequestError (/Users/sfteam/Documents/nodeApps/Identity Provider/node_modules/@prisma/client/runtime/library.js:121:6858)
+2025-04-03 23:41:42:     at Wn.request (/Users/sfteam/Documents/nodeApps/Identity Provider/node_modules/@prisma/client/runtime/library.js:121:6565)
+2025-04-03 23:41:42:     at async l (/Users/sfteam/Documents/nodeApps/Identity Provider/node_modules/@prisma/client/runtime/library.js:130:10067) {
+2025-04-03 23:41:42:   clientVersion: '6.5.0',
+2025-04-03 23:41:42:   errorCode: undefined,
+2025-04-03 23:41:42:   retryable: undefined
+2025-04-03 23:41:42: }
+2025-04-03 23:42:24: Authentication Error: PrismaClientInitializationError: 
+2025-04-03 23:42:24: Invalid `prisma.user.findUnique()` invocation in
+2025-04-03 23:42:24: /Users/sfteam/Documents/nodeApps/Identity Provider/src/services/account.service.ts:5:30
+2025-04-03 23:42:24: 
+2025-04-03 23:42:24:   2 import prisma from "../utils/client"
+2025-04-03 23:42:24:   3 
+2025-04-03 23:42:24:   4 export const getUserByTaxId = async (taxId: string): Promise<User | null> => {
+2025-04-03 23:42:24: → 5     return await prisma.user.findUnique(
+2025-04-03 23:42:24: Can't reach database server at `localhost:3306`
+2025-04-03 23:42:24: 
+2025-04-03 23:42:24: Please make sure your database server is running at `localhost:3306`.
+2025-04-03 23:42:24:     at Wn.handleRequestError (/Users/sfteam/Documents/nodeApps/Identity Provider/node_modules/@prisma/client/runtime/library.js:121:7835)
+2025-04-03 23:42:24:     at Wn.handleAndLogRequestError (/Users/sfteam/Documents/nodeApps/Identity Provider/node_modules/@prisma/client/runtime/library.js:121:6858)
+2025-04-03 23:42:24:     at Wn.request (/Users/sfteam/Documents/nodeApps/Identity Provider/node_modules/@prisma/client/runtime/library.js:121:6565)
+2025-04-03 23:42:24:     at async l (/Users/sfteam/Documents/nodeApps/Identity Provider/node_modules/@prisma/client/runtime/library.js:130:10067) {
+2025-04-03 23:42:24:   clientVersion: '6.5.0',
+2025-04-03 23:42:24:   errorCode: undefined,
+2025-04-03 23:42:24:   retryable: undefined
+2025-04-03 23:42:24: }
+2025-04-04 01:55:01: (node:13558) MaxListenersExceededWarning: Possible EventEmitter memory leak detected. 11 exit listeners added to [Bus]. MaxListeners is 10. Use emitter.setMaxListeners() to increase limit
+2025-04-04 01:55:01: (Use `node --trace-warnings ...` to show where the warning was created)
+2025-04-04 01:57:30: TypeError: config_1.identityProvider.parse_request is not a function
+2025-04-04 01:57:30:     at /Users/sfteam/Documents/nodeApps/Identity Provider/src/routes/main.router.ts:48:22
+2025-04-04 01:57:30:     at Layer.handle [as handle_request] (/Users/sfteam/Documents/nodeApps/Identity Provider/node_modules/express/lib/router/layer.js:95:5)
+2025-04-04 01:57:30:     at next (/Users/sfteam/Documents/nodeApps/Identity Provider/node_modules/express/lib/router/route.js:149:13)
+2025-04-04 01:57:30:     at urlencodedParser (/Users/sfteam/Documents/nodeApps/Identity Provider/node_modules/body-parser/lib/types/urlencoded.js:85:7)
+2025-04-04 01:57:30:     at Layer.handle [as handle_request] (/Users/sfteam/Documents/nodeApps/Identity Provider/node_modules/express/lib/router/layer.js:95:5)
+2025-04-04 01:57:30:     at next (/Users/sfteam/Documents/nodeApps/Identity Provider/node_modules/express/lib/router/route.js:149:13)
+2025-04-04 01:57:30:     at Route.dispatch (/Users/sfteam/Documents/nodeApps/Identity Provider/node_modules/express/lib/router/route.js:119:3)
+2025-04-04 01:57:30:     at Layer.handle [as handle_request] (/Users/sfteam/Documents/nodeApps/Identity Provider/node_modules/express/lib/router/layer.js:95:5)
+2025-04-04 01:57:30:     at /Users/sfteam/Documents/nodeApps/Identity Provider/node_modules/express/lib/router/index.js:284:15
+2025-04-04 01:57:30:     at Function.process_params (/Users/sfteam/Documents/nodeApps/Identity Provider/node_modules/express/lib/router/index.js:346:12)
+2025-04-04 02:00:05: TypeError: config_1.identityProvider.parse_request is not a function
+2025-04-04 02:00:05:     at /Users/sfteam/Documents/nodeApps/Identity Provider/src/routes/main.router.ts:54:22
+2025-04-04 02:00:05:     at Layer.handle [as handle_request] (/Users/sfteam/Documents/nodeApps/Identity Provider/node_modules/express/lib/router/layer.js:95:5)
+2025-04-04 02:00:05:     at next (/Users/sfteam/Documents/nodeApps/Identity Provider/node_modules/express/lib/router/route.js:149:13)
+2025-04-04 02:00:05:     at urlencodedParser (/Users/sfteam/Documents/nodeApps/Identity Provider/node_modules/body-parser/lib/types/urlencoded.js:85:7)
+2025-04-04 02:00:05:     at Layer.handle [as handle_request] (/Users/sfteam/Documents/nodeApps/Identity Provider/node_modules/express/lib/router/layer.js:95:5)
+2025-04-04 02:00:05:     at next (/Users/sfteam/Documents/nodeApps/Identity Provider/node_modules/express/lib/router/route.js:149:13)
+2025-04-04 02:00:05:     at Route.dispatch (/Users/sfteam/Documents/nodeApps/Identity Provider/node_modules/express/lib/router/route.js:119:3)
+2025-04-04 02:00:05:     at Layer.handle [as handle_request] (/Users/sfteam/Documents/nodeApps/Identity Provider/node_modules/express/lib/router/layer.js:95:5)
+2025-04-04 02:00:05:     at /Users/sfteam/Documents/nodeApps/Identity Provider/node_modules/express/lib/router/index.js:284:15
+2025-04-04 02:00:05:     at Function.process_params (/Users/sfteam/Documents/nodeApps/Identity Provider/node_modules/express/lib/router/index.js:346:12)
+2025-04-04 02:04:15: TypeError: config_1.identityProvider.parse_login_request is not a function
+2025-04-04 02:04:15:     at /Users/sfteam/Documents/nodeApps/Identity Provider/src/routes/main.router.ts:54:22
+2025-04-04 02:04:15:     at Layer.handle [as handle_request] (/Users/sfteam/Documents/nodeApps/Identity Provider/node_modules/express/lib/router/layer.js:95:5)
+2025-04-04 02:04:15:     at next (/Users/sfteam/Documents/nodeApps/Identity Provider/node_modules/express/lib/router/route.js:149:13)
+2025-04-04 02:04:15:     at urlencodedParser (/Users/sfteam/Documents/nodeApps/Identity Provider/node_modules/body-parser/lib/types/urlencoded.js:85:7)
+2025-04-04 02:04:15:     at Layer.handle [as handle_request] (/Users/sfteam/Documents/nodeApps/Identity Provider/node_modules/express/lib/router/layer.js:95:5)
+2025-04-04 02:04:15:     at next (/Users/sfteam/Documents/nodeApps/Identity Provider/node_modules/express/lib/router/route.js:149:13)
+2025-04-04 02:04:15:     at Route.dispatch (/Users/sfteam/Documents/nodeApps/Identity Provider/node_modules/express/lib/router/route.js:119:3)
+2025-04-04 02:04:15:     at Layer.handle [as handle_request] (/Users/sfteam/Documents/nodeApps/Identity Provider/node_modules/express/lib/router/layer.js:95:5)
+2025-04-04 02:04:15:     at /Users/sfteam/Documents/nodeApps/Identity Provider/node_modules/express/lib/router/index.js:284:15
+2025-04-04 02:04:15:     at Function.process_params (/Users/sfteam/Documents/nodeApps/Identity Provider/node_modules/express/lib/router/index.js:346:12)
+2025-04-04 02:04:47: TypeError: config_1.identityProvider.parse_request is not a function
+2025-04-04 02:04:47:     at /Users/sfteam/Documents/nodeApps/Identity Provider/src/routes/main.router.ts:54:31
+2025-04-04 02:04:47:     at Layer.handle [as handle_request] (/Users/sfteam/Documents/nodeApps/Identity Provider/node_modules/express/lib/router/layer.js:95:5)
+2025-04-04 02:04:47:     at next (/Users/sfteam/Documents/nodeApps/Identity Provider/node_modules/express/lib/router/route.js:149:13)
+2025-04-04 02:04:47:     at urlencodedParser (/Users/sfteam/Documents/nodeApps/Identity Provider/node_modules/body-parser/lib/types/urlencoded.js:85:7)
+2025-04-04 02:04:47:     at Layer.handle [as handle_request] (/Users/sfteam/Documents/nodeApps/Identity Provider/node_modules/express/lib/router/layer.js:95:5)
+2025-04-04 02:04:47:     at next (/Users/sfteam/Documents/nodeApps/Identity Provider/node_modules/express/lib/router/route.js:149:13)
+2025-04-04 02:04:47:     at Route.dispatch (/Users/sfteam/Documents/nodeApps/Identity Provider/node_modules/express/lib/router/route.js:119:3)
+2025-04-04 02:04:47:     at Layer.handle [as handle_request] (/Users/sfteam/Documents/nodeApps/Identity Provider/node_modules/express/lib/router/layer.js:95:5)
+2025-04-04 02:04:47:     at /Users/sfteam/Documents/nodeApps/Identity Provider/node_modules/express/lib/router/index.js:284:15
+2025-04-04 02:04:47:     at Function.process_params (/Users/sfteam/Documents/nodeApps/Identity Provider/node_modules/express/lib/router/index.js:346:12)
+2025-04-04 02:05:14: TypeError: config_1.identityProvider.parse_request is not a function
+2025-04-04 02:05:14:     at /Users/sfteam/Documents/nodeApps/Identity Provider/src/routes/main.router.ts:54:31
+2025-04-04 02:05:14:     at Layer.handle [as handle_request] (/Users/sfteam/Documents/nodeApps/Identity Provider/node_modules/express/lib/router/layer.js:95:5)
+2025-04-04 02:05:14:     at next (/Users/sfteam/Documents/nodeApps/Identity Provider/node_modules/express/lib/router/route.js:149:13)
+2025-04-04 02:05:14:     at urlencodedParser (/Users/sfteam/Documents/nodeApps/Identity Provider/node_modules/body-parser/lib/types/urlencoded.js:85:7)
+2025-04-04 02:05:14:     at Layer.handle [as handle_request] (/Users/sfteam/Documents/nodeApps/Identity Provider/node_modules/express/lib/router/layer.js:95:5)
+2025-04-04 02:05:14:     at next (/Users/sfteam/Documents/nodeApps/Identity Provider/node_modules/express/lib/router/route.js:149:13)
+2025-04-04 02:05:14:     at Route.dispatch (/Users/sfteam/Documents/nodeApps/Identity Provider/node_modules/express/lib/router/route.js:119:3)
+2025-04-04 02:05:14:     at Layer.handle [as handle_request] (/Users/sfteam/Documents/nodeApps/Identity Provider/node_modules/express/lib/router/layer.js:95:5)
+2025-04-04 02:05:14:     at /Users/sfteam/Documents/nodeApps/Identity Provider/node_modules/express/lib/router/index.js:284:15
+2025-04-04 02:05:14:     at Function.process_params (/Users/sfteam/Documents/nodeApps/Identity Provider/node_modules/express/lib/router/index.js:346:12)
+2025-04-04 02:09:36: TypeError: this.parse_login_request is not a function
+2025-04-04 02:09:36:     at IdentityProvider.parse_request (/Users/sfteam/Documents/nodeApps/Identity Provider/src/config/config.ts:55:18)
+2025-04-04 02:09:36:     at /Users/sfteam/Documents/nodeApps/Identity Provider/src/routes/main.router.ts:52:31
+2025-04-04 02:09:36:     at Layer.handle [as handle_request] (/Users/sfteam/Documents/nodeApps/Identity Provider/node_modules/express/lib/router/layer.js:95:5)
+2025-04-04 02:09:36:     at next (/Users/sfteam/Documents/nodeApps/Identity Provider/node_modules/express/lib/router/route.js:149:13)
+2025-04-04 02:09:36:     at urlencodedParser (/Users/sfteam/Documents/nodeApps/Identity Provider/node_modules/body-parser/lib/types/urlencoded.js:85:7)
+2025-04-04 02:09:36:     at Layer.handle [as handle_request] (/Users/sfteam/Documents/nodeApps/Identity Provider/node_modules/express/lib/router/layer.js:95:5)
+2025-04-04 02:09:36:     at next (/Users/sfteam/Documents/nodeApps/Identity Provider/node_modules/express/lib/router/route.js:149:13)
+2025-04-04 02:09:36:     at Route.dispatch (/Users/sfteam/Documents/nodeApps/Identity Provider/node_modules/express/lib/router/route.js:119:3)
+2025-04-04 02:09:36:     at Layer.handle [as handle_request] (/Users/sfteam/Documents/nodeApps/Identity Provider/node_modules/express/lib/router/layer.js:95:5)
+2025-04-04 02:09:36:     at /Users/sfteam/Documents/nodeApps/Identity Provider/node_modules/express/lib/router/index.js:284:15
+2025-04-04 02:10:42: TypeError: this.parse_login_request is not a function
+2025-04-04 02:10:42:     at IdentityProvider.parse_request (/Users/sfteam/Documents/nodeApps/Identity Provider/src/config/config.ts:55:18)
+2025-04-04 02:10:42:     at /Users/sfteam/Documents/nodeApps/Identity Provider/src/routes/main.router.ts:52:31
+2025-04-04 02:10:42:     at Layer.handle [as handle_request] (/Users/sfteam/Documents/nodeApps/Identity Provider/node_modules/express/lib/router/layer.js:95:5)
+2025-04-04 02:10:42:     at next (/Users/sfteam/Documents/nodeApps/Identity Provider/node_modules/express/lib/router/route.js:149:13)
+2025-04-04 02:10:42:     at urlencodedParser (/Users/sfteam/Documents/nodeApps/Identity Provider/node_modules/body-parser/lib/types/urlencoded.js:85:7)
+2025-04-04 02:10:42:     at Layer.handle [as handle_request] (/Users/sfteam/Documents/nodeApps/Identity Provider/node_modules/express/lib/router/layer.js:95:5)
+2025-04-04 02:10:42:     at next (/Users/sfteam/Documents/nodeApps/Identity Provider/node_modules/express/lib/router/route.js:149:13)
+2025-04-04 02:10:42:     at Route.dispatch (/Users/sfteam/Documents/nodeApps/Identity Provider/node_modules/express/lib/router/route.js:119:3)
+2025-04-04 02:10:42:     at Layer.handle [as handle_request] (/Users/sfteam/Documents/nodeApps/Identity Provider/node_modules/express/lib/router/layer.js:95:5)
+2025-04-04 02:10:42:     at /Users/sfteam/Documents/nodeApps/Identity Provider/node_modules/express/lib/router/index.js:284:15
+2025-04-04 02:11:15: RangeError: Maximum call stack size exceeded
+2025-04-04 02:11:15:     at IdentityProvider.parse_login_request (/Users/sfteam/Documents/nodeApps/Identity Provider/src/config/config.ts:55:18)
+2025-04-04 02:11:15:     at IdentityProvider.parse_login_request (/Users/sfteam/Documents/nodeApps/Identity Provider/src/config/config.ts:55:18)
+2025-04-04 02:11:15:     at IdentityProvider.parse_login_request (/Users/sfteam/Documents/nodeApps/Identity Provider/src/config/config.ts:55:18)
+2025-04-04 02:11:15:     at IdentityProvider.parse_login_request (/Users/sfteam/Documents/nodeApps/Identity Provider/src/config/config.ts:55:18)
+2025-04-04 02:11:15:     at IdentityProvider.parse_login_request (/Users/sfteam/Documents/nodeApps/Identity Provider/src/config/config.ts:55:18)
+2025-04-04 02:11:15:     at IdentityProvider.parse_login_request (/Users/sfteam/Documents/nodeApps/Identity Provider/src/config/config.ts:55:18)
+2025-04-04 02:11:15:     at IdentityProvider.parse_login_request (/Users/sfteam/Documents/nodeApps/Identity Provider/src/config/config.ts:55:18)
+2025-04-04 02:11:15:     at IdentityProvider.parse_login_request (/Users/sfteam/Documents/nodeApps/Identity Provider/src/config/config.ts:55:18)
+2025-04-04 02:11:15:     at IdentityProvider.parse_login_request (/Users/sfteam/Documents/nodeApps/Identity Provider/src/config/config.ts:55:18)
+2025-04-04 02:11:15:     at IdentityProvider.parse_login_request (/Users/sfteam/Documents/nodeApps/Identity Provider/src/config/config.ts:55:18)
+2025-04-04 02:12:24: RangeError: Maximum call stack size exceeded
+2025-04-04 02:12:24:     at IdentityProvider.parse_login_request (/Users/sfteam/Documents/nodeApps/Identity Provider/src/config/config.ts:55:18)
+2025-04-04 02:12:24:     at IdentityProvider.parse_login_request (/Users/sfteam/Documents/nodeApps/Identity Provider/src/config/config.ts:55:18)
+2025-04-04 02:12:24:     at IdentityProvider.parse_login_request (/Users/sfteam/Documents/nodeApps/Identity Provider/src/config/config.ts:55:18)
+2025-04-04 02:12:24:     at IdentityProvider.parse_login_request (/Users/sfteam/Documents/nodeApps/Identity Provider/src/config/config.ts:55:18)
+2025-04-04 02:12:24:     at IdentityProvider.parse_login_request (/Users/sfteam/Documents/nodeApps/Identity Provider/src/config/config.ts:55:18)
+2025-04-04 02:12:24:     at IdentityProvider.parse_login_request (/Users/sfteam/Documents/nodeApps/Identity Provider/src/config/config.ts:55:18)
+2025-04-04 02:12:24:     at IdentityProvider.parse_login_request (/Users/sfteam/Documents/nodeApps/Identity Provider/src/config/config.ts:55:18)
+2025-04-04 02:12:24:     at IdentityProvider.parse_login_request (/Users/sfteam/Documents/nodeApps/Identity Provider/src/config/config.ts:55:18)
+2025-04-04 02:12:24:     at IdentityProvider.parse_login_request (/Users/sfteam/Documents/nodeApps/Identity Provider/src/config/config.ts:55:18)
+2025-04-04 02:12:24:     at IdentityProvider.parse_login_request (/Users/sfteam/Documents/nodeApps/Identity Provider/src/config/config.ts:55:18)
+2025-04-04 02:14:40: RangeError: Maximum call stack size exceeded
+2025-04-04 02:14:40:     at IdentityProvider.parse_login_request (/Users/sfteam/Documents/nodeApps/Identity Provider/src/config/config.ts:55:18)
+2025-04-04 02:14:40:     at IdentityProvider.parse_login_request (/Users/sfteam/Documents/nodeApps/Identity Provider/src/config/config.ts:55:18)
+2025-04-04 02:14:40:     at IdentityProvider.parse_login_request (/Users/sfteam/Documents/nodeApps/Identity Provider/src/config/config.ts:55:18)
+2025-04-04 02:14:40:     at IdentityProvider.parse_login_request (/Users/sfteam/Documents/nodeApps/Identity Provider/src/config/config.ts:55:18)
+2025-04-04 02:14:40:     at IdentityProvider.parse_login_request (/Users/sfteam/Documents/nodeApps/Identity Provider/src/config/config.ts:55:18)
+2025-04-04 02:14:40:     at IdentityProvider.parse_login_request (/Users/sfteam/Documents/nodeApps/Identity Provider/src/config/config.ts:55:18)
+2025-04-04 02:14:40:     at IdentityProvider.parse_login_request (/Users/sfteam/Documents/nodeApps/Identity Provider/src/config/config.ts:55:18)
+2025-04-04 02:14:40:     at IdentityProvider.parse_login_request (/Users/sfteam/Documents/nodeApps/Identity Provider/src/config/config.ts:55:18)
+2025-04-04 02:14:40:     at IdentityProvider.parse_login_request (/Users/sfteam/Documents/nodeApps/Identity Provider/src/config/config.ts:55:18)
+2025-04-04 02:14:40:     at IdentityProvider.parse_login_request (/Users/sfteam/Documents/nodeApps/Identity Provider/src/config/config.ts:55:18)
+2025-04-05 07:56:45: RangeError: Maximum call stack size exceeded
+2025-04-05 07:56:45:     at IdentityProvider.parse_login_request (/Users/sfteam/Documents/nodeApps/Identity Provider/src/config/config.ts:55:18)
+2025-04-05 07:56:45:     at IdentityProvider.parse_login_request (/Users/sfteam/Documents/nodeApps/Identity Provider/src/config/config.ts:55:18)
+2025-04-05 07:56:45:     at IdentityProvider.parse_login_request (/Users/sfteam/Documents/nodeApps/Identity Provider/src/config/config.ts:55:18)
+2025-04-05 07:56:45:     at IdentityProvider.parse_login_request (/Users/sfteam/Documents/nodeApps/Identity Provider/src/config/config.ts:55:18)
+2025-04-05 07:56:45:     at IdentityProvider.parse_login_request (/Users/sfteam/Documents/nodeApps/Identity Provider/src/config/config.ts:55:18)
+2025-04-05 07:56:45:     at IdentityProvider.parse_login_request (/Users/sfteam/Documents/nodeApps/Identity Provider/src/config/config.ts:55:18)
+2025-04-05 07:56:45:     at IdentityProvider.parse_login_request (/Users/sfteam/Documents/nodeApps/Identity Provider/src/config/config.ts:55:18)
+2025-04-05 07:56:45:     at IdentityProvider.parse_login_request (/Users/sfteam/Documents/nodeApps/Identity Provider/src/config/config.ts:55:18)
+2025-04-05 07:56:45:     at IdentityProvider.parse_login_request (/Users/sfteam/Documents/nodeApps/Identity Provider/src/config/config.ts:55:18)
+2025-04-05 07:56:45:     at IdentityProvider.parse_login_request (/Users/sfteam/Documents/nodeApps/Identity Provider/src/config/config.ts:55:18)

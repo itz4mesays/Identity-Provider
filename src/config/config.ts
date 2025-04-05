@@ -1,29 +1,32 @@
 import fs from 'fs';
 import path from 'path';
+import envVars from '../validations/validateEnv';
+import { IdentityProvider } from 'saml2-js';
 
-const loadFile = (filename: string): string => {
+export const loadFile = (filename: string): string => {
     const filePath = path.resolve(__dirname, '../../', filename);
     if (!fs.existsSync(filePath)) {
-        throw new Error(`File not found: ${filePath}`);
+        throw new Error(`File not found:${filePath}`);
     }
     return fs.readFileSync(filePath, 'utf8');
 };
 
 export interface IdpConfig {
-    entityId: string;
-    ssoLoginUrl: string;
-    ssoLogoutUrl?: string;
+    entity_id: string;
+    sso_login_url: string;
+    sso_logout_url: string;
     privateKey: string;
     certificates: string[];
     assertEndpoint: string;
 }
 
 export const idpConfig: IdpConfig = {
-    entityId: 'http://localhost:7001/saml/idp',
-    ssoLoginUrl: 'http://localhost:7001/sso/login',
+    entity_id: `${envVars.IDP_PROVIDER_URL}/saml/idp`,
+    sso_login_url: `${envVars.IDP_PROVIDER_URL}/saml/idp/login`,
     certificates: [loadFile('idp-cert.pem')],
     privateKey: loadFile('idp-private-key.pem'),
-    assertEndpoint: 'http://localhost:7001/saml/assert'
+    assertEndpoint: `${envVars.IDP_PROVIDER_URL}/saml/idp/acs`,
+    sso_logout_url: `${envVars.SERVICE_PROVIDER_URL}/saml/sp/logout`
 };
 
 export interface ServiceProviderConfig {
@@ -36,10 +39,14 @@ export interface ServiceProviderConfig {
 
 export const knownServiceProviders: Record<string, ServiceProviderConfig> = {
     sp1: {
-        entityId: 'http://localhost:8000/saml/sp',
+        entityId: `${envVars.SERVICE_PROVIDER_URL}/saml/sp`,
         certificate: loadFile('sp-cert.pem'),
-        audience: 'http://localhost:8000',
-        assertionConsumerService: 'http://localhost:8000/saml/acs',
+        audience: `${envVars.SERVICE_PROVIDER_URL}`,
+        assertionConsumerService: `${envVars.SERVICE_PROVIDER_URL}/saml/acs`,
         wantAssertionsSigned: false
     }
 };
+
+
+// Initialize IdentityProvider WITHOUT method overrides
+export const identityProvider = new IdentityProvider(idpConfig);

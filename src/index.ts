@@ -8,25 +8,22 @@ import { logger } from './utils/logger'
 import bodyParser from 'body-parser'
 import swaggerUi from 'swagger-ui-express'
 import swaggerJsdoc from 'swagger-jsdoc'
-import { getUserByTaxId } from './services/account.service'
-import bcrypt from 'bcrypt'
 import { encrypt } from 'xml-encryption';
 import { promisify } from 'util';
 const encryptAsync = promisify(encrypt)
-import fs from 'fs'
 import path from 'path'
-import { ServiceProvider, IdentityProvider } from 'saml2-js'
 import accountRoute from './routes/account.router'
 import authRoute from './routes/auth.router'
-import { encryptSamlResponse, generateSamlResponse, sendSamlResponse } from './utils/saml.helper'
-import SamlEncryptor from './utils/saml-encryption'
 import mainRoute from './routes/main.router'
 
 
 const app: Application = express();
 
 // Define the list of allowed origins
-const allowedOrigins = ['http://localhost:8000', 'http://localhost:7001'];
+const allowedOrigins = [
+  `${envVars.SERVICE_PROVIDER_URL}`,
+  `${envVars.IDP_PROVIDER_URL}`
+];
 
 // Configure CORS
 app.use(cors({
