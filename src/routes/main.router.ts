@@ -1,4 +1,4 @@
-import { SamlResponse } from './../utils/types';
+import { spConfig } from './../saml/idp';
 import express, { Request, Response, Router } from 'express'
 import { handleError, successResponse } from '../utils/responseHandler'
 import { generateIdpMetadata } from '../config/metadata'
@@ -11,7 +11,7 @@ import bcrypt from 'bcrypt'
 import { signSAMLResponse } from '../config/saml'
 import crypto from 'crypto';
 import xml2js from 'xml2js';
-
+import { ServiceProvider } from 'saml2-js';
 
 const router: Router = express.Router()
 
@@ -72,7 +72,8 @@ router.post('/idp/login', express.urlencoded({ extended: true }), async (req, re
     // Step 4: Handle the response, in this case return success
     return successResponse(res, 200, {
       RelayState: req.body.RelayState,
-      target: authnRequest?.provider?.entity_id
+      target: authnRequest?.provider?.entity_id,
+      samlResponse: decodedSamlRequest
     }, "SAML request processed successfully.");
 
     // Or render a login page or any other logic you require:
@@ -166,6 +167,35 @@ router.get('/idp/health', (req, res) => {
   });
 });
 
+// router.post("/idp/slo", (req, res) => {
+//   const samlRequest = req.body.SAMLRequest;
+//   const relayState = req.body.RelayState;
+
+//   spConfig.parse_logout_request(idpConfig, { request_body: req.body }, (err: Error, logoutRequest: string) => {
+//     if (err) {
+//       console.error("Failed to parse LogoutRequest", err);
+//       return res.status(400).send("Invalid SAML LogoutRequest");
+//     }
+
+//     console.log("Received LogoutRequest for user:", logoutRequest.user.name_id);
+
+//     // Optional: Destroy user session here
+//     // req.session.destroy();
+
+//     // Create and send LogoutResponse back to SP
+//     sspConfigp.create_logout_response_url(idpConfig, logoutRequest, { relay_state: relayState }, (err, logoutUrl) => {
+//       if (err) {
+//         console.error("Failed to create LogoutResponse", err);
+//         return res.status(500).send("Error creating LogoutResponse");
+//       }
+
+//       // Redirect back to SP with the LogoutResponse
+//       res.redirect(logoutUrl);
+//     });
+//   });
+// });
+
+//Optional
 router.post('/idp/acs', (req, res) => {
   res.send('Assertion received by IdP')
 })

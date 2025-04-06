@@ -1,4 +1,4 @@
-import { Individual, PasswordResetToken, User } from "@prisma/client"
+import { PasswordResetToken, User } from "@prisma/client"
 import prisma from "../utils/client"
 
 export const getUserByTaxId = async (taxId: string): Promise<User | null> => {
@@ -35,21 +35,5 @@ export const storePasswordToken = async (obj: any): Promise<PasswordResetToken> 
 export const getPasswordResetToken = async (token: string): Promise<PasswordResetToken | null> => {
     return await prisma.passwordResetToken.findFirst({
         where: { reset_token: String(token) }
-    })
-}
-
-export const createIndividual = async (obj: any): Promise<Individual> => {
-    return await prisma.individual.create({
-        data: obj
-    })
-}
-
-export const singleInvididual = async (type: string, value: any): Promise<Individual | null> => {
-    const whereClause = type === 'tax_id'
-        ? { tax_id: value }
-        : { id: parseInt(value, 10) };  // Explicit base-10 parsing
-
-    return await prisma.individual.findFirst({
-        where: whereClause
     })
 }

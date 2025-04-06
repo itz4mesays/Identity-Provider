@@ -2,14 +2,11 @@ import { Request, Response } from "express";
 import AuthInterface from "../interfaces/auth.interface";
 import { handleError, successResponse } from "../utils/responseHandler";
 import prisma from "../utils/client";
-import { Prisma, UserRoles } from "@prisma/client";
-import { passwordRequestSchema, resetPasswordValidation } from "../validations/form_validations";
+import { passwordRequestSchema, resetPasswordValidation, validateUserPayload } from "../validations/form_validations";
 import { getPasswordResetToken, getUserByTaxId, storePasswordToken, updateUserData } from "../services/account.service";
-import { use } from "passport";
 import { EmailService } from "../services/email.service";
 import { generateVerificationCode, hashPassword } from "../utils/helpers";
 import { retryTransaction } from "../utils/retry.transaction";
-
 
 export default class AuthController implements AuthInterface {
 
@@ -140,6 +137,40 @@ export default class AuthController implements AuthInterface {
 
             return successResponse(res, 200, {}, "Password reset successful. You can now log in with your new password.")
         } catch (error) {
+            return handleError(res, 500, error)
+        }
+    }
+
+    createAuthDetails = async (req: Request, res: Response): Promise<Response> => {
+        try {
+            console.log(`Data received from sp`, req.body)
+            const { error, value } = validateUserPayload.validate(req.body, { abortEarly: false })
+            if (error) {
+                console.log(`Validation error`, error)
+                return handleError(res, 422, error.details[0].message)
+            }
+
+            //check if tax_id has already been registered
+            const verifyID = await prisma.user.findFirst({
+                where: { tax_id: value.tax_id }
+            })
+            if (verifyID)
+                return handleError(res, 409, `Sorry, this ${value.tax_id} has already been registered`)
+
+            const user = await prisma.user.create({
+                data: {
+                    tax_id: value.tax_id,
+                    password: value.password,
+                    date_of_birth: new Date(value.date_of_birth),
+                    role: value.role,
+                    identification_type: value.tax_pay_type,
+                    identification_value: value.identification_value,
+                    email_address: value.email_address
+                }
+            })
+            return successResponse(res, 200, user, "Auth Details created successfully")
+        } catch (error) {
+            console.log(`Internal error`, error)
             return handleError(res, 500, error)
         }
     }

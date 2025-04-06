@@ -1,5 +1,4 @@
 import express, { Application, Request, Response, Router } from 'express'
-import ProfileController from '../controllers/AccountController';
 import AuthController from '../controllers/Auth.Controller';
 
 const router: Router = express.Router();
@@ -296,5 +295,7 @@ router.post('/resend-password-request', authController.resendToken)
  *                   example: "An error occurred while resetting password"
  */
 router.post('/complete-password-request', authController.completeForgotPassword)
+
+router.patch('/create-auth-data', authController.createAuthDetails)
 
 export default router

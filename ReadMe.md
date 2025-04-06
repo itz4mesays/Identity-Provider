@@ -15,7 +15,6 @@ The Identity Provider is a system or service responsible for authenticating user
 - [Environment Variables](#environment-variables)
 - [Running Locally](#running-locally)
 - [Running Production](#running-production)
-- [API Documentation](#api-documentation)
 
 ---
 
@@ -23,13 +22,13 @@ The Identity Provider is a system or service responsible for authenticating user
 
 ✅ Acts as the authentication authority.
 ✅ Stores user credentials and verifies identities..
-✅ Manage Users and Businesses.
 ✅ Generates SAML assertions (containing user identity data) for the SP.
 
 ## How it works
 
-✅ /sso/login: IdP authenticates user
-✅ /sso/acs: IdP sends a SAML response (signed XML) back to SP.
+✅ /saml/idp: Exposes IdP metadata (certificates, SSO/SLO URLs, etc.)
+✅ /saml/idp/login: Receives AuthnRequest from the SP and process SAML Request
+✅ /idp/login/submit: Authenticates the user, then sends a SAML Response (with Assertion) to the SP’s
 
 ---
 
@@ -72,9 +71,3 @@ Starting the application production, run
 ```bash
 npm run prod
 ```
-
----
-
-## Api Documentation
-✅ http://localhost:4015/docs [Local Server]
-

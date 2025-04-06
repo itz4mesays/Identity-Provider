@@ -9,6 +9,11 @@
             "date": 1743884203576,
             "name": "/Users/sfteam/Documents/nodeApps/Identity Provider/src/logs/app-log-2025-04-05.txt",
             "hash": "9018c05896e3535f52fd5333e22b0a321426d28e9c589257fa83e603b7268b3f"
+        },
+        {
+            "date": 1743943156378,
+            "name": "/Users/sfteam/Documents/nodeApps/Identity Provider/src/logs/app-log-2025-04-06.txt",
+            "hash": "ed5d56dc47a2560bc0d0f11cdd70406bee3b432d2ae0c0cd17e242cd1bad7770"
         }
     ],
     "hashType": "sha256"

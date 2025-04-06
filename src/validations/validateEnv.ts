@@ -45,7 +45,7 @@ const envSchema: Joi.ObjectSchema = Joi.object<EnvironmentVariablePayload>({
     MAIL_PASSWORD: Joi.string().required(),
     MAIL_ENCRYPTION: Joi.string().required(),
     MAIL_FROM_ADDRESS: Joi.string().required(),
-    RELAY_STATE: Joi.string().required(),
+    RELAY_STATE: Joi.optional().required(),
     APP_NAME: Joi.string().required(),
     IDP_CERTIFICATE_B64: Joi.string().required(),
     IDP_PRIVATE_KEY_B64: Joi.string().required(),

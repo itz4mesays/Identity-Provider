@@ -1,0 +1,1160 @@
+2025-04-06 13:40:16 [ERROR]: uncaughtException: ⨯ Unable to compile TypeScript:
+[96msrc/controllers/Auth.Controller.ts[0m:[93m11[0m:[93m22[0m - [91merror[0m[90m TS2420: [0mClass 'AuthController' incorrectly implements interface 'AuthInterface'.
+  Property 'createAuthDetails' is missing in type 'AuthController' but required in type 'AuthInterface'.
+
+[7m11[0m export default class AuthController implements AuthInterface {
+[7m  [0m [91m                     ~~~~~~~~~~~~~~[0m
+
+  [96msrc/interfaces/auth.interface.ts[0m:[93m7[0m:[93m5[0m
+    [7m7[0m     createAuthDetails(req: Request, res: Response): Promise<Response>
+    [7m [0m [96m    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+    'createAuthDetails' is declared here.
+
+TSError: ⨯ Unable to compile TypeScript:
+[96msrc/controllers/Auth.Controller.ts[0m:[93m11[0m:[93m22[0m - [91merror[0m[90m TS2420: [0mClass 'AuthController' incorrectly implements interface 'AuthInterface'.
+  Property 'createAuthDetails' is missing in type 'AuthController' but required in type 'AuthInterface'.
+
+[7m11[0m export default class AuthController implements AuthInterface {
+[7m  [0m [91m                     ~~~~~~~~~~~~~~[0m
+
+  [96msrc/interfaces/auth.interface.ts[0m:[93m7[0m:[93m5[0m
+    [7m7[0m     createAuthDetails(req: Request, res: Response): Promise<Response>
+    [7m [0m [96m    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+    'createAuthDetails' is declared here.
+
+    at createTSError (/Users/sfteam/Documents/nodeApps/Identity Provider/node_modules/ts-node/src/index.ts:859:12)
+    at reportTSError (/Users/sfteam/Documents/nodeApps/Identity Provider/node_modules/ts-node/src/index.ts:863:19)
+    at getOutput (/Users/sfteam/Documents/nodeApps/Identity Provider/node_modules/ts-node/src/index.ts:1077:36)
+    at Object.compile (/Users/sfteam/Documents/nodeApps/Identity Provider/node_modules/ts-node/src/index.ts:1433:41)
+    at Module.m._compile (/Users/sfteam/Documents/nodeApps/Identity Provider/node_modules/ts-node/src/index.ts:1617:30)
+    at node:internal/modules/cjs/loader:1905:10
+    at Object.require.extensions.<computed> [as .ts] (/Users/sfteam/Documents/nodeApps/Identity Provider/node_modules/ts-node/src/index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1474:32)
+    at Function._load (node:internal/modules/cjs/loader:1286:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+2025-04-06 13:40:26 [ERROR]: uncaughtException: ⨯ Unable to compile TypeScript:
+[96msrc/routes/auth.router.ts[0m:[93m299[0m:[93m45[0m - [91merror[0m[90m TS2551: [0mProperty 'updateAuthDetails' does not exist on type 'AuthController'. Did you mean 'createAuthDetails'?
+
+[7m299[0m router.patch('/update-data', authController.updateAuthDetails)
+[7m   [0m [91m                                            ~~~~~~~~~~~~~~~~~[0m
+
+  [96msrc/controllers/Auth.Controller.ts[0m:[93m144[0m:[93m5[0m
+    [7m144[0m     createAuthDetails = async (req: Request, res: Response): Promise<Response> => {
+    [7m   [0m [96m    ~~~~~~~~~~~~~~~~~[0m
+    'createAuthDetails' is declared here.
+
+TSError: ⨯ Unable to compile TypeScript:
+[96msrc/routes/auth.router.ts[0m:[93m299[0m:[93m45[0m - [91merror[0m[90m TS2551: [0mProperty 'updateAuthDetails' does not exist on type 'AuthController'. Did you mean 'createAuthDetails'?
+
+[7m299[0m router.patch('/update-data', authController.updateAuthDetails)
+[7m   [0m [91m                                            ~~~~~~~~~~~~~~~~~[0m
+
+  [96msrc/controllers/Auth.Controller.ts[0m:[93m144[0m:[93m5[0m
+    [7m144[0m     createAuthDetails = async (req: Request, res: Response): Promise<Response> => {
+    [7m   [0m [96m    ~~~~~~~~~~~~~~~~~[0m
+    'createAuthDetails' is declared here.
+
+    at createTSError (/Users/sfteam/Documents/nodeApps/Identity Provider/node_modules/ts-node/src/index.ts:859:12)
+    at reportTSError (/Users/sfteam/Documents/nodeApps/Identity Provider/node_modules/ts-node/src/index.ts:863:19)
+    at getOutput (/Users/sfteam/Documents/nodeApps/Identity Provider/node_modules/ts-node/src/index.ts:1077:36)
+    at Object.compile (/Users/sfteam/Documents/nodeApps/Identity Provider/node_modules/ts-node/src/index.ts:1433:41)
+    at Module.m._compile (/Users/sfteam/Documents/nodeApps/Identity Provider/node_modules/ts-node/src/index.ts:1617:30)
+    at node:internal/modules/cjs/loader:1905:10
+    at Object.require.extensions.<computed> [as .ts] (/Users/sfteam/Documents/nodeApps/Identity Provider/node_modules/ts-node/src/index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1474:32)
+    at Function._load (node:internal/modules/cjs/loader:1286:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+2025-04-06 14:02:29 [ERROR]: uncaughtException: ⨯ Unable to compile TypeScript:
+[96msrc/controllers/Auth.Controller.ts[0m:[93m146[0m:[93m53[0m - [91merror[0m[90m TS2322: [0mType '{}' is not assignable to type '(Without<UserCreateInput, UserUncheckedCreateInput> & UserUncheckedCreateInput) | (Without<...> & UserCreateInput)'.
+
+[7m146[0m             const user = await prisma.user.create({ data: {} })
+[7m   [0m [91m                                                    ~~~~[0m
+
+  [96mnode_modules/.prisma/client/index.d.ts[0m:[93m1987[0m:[93m5[0m
+    [7m1987[0m     data: XOR<UserCreateInput, UserUncheckedCreateInput>
+    [7m    [0m [96m    ~~~~[0m
+    The expected type comes from property 'data' which is declared here on type '{ select?: UserSelect<DefaultArgs>; omit?: UserOmit<DefaultArgs>; include?: UserInclude<DefaultArgs>; data: (Without<...> & UserUncheckedCreateInput) | (Without<...> & UserCreateInput); }'
+
+TSError: ⨯ Unable to compile TypeScript:
+[96msrc/controllers/Auth.Controller.ts[0m:[93m146[0m:[93m53[0m - [91merror[0m[90m TS2322: [0mType '{}' is not assignable to type '(Without<UserCreateInput, UserUncheckedCreateInput> & UserUncheckedCreateInput) | (Without<...> & UserCreateInput)'.
+
+[7m146[0m             const user = await prisma.user.create({ data: {} })
+[7m   [0m [91m                                                    ~~~~[0m
+
+  [96mnode_modules/.prisma/client/index.d.ts[0m:[93m1987[0m:[93m5[0m
+    [7m1987[0m     data: XOR<UserCreateInput, UserUncheckedCreateInput>
+    [7m    [0m [96m    ~~~~[0m
+    The expected type comes from property 'data' which is declared here on type '{ select?: UserSelect<DefaultArgs>; omit?: UserOmit<DefaultArgs>; include?: UserInclude<DefaultArgs>; data: (Without<...> & UserUncheckedCreateInput) | (Without<...> & UserCreateInput); }'
+
+    at createTSError (/Users/sfteam/Documents/nodeApps/Identity Provider/node_modules/ts-node/src/index.ts:859:12)
+    at reportTSError (/Users/sfteam/Documents/nodeApps/Identity Provider/node_modules/ts-node/src/index.ts:863:19)
+    at getOutput (/Users/sfteam/Documents/nodeApps/Identity Provider/node_modules/ts-node/src/index.ts:1077:36)
+    at Object.compile (/Users/sfteam/Documents/nodeApps/Identity Provider/node_modules/ts-node/src/index.ts:1433:41)
+    at Module.m._compile (/Users/sfteam/Documents/nodeApps/Identity Provider/node_modules/ts-node/src/index.ts:1617:30)
+    at node:internal/modules/cjs/loader:1905:10
+    at Object.require.extensions.<computed> [as .ts] (/Users/sfteam/Documents/nodeApps/Identity Provider/node_modules/ts-node/src/index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1474:32)
+    at Function._load (node:internal/modules/cjs/loader:1286:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+2025-04-06 14:03:33 [ERROR]: uncaughtException: ⨯ Unable to compile TypeScript:
+[96msrc/controllers/Auth.Controller.ts[0m:[93m147[0m:[93m17[0m - [91merror[0m[90m TS2322: [0mType '{ tax_id: any; }' is not assignable to type '(Without<UserCreateInput, UserUncheckedCreateInput> & UserUncheckedCreateInput) | (Without<...> & UserCreateInput)'.
+  Type '{ tax_id: any; }' is not assignable to type 'Without<UserUncheckedCreateInput, UserCreateInput> & UserCreateInput'.
+    Type '{ tax_id: any; }' is missing the following properties from type 'UserCreateInput': password, role
+
+[7m147[0m                 data: {
+[7m   [0m [91m                ~~~~[0m
+
+  [96mnode_modules/.prisma/client/index.d.ts[0m:[93m1987[0m:[93m5[0m
+    [7m1987[0m     data: XOR<UserCreateInput, UserUncheckedCreateInput>
+    [7m    [0m [96m    ~~~~[0m
+    The expected type comes from property 'data' which is declared here on type '{ select?: UserSelect<DefaultArgs>; omit?: UserOmit<DefaultArgs>; include?: UserInclude<DefaultArgs>; data: (Without<...> & UserUncheckedCreateInput) | (Without<...> & UserCreateInput); }'
+
+TSError: ⨯ Unable to compile TypeScript:
+[96msrc/controllers/Auth.Controller.ts[0m:[93m147[0m:[93m17[0m - [91merror[0m[90m TS2322: [0mType '{ tax_id: any; }' is not assignable to type '(Without<UserCreateInput, UserUncheckedCreateInput> & UserUncheckedCreateInput) | (Without<...> & UserCreateInput)'.
+  Type '{ tax_id: any; }' is not assignable to type 'Without<UserUncheckedCreateInput, UserCreateInput> & UserCreateInput'.
+    Type '{ tax_id: any; }' is missing the following properties from type 'UserCreateInput': password, role
+
+[7m147[0m                 data: {
+[7m   [0m [91m                ~~~~[0m
+
+  [96mnode_modules/.prisma/client/index.d.ts[0m:[93m1987[0m:[93m5[0m
+    [7m1987[0m     data: XOR<UserCreateInput, UserUncheckedCreateInput>
+    [7m    [0m [96m    ~~~~[0m
+    The expected type comes from property 'data' which is declared here on type '{ select?: UserSelect<DefaultArgs>; omit?: UserOmit<DefaultArgs>; include?: UserInclude<DefaultArgs>; data: (Without<...> & UserUncheckedCreateInput) | (Without<...> & UserCreateInput); }'
+
+    at createTSError (/Users/sfteam/Documents/nodeApps/Identity Provider/node_modules/ts-node/src/index.ts:859:12)
+    at reportTSError (/Users/sfteam/Documents/nodeApps/Identity Provider/node_modules/ts-node/src/index.ts:863:19)
+    at getOutput (/Users/sfteam/Documents/nodeApps/Identity Provider/node_modules/ts-node/src/index.ts:1077:36)
+    at Object.compile (/Users/sfteam/Documents/nodeApps/Identity Provider/node_modules/ts-node/src/index.ts:1433:41)
+    at Module.m._compile (/Users/sfteam/Documents/nodeApps/Identity Provider/node_modules/ts-node/src/index.ts:1617:30)
+    at node:internal/modules/cjs/loader:1905:10
+    at Object.require.extensions.<computed> [as .ts] (/Users/sfteam/Documents/nodeApps/Identity Provider/node_modules/ts-node/src/index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1474:32)
+    at Function._load (node:internal/modules/cjs/loader:1286:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+2025-04-06 14:05:06 [ERROR]: uncaughtException: ⨯ Unable to compile TypeScript:
+[96msrc/controllers/Auth.Controller.ts[0m:[93m147[0m:[93m17[0m - [91merror[0m[90m TS2322: [0mType '{ tax_id: any; }' is not assignable to type '(Without<UserCreateInput, UserUncheckedCreateInput> & UserUncheckedCreateInput) | (Without<...> & UserCreateInput)'.
+  Type '{ tax_id: any; }' is not assignable to type 'Without<UserUncheckedCreateInput, UserCreateInput> & UserCreateInput'.
+    Type '{ tax_id: any; }' is missing the following properties from type 'UserCreateInput': password, role
+
+[7m147[0m                 data: {
+[7m   [0m [91m                ~~~~[0m
+
+  [96mnode_modules/.prisma/client/index.d.ts[0m:[93m1863[0m:[93m5[0m
+    [7m1863[0m     data: XOR<UserCreateInput, UserUncheckedCreateInput>
+    [7m    [0m [96m    ~~~~[0m
+    The expected type comes from property 'data' which is declared here on type '{ select?: UserSelect<DefaultArgs>; omit?: UserOmit<DefaultArgs>; include?: UserInclude<DefaultArgs>; data: (Without<...> & UserUncheckedCreateInput) | (Without<...> & UserCreateInput); }'
+
+TSError: ⨯ Unable to compile TypeScript:
+[96msrc/controllers/Auth.Controller.ts[0m:[93m147[0m:[93m17[0m - [91merror[0m[90m TS2322: [0mType '{ tax_id: any; }' is not assignable to type '(Without<UserCreateInput, UserUncheckedCreateInput> & UserUncheckedCreateInput) | (Without<...> & UserCreateInput)'.
+  Type '{ tax_id: any; }' is not assignable to type 'Without<UserUncheckedCreateInput, UserCreateInput> & UserCreateInput'.
+    Type '{ tax_id: any; }' is missing the following properties from type 'UserCreateInput': password, role
+
+[7m147[0m                 data: {
+[7m   [0m [91m                ~~~~[0m
+
+  [96mnode_modules/.prisma/client/index.d.ts[0m:[93m1863[0m:[93m5[0m
+    [7m1863[0m     data: XOR<UserCreateInput, UserUncheckedCreateInput>
+    [7m    [0m [96m    ~~~~[0m
+    The expected type comes from property 'data' which is declared here on type '{ select?: UserSelect<DefaultArgs>; omit?: UserOmit<DefaultArgs>; include?: UserInclude<DefaultArgs>; data: (Without<...> & UserUncheckedCreateInput) | (Without<...> & UserCreateInput); }'
+
+    at createTSError (/Users/sfteam/Documents/nodeApps/Identity Provider/node_modules/ts-node/src/index.ts:859:12)
+    at reportTSError (/Users/sfteam/Documents/nodeApps/Identity Provider/node_modules/ts-node/src/index.ts:863:19)
+    at getOutput (/Users/sfteam/Documents/nodeApps/Identity Provider/node_modules/ts-node/src/index.ts:1077:36)
+    at Object.compile (/Users/sfteam/Documents/nodeApps/Identity Provider/node_modules/ts-node/src/index.ts:1433:41)
+    at Module.m._compile (/Users/sfteam/Documents/nodeApps/Identity Provider/node_modules/ts-node/src/index.ts:1617:30)
+    at node:internal/modules/cjs/loader:1905:10
+    at Object.require.extensions.<computed> [as .ts] (/Users/sfteam/Documents/nodeApps/Identity Provider/node_modules/ts-node/src/index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1474:32)
+    at Function._load (node:internal/modules/cjs/loader:1286:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+2025-04-06 14:05:24 [ERROR]: uncaughtException: ⨯ Unable to compile TypeScript:
+[96msrc/controllers/Auth.Controller.ts[0m:[93m147[0m:[93m17[0m - [91merror[0m[90m TS2322: [0mType '{ tax_id: any; password: any; }' is not assignable to type '(Without<UserCreateInput, UserUncheckedCreateInput> & UserUncheckedCreateInput) | (Without<...> & UserCreateInput)'.
+  Type '{ tax_id: any; password: any; }' is not assignable to type 'Without<UserUncheckedCreateInput, UserCreateInput> & UserCreateInput'.
+    Property 'role' is missing in type '{ tax_id: any; password: any; }' but required in type 'UserCreateInput'.
+
+[7m147[0m                 data: {
+[7m   [0m [91m                ~~~~[0m
+
+  [96mnode_modules/.prisma/client/index.d.ts[0m:[93m3269[0m:[93m5[0m
+    [7m3269[0m     role: $Enums.UserRoles
+    [7m    [0m [96m    ~~~~[0m
+    'role' is declared here.
+  [96mnode_modules/.prisma/client/index.d.ts[0m:[93m1863[0m:[93m5[0m
+    [7m1863[0m     data: XOR<UserCreateInput, UserUncheckedCreateInput>
+    [7m    [0m [96m    ~~~~[0m
+    The expected type comes from property 'data' which is declared here on type '{ select?: UserSelect<DefaultArgs>; omit?: UserOmit<DefaultArgs>; include?: UserInclude<DefaultArgs>; data: (Without<...> & UserUncheckedCreateInput) | (Without<...> & UserCreateInput); }'
+
+TSError: ⨯ Unable to compile TypeScript:
+[96msrc/controllers/Auth.Controller.ts[0m:[93m147[0m:[93m17[0m - [91merror[0m[90m TS2322: [0mType '{ tax_id: any; password: any; }' is not assignable to type '(Without<UserCreateInput, UserUncheckedCreateInput> & UserUncheckedCreateInput) | (Without<...> & UserCreateInput)'.
+  Type '{ tax_id: any; password: any; }' is not assignable to type 'Without<UserUncheckedCreateInput, UserCreateInput> & UserCreateInput'.
+    Property 'role' is missing in type '{ tax_id: any; password: any; }' but required in type 'UserCreateInput'.
+
+[7m147[0m                 data: {
+[7m   [0m [91m                ~~~~[0m
+
+  [96mnode_modules/.prisma/client/index.d.ts[0m:[93m3269[0m:[93m5[0m
+    [7m3269[0m     role: $Enums.UserRoles
+    [7m    [0m [96m    ~~~~[0m
+    'role' is declared here.
+  [96mnode_modules/.prisma/client/index.d.ts[0m:[93m1863[0m:[93m5[0m
+    [7m1863[0m     data: XOR<UserCreateInput, UserUncheckedCreateInput>
+    [7m    [0m [96m    ~~~~[0m
+    The expected type comes from property 'data' which is declared here on type '{ select?: UserSelect<DefaultArgs>; omit?: UserOmit<DefaultArgs>; include?: UserInclude<DefaultArgs>; data: (Without<...> & UserUncheckedCreateInput) | (Without<...> & UserCreateInput); }'
+
+    at createTSError (/Users/sfteam/Documents/nodeApps/Identity Provider/node_modules/ts-node/src/index.ts:859:12)
+    at reportTSError (/Users/sfteam/Documents/nodeApps/Identity Provider/node_modules/ts-node/src/index.ts:863:19)
+    at getOutput (/Users/sfteam/Documents/nodeApps/Identity Provider/node_modules/ts-node/src/index.ts:1077:36)
+    at Object.compile (/Users/sfteam/Documents/nodeApps/Identity Provider/node_modules/ts-node/src/index.ts:1433:41)
+    at Module.m._compile (/Users/sfteam/Documents/nodeApps/Identity Provider/node_modules/ts-node/src/index.ts:1617:30)
+    at node:internal/modules/cjs/loader:1905:10
+    at Object.require.extensions.<computed> [as .ts] (/Users/sfteam/Documents/nodeApps/Identity Provider/node_modules/ts-node/src/index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1474:32)
+    at Function._load (node:internal/modules/cjs/loader:1286:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+2025-04-06 14:05:32 [ERROR]: uncaughtException: ⨯ Unable to compile TypeScript:
+[96msrc/controllers/Auth.Controller.ts[0m:[93m147[0m:[93m17[0m - [91merror[0m[90m TS2322: [0mType '{ tax_id: any; password: any; date_of_birth: any; }' is not assignable to type '(Without<UserCreateInput, UserUncheckedCreateInput> & UserUncheckedCreateInput) | (Without<...> & UserCreateInput)'.
+  Type '{ tax_id: any; password: any; date_of_birth: any; }' is not assignable to type 'Without<UserUncheckedCreateInput, UserCreateInput> & UserCreateInput'.
+    Property 'role' is missing in type '{ tax_id: any; password: any; date_of_birth: any; }' but required in type 'UserCreateInput'.
+
+[7m147[0m                 data: {
+[7m   [0m [91m                ~~~~[0m
+
+  [96mnode_modules/.prisma/client/index.d.ts[0m:[93m3269[0m:[93m5[0m
+    [7m3269[0m     role: $Enums.UserRoles
+    [7m    [0m [96m    ~~~~[0m
+    'role' is declared here.
+  [96mnode_modules/.prisma/client/index.d.ts[0m:[93m1863[0m:[93m5[0m
+    [7m1863[0m     data: XOR<UserCreateInput, UserUncheckedCreateInput>
+    [7m    [0m [96m    ~~~~[0m
+    The expected type comes from property 'data' which is declared here on type '{ select?: UserSelect<DefaultArgs>; omit?: UserOmit<DefaultArgs>; include?: UserInclude<DefaultArgs>; data: (Without<...> & UserUncheckedCreateInput) | (Without<...> & UserCreateInput); }'
+
+TSError: ⨯ Unable to compile TypeScript:
+[96msrc/controllers/Auth.Controller.ts[0m:[93m147[0m:[93m17[0m - [91merror[0m[90m TS2322: [0mType '{ tax_id: any; password: any; date_of_birth: any; }' is not assignable to type '(Without<UserCreateInput, UserUncheckedCreateInput> & UserUncheckedCreateInput) | (Without<...> & UserCreateInput)'.
+  Type '{ tax_id: any; password: any; date_of_birth: any; }' is not assignable to type 'Without<UserUncheckedCreateInput, UserCreateInput> & UserCreateInput'.
+    Property 'role' is missing in type '{ tax_id: any; password: any; date_of_birth: any; }' but required in type 'UserCreateInput'.
+
+[7m147[0m                 data: {
+[7m   [0m [91m                ~~~~[0m
+
+  [96mnode_modules/.prisma/client/index.d.ts[0m:[93m3269[0m:[93m5[0m
+    [7m3269[0m     role: $Enums.UserRoles
+    [7m    [0m [96m    ~~~~[0m
+    'role' is declared here.
+  [96mnode_modules/.prisma/client/index.d.ts[0m:[93m1863[0m:[93m5[0m
+    [7m1863[0m     data: XOR<UserCreateInput, UserUncheckedCreateInput>
+    [7m    [0m [96m    ~~~~[0m
+    The expected type comes from property 'data' which is declared here on type '{ select?: UserSelect<DefaultArgs>; omit?: UserOmit<DefaultArgs>; include?: UserInclude<DefaultArgs>; data: (Without<...> & UserUncheckedCreateInput) | (Without<...> & UserCreateInput); }'
+
+    at createTSError (/Users/sfteam/Documents/nodeApps/Identity Provider/node_modules/ts-node/src/index.ts:859:12)
+    at reportTSError (/Users/sfteam/Documents/nodeApps/Identity Provider/node_modules/ts-node/src/index.ts:863:19)
+    at getOutput (/Users/sfteam/Documents/nodeApps/Identity Provider/node_modules/ts-node/src/index.ts:1077:36)
+    at Object.compile (/Users/sfteam/Documents/nodeApps/Identity Provider/node_modules/ts-node/src/index.ts:1433:41)
+    at Module.m._compile (/Users/sfteam/Documents/nodeApps/Identity Provider/node_modules/ts-node/src/index.ts:1617:30)
+    at node:internal/modules/cjs/loader:1905:10
+    at Object.require.extensions.<computed> [as .ts] (/Users/sfteam/Documents/nodeApps/Identity Provider/node_modules/ts-node/src/index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1474:32)
+    at Function._load (node:internal/modules/cjs/loader:1286:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+2025-04-06 14:05:40 [ERROR]: uncaughtException: ⨯ Unable to compile TypeScript:
+[96msrc/validations/form_validations.ts[0m:[93m1[0m:[93m10[0m - [91merror[0m[90m TS2305: [0mModule '"@prisma/client"' has no exported member 'GenderTypes'.
+
+[7m1[0m import { GenderTypes, IdentificationType, MaritalStatus, Options } from '@prisma/client';
+[7m [0m [91m         ~~~~~~~~~~~[0m
+[96msrc/validations/form_validations.ts[0m:[93m1[0m:[93m43[0m - [91merror[0m[90m TS2305: [0mModule '"@prisma/client"' has no exported member 'MaritalStatus'.
+
+[7m1[0m import { GenderTypes, IdentificationType, MaritalStatus, Options } from '@prisma/client';
+[7m [0m [91m                                          ~~~~~~~~~~~~~[0m
+[96msrc/validations/form_validations.ts[0m:[93m1[0m:[93m58[0m - [91merror[0m[90m TS2305: [0mModule '"@prisma/client"' has no exported member 'Options'.
+
+[7m1[0m import { GenderTypes, IdentificationType, MaritalStatus, Options } from '@prisma/client';
+[7m [0m [91m                                                         ~~~~~~~[0m
+
+TSError: ⨯ Unable to compile TypeScript:
+[96msrc/validations/form_validations.ts[0m:[93m1[0m:[93m10[0m - [91merror[0m[90m TS2305: [0mModule '"@prisma/client"' has no exported member 'GenderTypes'.
+
+[7m1[0m import { GenderTypes, IdentificationType, MaritalStatus, Options } from '@prisma/client';
+[7m [0m [91m         ~~~~~~~~~~~[0m
+[96msrc/validations/form_validations.ts[0m:[93m1[0m:[93m43[0m - [91merror[0m[90m TS2305: [0mModule '"@prisma/client"' has no exported member 'MaritalStatus'.
+
+[7m1[0m import { GenderTypes, IdentificationType, MaritalStatus, Options } from '@prisma/client';
+[7m [0m [91m                                          ~~~~~~~~~~~~~[0m
+[96msrc/validations/form_validations.ts[0m:[93m1[0m:[93m58[0m - [91merror[0m[90m TS2305: [0mModule '"@prisma/client"' has no exported member 'Options'.
+
+[7m1[0m import { GenderTypes, IdentificationType, MaritalStatus, Options } from '@prisma/client';
+[7m [0m [91m                                                         ~~~~~~~[0m
+
+    at createTSError (/Users/sfteam/Documents/nodeApps/Identity Provider/node_modules/ts-node/src/index.ts:859:12)
+    at reportTSError (/Users/sfteam/Documents/nodeApps/Identity Provider/node_modules/ts-node/src/index.ts:863:19)
+    at getOutput (/Users/sfteam/Documents/nodeApps/Identity Provider/node_modules/ts-node/src/index.ts:1077:36)
+    at Object.compile (/Users/sfteam/Documents/nodeApps/Identity Provider/node_modules/ts-node/src/index.ts:1433:41)
+    at Module.m._compile (/Users/sfteam/Documents/nodeApps/Identity Provider/node_modules/ts-node/src/index.ts:1617:30)
+    at node:internal/modules/cjs/loader:1905:10
+    at Object.require.extensions.<computed> [as .ts] (/Users/sfteam/Documents/nodeApps/Identity Provider/node_modules/ts-node/src/index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1474:32)
+    at Function._load (node:internal/modules/cjs/loader:1286:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+2025-04-06 14:06:30 [ERROR]: uncaughtException: ⨯ Unable to compile TypeScript:
+[96msrc/validations/form_validations.ts[0m:[93m1[0m:[93m10[0m - [91merror[0m[90m TS2305: [0mModule '"@prisma/client"' has no exported member 'GenderTypes'.
+
+[7m1[0m import { GenderTypes, IdentificationType, MaritalStatus, Options } from '@prisma/client';
+[7m [0m [91m         ~~~~~~~~~~~[0m
+[96msrc/validations/form_validations.ts[0m:[93m1[0m:[93m43[0m - [91merror[0m[90m TS2305: [0mModule '"@prisma/client"' has no exported member 'MaritalStatus'.
+
+[7m1[0m import { GenderTypes, IdentificationType, MaritalStatus, Options } from '@prisma/client';
+[7m [0m [91m                                          ~~~~~~~~~~~~~[0m
+[96msrc/validations/form_validations.ts[0m:[93m1[0m:[93m58[0m - [91merror[0m[90m TS2305: [0mModule '"@prisma/client"' has no exported member 'Options'.
+
+[7m1[0m import { GenderTypes, IdentificationType, MaritalStatus, Options } from '@prisma/client';
+[7m [0m [91m                                                         ~~~~~~~[0m
+
+TSError: ⨯ Unable to compile TypeScript:
+[96msrc/validations/form_validations.ts[0m:[93m1[0m:[93m10[0m - [91merror[0m[90m TS2305: [0mModule '"@prisma/client"' has no exported member 'GenderTypes'.
+
+[7m1[0m import { GenderTypes, IdentificationType, MaritalStatus, Options } from '@prisma/client';
+[7m [0m [91m         ~~~~~~~~~~~[0m
+[96msrc/validations/form_validations.ts[0m:[93m1[0m:[93m43[0m - [91merror[0m[90m TS2305: [0mModule '"@prisma/client"' has no exported member 'MaritalStatus'.
+
+[7m1[0m import { GenderTypes, IdentificationType, MaritalStatus, Options } from '@prisma/client';
+[7m [0m [91m                                          ~~~~~~~~~~~~~[0m
+[96msrc/validations/form_validations.ts[0m:[93m1[0m:[93m58[0m - [91merror[0m[90m TS2305: [0mModule '"@prisma/client"' has no exported member 'Options'.
+
+[7m1[0m import { GenderTypes, IdentificationType, MaritalStatus, Options } from '@prisma/client';
+[7m [0m [91m                                                         ~~~~~~~[0m
+
+    at createTSError (/Users/sfteam/Documents/nodeApps/Identity Provider/node_modules/ts-node/src/index.ts:859:12)
+    at reportTSError (/Users/sfteam/Documents/nodeApps/Identity Provider/node_modules/ts-node/src/index.ts:863:19)
+    at getOutput (/Users/sfteam/Documents/nodeApps/Identity Provider/node_modules/ts-node/src/index.ts:1077:36)
+    at Object.compile (/Users/sfteam/Documents/nodeApps/Identity Provider/node_modules/ts-node/src/index.ts:1433:41)
+    at Module.m._compile (/Users/sfteam/Documents/nodeApps/Identity Provider/node_modules/ts-node/src/index.ts:1617:30)
+    at node:internal/modules/cjs/loader:1905:10
+    at Object.require.extensions.<computed> [as .ts] (/Users/sfteam/Documents/nodeApps/Identity Provider/node_modules/ts-node/src/index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1474:32)
+    at Function._load (node:internal/modules/cjs/loader:1286:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+2025-04-06 14:06:37 [ERROR]: uncaughtException: ⨯ Unable to compile TypeScript:
+[96msrc/validations/form_validations.ts[0m:[93m1[0m:[93m10[0m - [91merror[0m[90m TS2305: [0mModule '"@prisma/client"' has no exported member 'GenderTypes'.
+
+[7m1[0m import { GenderTypes, IdentificationType, MaritalStatus, Options } from '@prisma/client';
+[7m [0m [91m         ~~~~~~~~~~~[0m
+[96msrc/validations/form_validations.ts[0m:[93m1[0m:[93m43[0m - [91merror[0m[90m TS2305: [0mModule '"@prisma/client"' has no exported member 'MaritalStatus'.
+
+[7m1[0m import { GenderTypes, IdentificationType, MaritalStatus, Options } from '@prisma/client';
+[7m [0m [91m                                          ~~~~~~~~~~~~~[0m
+[96msrc/validations/form_validations.ts[0m:[93m1[0m:[93m58[0m - [91merror[0m[90m TS2305: [0mModule '"@prisma/client"' has no exported member 'Options'.
+
+[7m1[0m import { GenderTypes, IdentificationType, MaritalStatus, Options } from '@prisma/client';
+[7m [0m [91m                                                         ~~~~~~~[0m
+
+TSError: ⨯ Unable to compile TypeScript:
+[96msrc/validations/form_validations.ts[0m:[93m1[0m:[93m10[0m - [91merror[0m[90m TS2305: [0mModule '"@prisma/client"' has no exported member 'GenderTypes'.
+
+[7m1[0m import { GenderTypes, IdentificationType, MaritalStatus, Options } from '@prisma/client';
+[7m [0m [91m         ~~~~~~~~~~~[0m
+[96msrc/validations/form_validations.ts[0m:[93m1[0m:[93m43[0m - [91merror[0m[90m TS2305: [0mModule '"@prisma/client"' has no exported member 'MaritalStatus'.
+
+[7m1[0m import { GenderTypes, IdentificationType, MaritalStatus, Options } from '@prisma/client';
+[7m [0m [91m                                          ~~~~~~~~~~~~~[0m
+[96msrc/validations/form_validations.ts[0m:[93m1[0m:[93m58[0m - [91merror[0m[90m TS2305: [0mModule '"@prisma/client"' has no exported member 'Options'.
+
+[7m1[0m import { GenderTypes, IdentificationType, MaritalStatus, Options } from '@prisma/client';
+[7m [0m [91m                                                         ~~~~~~~[0m
+
+    at createTSError (/Users/sfteam/Documents/nodeApps/Identity Provider/node_modules/ts-node/src/index.ts:859:12)
+    at reportTSError (/Users/sfteam/Documents/nodeApps/Identity Provider/node_modules/ts-node/src/index.ts:863:19)
+    at getOutput (/Users/sfteam/Documents/nodeApps/Identity Provider/node_modules/ts-node/src/index.ts:1077:36)
+    at Object.compile (/Users/sfteam/Documents/nodeApps/Identity Provider/node_modules/ts-node/src/index.ts:1433:41)
+    at Module.m._compile (/Users/sfteam/Documents/nodeApps/Identity Provider/node_modules/ts-node/src/index.ts:1617:30)
+    at node:internal/modules/cjs/loader:1905:10
+    at Object.require.extensions.<computed> [as .ts] (/Users/sfteam/Documents/nodeApps/Identity Provider/node_modules/ts-node/src/index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1474:32)
+    at Function._load (node:internal/modules/cjs/loader:1286:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+2025-04-06 14:06:43 [ERROR]: uncaughtException: ⨯ Unable to compile TypeScript:
+[96msrc/validations/form_validations.ts[0m:[93m1[0m:[93m10[0m - [91merror[0m[90m TS2305: [0mModule '"@prisma/client"' has no exported member 'GenderTypes'.
+
+[7m1[0m import { GenderTypes, IdentificationType, MaritalStatus, Options } from '@prisma/client';
+[7m [0m [91m         ~~~~~~~~~~~[0m
+[96msrc/validations/form_validations.ts[0m:[93m1[0m:[93m43[0m - [91merror[0m[90m TS2305: [0mModule '"@prisma/client"' has no exported member 'MaritalStatus'.
+
+[7m1[0m import { GenderTypes, IdentificationType, MaritalStatus, Options } from '@prisma/client';
+[7m [0m [91m                                          ~~~~~~~~~~~~~[0m
+[96msrc/validations/form_validations.ts[0m:[93m1[0m:[93m58[0m - [91merror[0m[90m TS2305: [0mModule '"@prisma/client"' has no exported member 'Options'.
+
+[7m1[0m import { GenderTypes, IdentificationType, MaritalStatus, Options } from '@prisma/client';
+[7m [0m [91m                                                         ~~~~~~~[0m
+
+TSError: ⨯ Unable to compile TypeScript:
+[96msrc/validations/form_validations.ts[0m:[93m1[0m:[93m10[0m - [91merror[0m[90m TS2305: [0mModule '"@prisma/client"' has no exported member 'GenderTypes'.
+
+[7m1[0m import { GenderTypes, IdentificationType, MaritalStatus, Options } from '@prisma/client';
+[7m [0m [91m         ~~~~~~~~~~~[0m
+[96msrc/validations/form_validations.ts[0m:[93m1[0m:[93m43[0m - [91merror[0m[90m TS2305: [0mModule '"@prisma/client"' has no exported member 'MaritalStatus'.
+
+[7m1[0m import { GenderTypes, IdentificationType, MaritalStatus, Options } from '@prisma/client';
+[7m [0m [91m                                          ~~~~~~~~~~~~~[0m
+[96msrc/validations/form_validations.ts[0m:[93m1[0m:[93m58[0m - [91merror[0m[90m TS2305: [0mModule '"@prisma/client"' has no exported member 'Options'.
+
+[7m1[0m import { GenderTypes, IdentificationType, MaritalStatus, Options } from '@prisma/client';
+[7m [0m [91m                                                         ~~~~~~~[0m
+
+    at createTSError (/Users/sfteam/Documents/nodeApps/Identity Provider/node_modules/ts-node/src/index.ts:859:12)
+    at reportTSError (/Users/sfteam/Documents/nodeApps/Identity Provider/node_modules/ts-node/src/index.ts:863:19)
+    at getOutput (/Users/sfteam/Documents/nodeApps/Identity Provider/node_modules/ts-node/src/index.ts:1077:36)
+    at Object.compile (/Users/sfteam/Documents/nodeApps/Identity Provider/node_modules/ts-node/src/index.ts:1433:41)
+    at Module.m._compile (/Users/sfteam/Documents/nodeApps/Identity Provider/node_modules/ts-node/src/index.ts:1617:30)
+    at node:internal/modules/cjs/loader:1905:10
+    at Object.require.extensions.<computed> [as .ts] (/Users/sfteam/Documents/nodeApps/Identity Provider/node_modules/ts-node/src/index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1474:32)
+    at Function._load (node:internal/modules/cjs/loader:1286:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+2025-04-06 14:06:56 [ERROR]: uncaughtException: ⨯ Unable to compile TypeScript:
+[96msrc/validations/form_validations.ts[0m:[93m1[0m:[93m10[0m - [91merror[0m[90m TS2305: [0mModule '"@prisma/client"' has no exported member 'GenderTypes'.
+
+[7m1[0m import { GenderTypes, IdentificationType, MaritalStatus, Options } from '@prisma/client';
+[7m [0m [91m         ~~~~~~~~~~~[0m
+[96msrc/validations/form_validations.ts[0m:[93m1[0m:[93m43[0m - [91merror[0m[90m TS2305: [0mModule '"@prisma/client"' has no exported member 'MaritalStatus'.
+
+[7m1[0m import { GenderTypes, IdentificationType, MaritalStatus, Options } from '@prisma/client';
+[7m [0m [91m                                          ~~~~~~~~~~~~~[0m
+[96msrc/validations/form_validations.ts[0m:[93m1[0m:[93m58[0m - [91merror[0m[90m TS2305: [0mModule '"@prisma/client"' has no exported member 'Options'.
+
+[7m1[0m import { GenderTypes, IdentificationType, MaritalStatus, Options } from '@prisma/client';
+[7m [0m [91m                                                         ~~~~~~~[0m
+
+TSError: ⨯ Unable to compile TypeScript:
+[96msrc/validations/form_validations.ts[0m:[93m1[0m:[93m10[0m - [91merror[0m[90m TS2305: [0mModule '"@prisma/client"' has no exported member 'GenderTypes'.
+
+[7m1[0m import { GenderTypes, IdentificationType, MaritalStatus, Options } from '@prisma/client';
+[7m [0m [91m         ~~~~~~~~~~~[0m
+[96msrc/validations/form_validations.ts[0m:[93m1[0m:[93m43[0m - [91merror[0m[90m TS2305: [0mModule '"@prisma/client"' has no exported member 'MaritalStatus'.
+
+[7m1[0m import { GenderTypes, IdentificationType, MaritalStatus, Options } from '@prisma/client';
+[7m [0m [91m                                          ~~~~~~~~~~~~~[0m
+[96msrc/validations/form_validations.ts[0m:[93m1[0m:[93m58[0m - [91merror[0m[90m TS2305: [0mModule '"@prisma/client"' has no exported member 'Options'.
+
+[7m1[0m import { GenderTypes, IdentificationType, MaritalStatus, Options } from '@prisma/client';
+[7m [0m [91m                                                         ~~~~~~~[0m
+
+    at createTSError (/Users/sfteam/Documents/nodeApps/Identity Provider/node_modules/ts-node/src/index.ts:859:12)
+    at reportTSError (/Users/sfteam/Documents/nodeApps/Identity Provider/node_modules/ts-node/src/index.ts:863:19)
+    at getOutput (/Users/sfteam/Documents/nodeApps/Identity Provider/node_modules/ts-node/src/index.ts:1077:36)
+    at Object.compile (/Users/sfteam/Documents/nodeApps/Identity Provider/node_modules/ts-node/src/index.ts:1433:41)
+    at Module.m._compile (/Users/sfteam/Documents/nodeApps/Identity Provider/node_modules/ts-node/src/index.ts:1617:30)
+    at node:internal/modules/cjs/loader:1905:10
+    at Object.require.extensions.<computed> [as .ts] (/Users/sfteam/Documents/nodeApps/Identity Provider/node_modules/ts-node/src/index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1474:32)
+    at Function._load (node:internal/modules/cjs/loader:1286:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+2025-04-06 14:07:42 [ERROR]: uncaughtException: ⨯ Unable to compile TypeScript:
+[96msrc/validations/form_validations.ts[0m:[93m1[0m:[93m10[0m - [91merror[0m[90m TS2305: [0mModule '"@prisma/client"' has no exported member 'GenderTypes'.
+
+[7m1[0m import { GenderTypes, IdentificationType, MaritalStatus, Options } from '@prisma/client';
+[7m [0m [91m         ~~~~~~~~~~~[0m
+[96msrc/validations/form_validations.ts[0m:[93m1[0m:[93m43[0m - [91merror[0m[90m TS2305: [0mModule '"@prisma/client"' has no exported member 'MaritalStatus'.
+
+[7m1[0m import { GenderTypes, IdentificationType, MaritalStatus, Options } from '@prisma/client';
+[7m [0m [91m                                          ~~~~~~~~~~~~~[0m
+[96msrc/validations/form_validations.ts[0m:[93m1[0m:[93m58[0m - [91merror[0m[90m TS2305: [0mModule '"@prisma/client"' has no exported member 'Options'.
+
+[7m1[0m import { GenderTypes, IdentificationType, MaritalStatus, Options } from '@prisma/client';
+[7m [0m [91m                                                         ~~~~~~~[0m
+
+TSError: ⨯ Unable to compile TypeScript:
+[96msrc/validations/form_validations.ts[0m:[93m1[0m:[93m10[0m - [91merror[0m[90m TS2305: [0mModule '"@prisma/client"' has no exported member 'GenderTypes'.
+
+[7m1[0m import { GenderTypes, IdentificationType, MaritalStatus, Options } from '@prisma/client';
+[7m [0m [91m         ~~~~~~~~~~~[0m
+[96msrc/validations/form_validations.ts[0m:[93m1[0m:[93m43[0m - [91merror[0m[90m TS2305: [0mModule '"@prisma/client"' has no exported member 'MaritalStatus'.
+
+[7m1[0m import { GenderTypes, IdentificationType, MaritalStatus, Options } from '@prisma/client';
+[7m [0m [91m                                          ~~~~~~~~~~~~~[0m
+[96msrc/validations/form_validations.ts[0m:[93m1[0m:[93m58[0m - [91merror[0m[90m TS2305: [0mModule '"@prisma/client"' has no exported member 'Options'.
+
+[7m1[0m import { GenderTypes, IdentificationType, MaritalStatus, Options } from '@prisma/client';
+[7m [0m [91m                                                         ~~~~~~~[0m
+
+    at createTSError (/Users/sfteam/Documents/nodeApps/Identity Provider/node_modules/ts-node/src/index.ts:859:12)
+    at reportTSError (/Users/sfteam/Documents/nodeApps/Identity Provider/node_modules/ts-node/src/index.ts:863:19)
+    at getOutput (/Users/sfteam/Documents/nodeApps/Identity Provider/node_modules/ts-node/src/index.ts:1077:36)
+    at Object.compile (/Users/sfteam/Documents/nodeApps/Identity Provider/node_modules/ts-node/src/index.ts:1433:41)
+    at Module.m._compile (/Users/sfteam/Documents/nodeApps/Identity Provider/node_modules/ts-node/src/index.ts:1617:30)
+    at node:internal/modules/cjs/loader:1905:10
+    at Object.require.extensions.<computed> [as .ts] (/Users/sfteam/Documents/nodeApps/Identity Provider/node_modules/ts-node/src/index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1474:32)
+    at Function._load (node:internal/modules/cjs/loader:1286:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+2025-04-06 14:07:54 [ERROR]: uncaughtException: ⨯ Unable to compile TypeScript:
+[96msrc/validations/form_validations.ts[0m:[93m1[0m:[93m10[0m - [91merror[0m[90m TS2305: [0mModule '"@prisma/client"' has no exported member 'GenderTypes'.
+
+[7m1[0m import { GenderTypes, IdentificationType, MaritalStatus, Options } from '@prisma/client';
+[7m [0m [91m         ~~~~~~~~~~~[0m
+[96msrc/validations/form_validations.ts[0m:[93m1[0m:[93m43[0m - [91merror[0m[90m TS2305: [0mModule '"@prisma/client"' has no exported member 'MaritalStatus'.
+
+[7m1[0m import { GenderTypes, IdentificationType, MaritalStatus, Options } from '@prisma/client';
+[7m [0m [91m                                          ~~~~~~~~~~~~~[0m
+[96msrc/validations/form_validations.ts[0m:[93m1[0m:[93m58[0m - [91merror[0m[90m TS2305: [0mModule '"@prisma/client"' has no exported member 'Options'.
+
+[7m1[0m import { GenderTypes, IdentificationType, MaritalStatus, Options } from '@prisma/client';
+[7m [0m [91m                                                         ~~~~~~~[0m
+
+TSError: ⨯ Unable to compile TypeScript:
+[96msrc/validations/form_validations.ts[0m:[93m1[0m:[93m10[0m - [91merror[0m[90m TS2305: [0mModule '"@prisma/client"' has no exported member 'GenderTypes'.
+
+[7m1[0m import { GenderTypes, IdentificationType, MaritalStatus, Options } from '@prisma/client';
+[7m [0m [91m         ~~~~~~~~~~~[0m
+[96msrc/validations/form_validations.ts[0m:[93m1[0m:[93m43[0m - [91merror[0m[90m TS2305: [0mModule '"@prisma/client"' has no exported member 'MaritalStatus'.
+
+[7m1[0m import { GenderTypes, IdentificationType, MaritalStatus, Options } from '@prisma/client';
+[7m [0m [91m                                          ~~~~~~~~~~~~~[0m
+[96msrc/validations/form_validations.ts[0m:[93m1[0m:[93m58[0m - [91merror[0m[90m TS2305: [0mModule '"@prisma/client"' has no exported member 'Options'.
+
+[7m1[0m import { GenderTypes, IdentificationType, MaritalStatus, Options } from '@prisma/client';
+[7m [0m [91m                                                         ~~~~~~~[0m
+
+    at createTSError (/Users/sfteam/Documents/nodeApps/Identity Provider/node_modules/ts-node/src/index.ts:859:12)
+    at reportTSError (/Users/sfteam/Documents/nodeApps/Identity Provider/node_modules/ts-node/src/index.ts:863:19)
+    at getOutput (/Users/sfteam/Documents/nodeApps/Identity Provider/node_modules/ts-node/src/index.ts:1077:36)
+    at Object.compile (/Users/sfteam/Documents/nodeApps/Identity Provider/node_modules/ts-node/src/index.ts:1433:41)
+    at Module.m._compile (/Users/sfteam/Documents/nodeApps/Identity Provider/node_modules/ts-node/src/index.ts:1617:30)
+    at node:internal/modules/cjs/loader:1905:10
+    at Object.require.extensions.<computed> [as .ts] (/Users/sfteam/Documents/nodeApps/Identity Provider/node_modules/ts-node/src/index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1474:32)
+    at Function._load (node:internal/modules/cjs/loader:1286:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+2025-04-06 14:08:21 [ERROR]: uncaughtException: ⨯ Unable to compile TypeScript:
+[96msrc/validations/form_validations.ts[0m:[93m119[0m:[93m33[0m - [91merror[0m[90m TS2304: [0mCannot find name 'GenderTypes'.
+
+[7m119[0m         .valid(...Object.values(GenderTypes))
+[7m   [0m [91m                                ~~~~~~~~~~~[0m
+[96msrc/validations/form_validations.ts[0m:[93m123[0m:[93m65[0m - [91merror[0m[90m TS2304: [0mCannot find name 'GenderTypes'.
+
+[7m123[0m             "any.only": `Gender must be one of: ${Object.values(GenderTypes).join(', ')}`,
+[7m   [0m [91m                                                                ~~~~~~~~~~~[0m
+[96msrc/validations/form_validations.ts[0m:[93m128[0m:[93m33[0m - [91merror[0m[90m TS2304: [0mCannot find name 'MaritalStatus'.
+
+[7m128[0m         .valid(...Object.values(MaritalStatus))
+[7m   [0m [91m                                ~~~~~~~~~~~~~[0m
+[96msrc/validations/form_validations.ts[0m:[93m132[0m:[93m73[0m - [91merror[0m[90m TS2304: [0mCannot find name 'MaritalStatus'.
+
+[7m132[0m             "any.only": `Marital status must be one of: ${Object.values(MaritalStatus).join(', ')}`,
+[7m   [0m [91m                                                                        ~~~~~~~~~~~~~[0m
+[96msrc/validations/form_validations.ts[0m:[93m173[0m:[93m33[0m - [91merror[0m[90m TS2552: [0mCannot find name 'Options'. Did you mean 'Option'?
+
+[7m173[0m         .valid(...Object.values(Options))
+[7m   [0m [91m                                ~~~~~~~[0m
+
+  [96mnode_modules/typescript/lib/lib.dom.d.ts[0m:[93m28546[0m:[93m13[0m
+    [7m28546[0m declare var Option: {
+    [7m     [0m [96m            ~~~~~~[0m
+    'Option' is declared here.
+[96msrc/validations/form_validations.ts[0m:[93m177[0m:[93m97[0m - [91merror[0m[90m TS2552: [0mCannot find name 'Options'. Did you mean 'Option'?
+
+[7m177[0m             "any.only": `Please specify if you're a public servant with either: ${Object.values(Options).join(' or ')}`,
+[7m   [0m [91m                                                                                                ~~~~~~~[0m
+
+  [96mnode_modules/typescript/lib/lib.dom.d.ts[0m:[93m28546[0m:[93m13[0m
+    [7m28546[0m declare var Option: {
+    [7m     [0m [96m            ~~~~~~[0m
+    'Option' is declared here.
+
+TSError: ⨯ Unable to compile TypeScript:
+[96msrc/validations/form_validations.ts[0m:[93m119[0m:[93m33[0m - [91merror[0m[90m TS2304: [0mCannot find name 'GenderTypes'.
+
+[7m119[0m         .valid(...Object.values(GenderTypes))
+[7m   [0m [91m                                ~~~~~~~~~~~[0m
+[96msrc/validations/form_validations.ts[0m:[93m123[0m:[93m65[0m - [91merror[0m[90m TS2304: [0mCannot find name 'GenderTypes'.
+
+[7m123[0m             "any.only": `Gender must be one of: ${Object.values(GenderTypes).join(', ')}`,
+[7m   [0m [91m                                                                ~~~~~~~~~~~[0m
+[96msrc/validations/form_validations.ts[0m:[93m128[0m:[93m33[0m - [91merror[0m[90m TS2304: [0mCannot find name 'MaritalStatus'.
+
+[7m128[0m         .valid(...Object.values(MaritalStatus))
+[7m   [0m [91m                                ~~~~~~~~~~~~~[0m
+[96msrc/validations/form_validations.ts[0m:[93m132[0m:[93m73[0m - [91merror[0m[90m TS2304: [0mCannot find name 'MaritalStatus'.
+
+[7m132[0m             "any.only": `Marital status must be one of: ${Object.values(MaritalStatus).join(', ')}`,
+[7m   [0m [91m                                                                        ~~~~~~~~~~~~~[0m
+[96msrc/validations/form_validations.ts[0m:[93m173[0m:[93m33[0m - [91merror[0m[90m TS2552: [0mCannot find name 'Options'. Did you mean 'Option'?
+
+[7m173[0m         .valid(...Object.values(Options))
+[7m   [0m [91m                                ~~~~~~~[0m
+
+  [96mnode_modules/typescript/lib/lib.dom.d.ts[0m:[93m28546[0m:[93m13[0m
+    [7m28546[0m declare var Option: {
+    [7m     [0m [96m            ~~~~~~[0m
+    'Option' is declared here.
+[96msrc/validations/form_validations.ts[0m:[93m177[0m:[93m97[0m - [91merror[0m[90m TS2552: [0mCannot find name 'Options'. Did you mean 'Option'?
+
+[7m177[0m             "any.only": `Please specify if you're a public servant with either: ${Object.values(Options).join(' or ')}`,
+[7m   [0m [91m                                                                                                ~~~~~~~[0m
+
+  [96mnode_modules/typescript/lib/lib.dom.d.ts[0m:[93m28546[0m:[93m13[0m
+    [7m28546[0m declare var Option: {
+    [7m     [0m [96m            ~~~~~~[0m
+    'Option' is declared here.
+
+    at createTSError (/Users/sfteam/Documents/nodeApps/Identity Provider/node_modules/ts-node/src/index.ts:859:12)
+    at reportTSError (/Users/sfteam/Documents/nodeApps/Identity Provider/node_modules/ts-node/src/index.ts:863:19)
+    at getOutput (/Users/sfteam/Documents/nodeApps/Identity Provider/node_modules/ts-node/src/index.ts:1077:36)
+    at Object.compile (/Users/sfteam/Documents/nodeApps/Identity Provider/node_modules/ts-node/src/index.ts:1433:41)
+    at Module.m._compile (/Users/sfteam/Documents/nodeApps/Identity Provider/node_modules/ts-node/src/index.ts:1617:30)
+    at node:internal/modules/cjs/loader:1905:10
+    at Object.require.extensions.<computed> [as .ts] (/Users/sfteam/Documents/nodeApps/Identity Provider/node_modules/ts-node/src/index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1474:32)
+    at Function._load (node:internal/modules/cjs/loader:1286:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+2025-04-06 14:08:45 [ERROR]: uncaughtException: ⨯ Unable to compile TypeScript:
+[96msrc/services/account.service.ts[0m:[93m1[0m:[93m10[0m - [91merror[0m[90m TS2305: [0mModule '"@prisma/client"' has no exported member 'Individual'.
+
+[7m1[0m import { Individual, PasswordResetToken, User } from "@prisma/client"
+[7m [0m [91m         ~~~~~~~~~~[0m
+[96msrc/services/account.service.ts[0m:[93m42[0m:[93m25[0m - [91merror[0m[90m TS2339: [0mProperty 'individual' does not exist on type 'PrismaClient<PrismaClientOptions, never, DefaultArgs>'.
+
+[7m42[0m     return await prisma.individual.create({
+[7m  [0m [91m                        ~~~~~~~~~~[0m
+[96msrc/services/account.service.ts[0m:[93m52[0m:[93m25[0m - [91merror[0m[90m TS2339: [0mProperty 'individual' does not exist on type 'PrismaClient<PrismaClientOptions, never, DefaultArgs>'.
+
+[7m52[0m     return await prisma.individual.findFirst({
+[7m  [0m [91m                        ~~~~~~~~~~[0m
+
+TSError: ⨯ Unable to compile TypeScript:
+[96msrc/services/account.service.ts[0m:[93m1[0m:[93m10[0m - [91merror[0m[90m TS2305: [0mModule '"@prisma/client"' has no exported member 'Individual'.
+
+[7m1[0m import { Individual, PasswordResetToken, User } from "@prisma/client"
+[7m [0m [91m         ~~~~~~~~~~[0m
+[96msrc/services/account.service.ts[0m:[93m42[0m:[93m25[0m - [91merror[0m[90m TS2339: [0mProperty 'individual' does not exist on type 'PrismaClient<PrismaClientOptions, never, DefaultArgs>'.
+
+[7m42[0m     return await prisma.individual.create({
+[7m  [0m [91m                        ~~~~~~~~~~[0m
+[96msrc/services/account.service.ts[0m:[93m52[0m:[93m25[0m - [91merror[0m[90m TS2339: [0mProperty 'individual' does not exist on type 'PrismaClient<PrismaClientOptions, never, DefaultArgs>'.
+
+[7m52[0m     return await prisma.individual.findFirst({
+[7m  [0m [91m                        ~~~~~~~~~~[0m
+
+    at createTSError (/Users/sfteam/Documents/nodeApps/Identity Provider/node_modules/ts-node/src/index.ts:859:12)
+    at reportTSError (/Users/sfteam/Documents/nodeApps/Identity Provider/node_modules/ts-node/src/index.ts:863:19)
+    at getOutput (/Users/sfteam/Documents/nodeApps/Identity Provider/node_modules/ts-node/src/index.ts:1077:36)
+    at Object.compile (/Users/sfteam/Documents/nodeApps/Identity Provider/node_modules/ts-node/src/index.ts:1433:41)
+    at Module.m._compile (/Users/sfteam/Documents/nodeApps/Identity Provider/node_modules/ts-node/src/index.ts:1617:30)
+    at node:internal/modules/cjs/loader:1905:10
+    at Object.require.extensions.<computed> [as .ts] (/Users/sfteam/Documents/nodeApps/Identity Provider/node_modules/ts-node/src/index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1474:32)
+    at Function._load (node:internal/modules/cjs/loader:1286:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+2025-04-06 14:09:08 [ERROR]: uncaughtException: ⨯ Unable to compile TypeScript:
+[96msrc/services/account.service.ts[0m:[93m1[0m:[93m10[0m - [91merror[0m[90m TS2305: [0mModule '"@prisma/client"' has no exported member 'Individual'.
+
+[7m1[0m import { Individual, PasswordResetToken, User } from "@prisma/client"
+[7m [0m [91m         ~~~~~~~~~~[0m
+[96msrc/services/account.service.ts[0m:[93m42[0m:[93m25[0m - [91merror[0m[90m TS2339: [0mProperty 'individual' does not exist on type 'PrismaClient<PrismaClientOptions, never, DefaultArgs>'.
+
+[7m42[0m     return await prisma.individual.create({
+[7m  [0m [91m                        ~~~~~~~~~~[0m
+[96msrc/services/account.service.ts[0m:[93m52[0m:[93m25[0m - [91merror[0m[90m TS2339: [0mProperty 'individual' does not exist on type 'PrismaClient<PrismaClientOptions, never, DefaultArgs>'.
+
+[7m52[0m     return await prisma.individual.findFirst({
+[7m  [0m [91m                        ~~~~~~~~~~[0m
+
+TSError: ⨯ Unable to compile TypeScript:
+[96msrc/services/account.service.ts[0m:[93m1[0m:[93m10[0m - [91merror[0m[90m TS2305: [0mModule '"@prisma/client"' has no exported member 'Individual'.
+
+[7m1[0m import { Individual, PasswordResetToken, User } from "@prisma/client"
+[7m [0m [91m         ~~~~~~~~~~[0m
+[96msrc/services/account.service.ts[0m:[93m42[0m:[93m25[0m - [91merror[0m[90m TS2339: [0mProperty 'individual' does not exist on type 'PrismaClient<PrismaClientOptions, never, DefaultArgs>'.
+
+[7m42[0m     return await prisma.individual.create({
+[7m  [0m [91m                        ~~~~~~~~~~[0m
+[96msrc/services/account.service.ts[0m:[93m52[0m:[93m25[0m - [91merror[0m[90m TS2339: [0mProperty 'individual' does not exist on type 'PrismaClient<PrismaClientOptions, never, DefaultArgs>'.
+
+[7m52[0m     return await prisma.individual.findFirst({
+[7m  [0m [91m                        ~~~~~~~~~~[0m
+
+    at createTSError (/Users/sfteam/Documents/nodeApps/Identity Provider/node_modules/ts-node/src/index.ts:859:12)
+    at reportTSError (/Users/sfteam/Documents/nodeApps/Identity Provider/node_modules/ts-node/src/index.ts:863:19)
+    at getOutput (/Users/sfteam/Documents/nodeApps/Identity Provider/node_modules/ts-node/src/index.ts:1077:36)
+    at Object.compile (/Users/sfteam/Documents/nodeApps/Identity Provider/node_modules/ts-node/src/index.ts:1433:41)
+    at Module.m._compile (/Users/sfteam/Documents/nodeApps/Identity Provider/node_modules/ts-node/src/index.ts:1617:30)
+    at node:internal/modules/cjs/loader:1905:10
+    at Object.require.extensions.<computed> [as .ts] (/Users/sfteam/Documents/nodeApps/Identity Provider/node_modules/ts-node/src/index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1474:32)
+    at Function._load (node:internal/modules/cjs/loader:1286:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+2025-04-06 14:09:22 [ERROR]: uncaughtException: ⨯ Unable to compile TypeScript:
+[96msrc/controllers/Auth.Controller.ts[0m:[93m147[0m:[93m13[0m - [91merror[0m[90m TS1109: [0mExpression expected.
+
+[7m147[0m             const user = await prisma.user.create({
+[7m   [0m [91m            ~~~~~[0m
+
+TSError: ⨯ Unable to compile TypeScript:
+[96msrc/controllers/Auth.Controller.ts[0m:[93m147[0m:[93m13[0m - [91merror[0m[90m TS1109: [0mExpression expected.
+
+[7m147[0m             const user = await prisma.user.create({
+[7m   [0m [91m            ~~~~~[0m
+
+    at createTSError (/Users/sfteam/Documents/nodeApps/Identity Provider/node_modules/ts-node/src/index.ts:859:12)
+    at reportTSError (/Users/sfteam/Documents/nodeApps/Identity Provider/node_modules/ts-node/src/index.ts:863:19)
+    at getOutput (/Users/sfteam/Documents/nodeApps/Identity Provider/node_modules/ts-node/src/index.ts:1077:36)
+    at Object.compile (/Users/sfteam/Documents/nodeApps/Identity Provider/node_modules/ts-node/src/index.ts:1433:41)
+    at Module.m._compile (/Users/sfteam/Documents/nodeApps/Identity Provider/node_modules/ts-node/src/index.ts:1617:30)
+    at node:internal/modules/cjs/loader:1905:10
+    at Object.require.extensions.<computed> [as .ts] (/Users/sfteam/Documents/nodeApps/Identity Provider/node_modules/ts-node/src/index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1474:32)
+    at Function._load (node:internal/modules/cjs/loader:1286:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+2025-04-06 14:10:52 [ERROR]: uncaughtException: ⨯ Unable to compile TypeScript:
+[96msrc/services/account.service.ts[0m:[93m1[0m:[93m10[0m - [91merror[0m[90m TS2305: [0mModule '"@prisma/client"' has no exported member 'Individual'.
+
+[7m1[0m import { Individual, PasswordResetToken, User } from "@prisma/client"
+[7m [0m [91m         ~~~~~~~~~~[0m
+[96msrc/services/account.service.ts[0m:[93m42[0m:[93m25[0m - [91merror[0m[90m TS2339: [0mProperty 'individual' does not exist on type 'PrismaClient<PrismaClientOptions, never, DefaultArgs>'.
+
+[7m42[0m     return await prisma.individual.create({
+[7m  [0m [91m                        ~~~~~~~~~~[0m
+[96msrc/services/account.service.ts[0m:[93m52[0m:[93m25[0m - [91merror[0m[90m TS2339: [0mProperty 'individual' does not exist on type 'PrismaClient<PrismaClientOptions, never, DefaultArgs>'.
+
+[7m52[0m     return await prisma.individual.findFirst({
+[7m  [0m [91m                        ~~~~~~~~~~[0m
+
+TSError: ⨯ Unable to compile TypeScript:
+[96msrc/services/account.service.ts[0m:[93m1[0m:[93m10[0m - [91merror[0m[90m TS2305: [0mModule '"@prisma/client"' has no exported member 'Individual'.
+
+[7m1[0m import { Individual, PasswordResetToken, User } from "@prisma/client"
+[7m [0m [91m         ~~~~~~~~~~[0m
+[96msrc/services/account.service.ts[0m:[93m42[0m:[93m25[0m - [91merror[0m[90m TS2339: [0mProperty 'individual' does not exist on type 'PrismaClient<PrismaClientOptions, never, DefaultArgs>'.
+
+[7m42[0m     return await prisma.individual.create({
+[7m  [0m [91m                        ~~~~~~~~~~[0m
+[96msrc/services/account.service.ts[0m:[93m52[0m:[93m25[0m - [91merror[0m[90m TS2339: [0mProperty 'individual' does not exist on type 'PrismaClient<PrismaClientOptions, never, DefaultArgs>'.
+
+[7m52[0m     return await prisma.individual.findFirst({
+[7m  [0m [91m                        ~~~~~~~~~~[0m
+
+    at createTSError (/Users/sfteam/Documents/nodeApps/Identity Provider/node_modules/ts-node/src/index.ts:859:12)
+    at reportTSError (/Users/sfteam/Documents/nodeApps/Identity Provider/node_modules/ts-node/src/index.ts:863:19)
+    at getOutput (/Users/sfteam/Documents/nodeApps/Identity Provider/node_modules/ts-node/src/index.ts:1077:36)
+    at Object.compile (/Users/sfteam/Documents/nodeApps/Identity Provider/node_modules/ts-node/src/index.ts:1433:41)
+    at Module.m._compile (/Users/sfteam/Documents/nodeApps/Identity Provider/node_modules/ts-node/src/index.ts:1617:30)
+    at node:internal/modules/cjs/loader:1905:10
+    at Object.require.extensions.<computed> [as .ts] (/Users/sfteam/Documents/nodeApps/Identity Provider/node_modules/ts-node/src/index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1474:32)
+    at Function._load (node:internal/modules/cjs/loader:1286:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+2025-04-06 14:10:58 [ERROR]: uncaughtException: ⨯ Unable to compile TypeScript:
+[96msrc/services/account.service.ts[0m:[93m1[0m:[93m10[0m - [91merror[0m[90m TS2305: [0mModule '"@prisma/client"' has no exported member 'Individual'.
+
+[7m1[0m import { Individual, PasswordResetToken, User } from "@prisma/client"
+[7m [0m [91m         ~~~~~~~~~~[0m
+[96msrc/services/account.service.ts[0m:[93m42[0m:[93m25[0m - [91merror[0m[90m TS2339: [0mProperty 'individual' does not exist on type 'PrismaClient<PrismaClientOptions, never, DefaultArgs>'.
+
+[7m42[0m     return await prisma.individual.create({
+[7m  [0m [91m                        ~~~~~~~~~~[0m
+[96msrc/services/account.service.ts[0m:[93m52[0m:[93m25[0m - [91merror[0m[90m TS2339: [0mProperty 'individual' does not exist on type 'PrismaClient<PrismaClientOptions, never, DefaultArgs>'.
+
+[7m52[0m     return await prisma.individual.findFirst({
+[7m  [0m [91m                        ~~~~~~~~~~[0m
+
+TSError: ⨯ Unable to compile TypeScript:
+[96msrc/services/account.service.ts[0m:[93m1[0m:[93m10[0m - [91merror[0m[90m TS2305: [0mModule '"@prisma/client"' has no exported member 'Individual'.
+
+[7m1[0m import { Individual, PasswordResetToken, User } from "@prisma/client"
+[7m [0m [91m         ~~~~~~~~~~[0m
+[96msrc/services/account.service.ts[0m:[93m42[0m:[93m25[0m - [91merror[0m[90m TS2339: [0mProperty 'individual' does not exist on type 'PrismaClient<PrismaClientOptions, never, DefaultArgs>'.
+
+[7m42[0m     return await prisma.individual.create({
+[7m  [0m [91m                        ~~~~~~~~~~[0m
+[96msrc/services/account.service.ts[0m:[93m52[0m:[93m25[0m - [91merror[0m[90m TS2339: [0mProperty 'individual' does not exist on type 'PrismaClient<PrismaClientOptions, never, DefaultArgs>'.
+
+[7m52[0m     return await prisma.individual.findFirst({
+[7m  [0m [91m                        ~~~~~~~~~~[0m
+
+    at createTSError (/Users/sfteam/Documents/nodeApps/Identity Provider/node_modules/ts-node/src/index.ts:859:12)
+    at reportTSError (/Users/sfteam/Documents/nodeApps/Identity Provider/node_modules/ts-node/src/index.ts:863:19)
+    at getOutput (/Users/sfteam/Documents/nodeApps/Identity Provider/node_modules/ts-node/src/index.ts:1077:36)
+    at Object.compile (/Users/sfteam/Documents/nodeApps/Identity Provider/node_modules/ts-node/src/index.ts:1433:41)
+    at Module.m._compile (/Users/sfteam/Documents/nodeApps/Identity Provider/node_modules/ts-node/src/index.ts:1617:30)
+    at node:internal/modules/cjs/loader:1905:10
+    at Object.require.extensions.<computed> [as .ts] (/Users/sfteam/Documents/nodeApps/Identity Provider/node_modules/ts-node/src/index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1474:32)
+    at Function._load (node:internal/modules/cjs/loader:1286:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+2025-04-06 14:11:26 [ERROR]: uncaughtException: ⨯ Unable to compile TypeScript:
+[96msrc/services/account.service.ts[0m:[93m1[0m:[93m10[0m - [91merror[0m[90m TS2305: [0mModule '"@prisma/client"' has no exported member 'Individual'.
+
+[7m1[0m import { Individual, PasswordResetToken, User } from "@prisma/client"
+[7m [0m [91m         ~~~~~~~~~~[0m
+[96msrc/services/account.service.ts[0m:[93m42[0m:[93m25[0m - [91merror[0m[90m TS2339: [0mProperty 'individual' does not exist on type 'PrismaClient<PrismaClientOptions, never, DefaultArgs>'.
+
+[7m42[0m     return await prisma.individual.create({
+[7m  [0m [91m                        ~~~~~~~~~~[0m
+[96msrc/services/account.service.ts[0m:[93m52[0m:[93m25[0m - [91merror[0m[90m TS2339: [0mProperty 'individual' does not exist on type 'PrismaClient<PrismaClientOptions, never, DefaultArgs>'.
+
+[7m52[0m     return await prisma.individual.findFirst({
+[7m  [0m [91m                        ~~~~~~~~~~[0m
+
+TSError: ⨯ Unable to compile TypeScript:
+[96msrc/services/account.service.ts[0m:[93m1[0m:[93m10[0m - [91merror[0m[90m TS2305: [0mModule '"@prisma/client"' has no exported member 'Individual'.
+
+[7m1[0m import { Individual, PasswordResetToken, User } from "@prisma/client"
+[7m [0m [91m         ~~~~~~~~~~[0m
+[96msrc/services/account.service.ts[0m:[93m42[0m:[93m25[0m - [91merror[0m[90m TS2339: [0mProperty 'individual' does not exist on type 'PrismaClient<PrismaClientOptions, never, DefaultArgs>'.
+
+[7m42[0m     return await prisma.individual.create({
+[7m  [0m [91m                        ~~~~~~~~~~[0m
+[96msrc/services/account.service.ts[0m:[93m52[0m:[93m25[0m - [91merror[0m[90m TS2339: [0mProperty 'individual' does not exist on type 'PrismaClient<PrismaClientOptions, never, DefaultArgs>'.
+
+[7m52[0m     return await prisma.individual.findFirst({
+[7m  [0m [91m                        ~~~~~~~~~~[0m
+
+    at createTSError (/Users/sfteam/Documents/nodeApps/Identity Provider/node_modules/ts-node/src/index.ts:859:12)
+    at reportTSError (/Users/sfteam/Documents/nodeApps/Identity Provider/node_modules/ts-node/src/index.ts:863:19)
+    at getOutput (/Users/sfteam/Documents/nodeApps/Identity Provider/node_modules/ts-node/src/index.ts:1077:36)
+    at Object.compile (/Users/sfteam/Documents/nodeApps/Identity Provider/node_modules/ts-node/src/index.ts:1433:41)
+    at Module.m._compile (/Users/sfteam/Documents/nodeApps/Identity Provider/node_modules/ts-node/src/index.ts:1617:30)
+    at node:internal/modules/cjs/loader:1905:10
+    at Object.require.extensions.<computed> [as .ts] (/Users/sfteam/Documents/nodeApps/Identity Provider/node_modules/ts-node/src/index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1474:32)
+    at Function._load (node:internal/modules/cjs/loader:1286:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+2025-04-06 14:11:34 [ERROR]: uncaughtException: ⨯ Unable to compile TypeScript:
+[96msrc/validations/form_validations.ts[0m:[93m2[0m:[93m10[0m - [91merror[0m[90m TS2305: [0mModule '"./../utils/types"' has no exported member 'CompleteSignUpPayload'.
+
+[7m2[0m import { CompleteSignUpPayload, IndividualPayload } from './../utils/types';
+[7m [0m [91m         ~~~~~~~~~~~~~~~~~~~~~[0m
+
+TSError: ⨯ Unable to compile TypeScript:
+[96msrc/validations/form_validations.ts[0m:[93m2[0m:[93m10[0m - [91merror[0m[90m TS2305: [0mModule '"./../utils/types"' has no exported member 'CompleteSignUpPayload'.
+
+[7m2[0m import { CompleteSignUpPayload, IndividualPayload } from './../utils/types';
+[7m [0m [91m         ~~~~~~~~~~~~~~~~~~~~~[0m
+
+    at createTSError (/Users/sfteam/Documents/nodeApps/Identity Provider/node_modules/ts-node/src/index.ts:859:12)
+    at reportTSError (/Users/sfteam/Documents/nodeApps/Identity Provider/node_modules/ts-node/src/index.ts:863:19)
+    at getOutput (/Users/sfteam/Documents/nodeApps/Identity Provider/node_modules/ts-node/src/index.ts:1077:36)
+    at Object.compile (/Users/sfteam/Documents/nodeApps/Identity Provider/node_modules/ts-node/src/index.ts:1433:41)
+    at Module.m._compile (/Users/sfteam/Documents/nodeApps/Identity Provider/node_modules/ts-node/src/index.ts:1617:30)
+    at node:internal/modules/cjs/loader:1905:10
+    at Object.require.extensions.<computed> [as .ts] (/Users/sfteam/Documents/nodeApps/Identity Provider/node_modules/ts-node/src/index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1474:32)
+    at Function._load (node:internal/modules/cjs/loader:1286:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+2025-04-06 14:11:41 [ERROR]: uncaughtException: ⨯ Unable to compile TypeScript:
+[96msrc/services/account.service.ts[0m:[93m1[0m:[93m10[0m - [91merror[0m[90m TS2305: [0mModule '"@prisma/client"' has no exported member 'Individual'.
+
+[7m1[0m import { Individual, PasswordResetToken, User } from "@prisma/client"
+[7m [0m [91m         ~~~~~~~~~~[0m
+[96msrc/services/account.service.ts[0m:[93m42[0m:[93m25[0m - [91merror[0m[90m TS2339: [0mProperty 'individual' does not exist on type 'PrismaClient<PrismaClientOptions, never, DefaultArgs>'.
+
+[7m42[0m     return await prisma.individual.create({
+[7m  [0m [91m                        ~~~~~~~~~~[0m
+[96msrc/services/account.service.ts[0m:[93m52[0m:[93m25[0m - [91merror[0m[90m TS2339: [0mProperty 'individual' does not exist on type 'PrismaClient<PrismaClientOptions, never, DefaultArgs>'.
+
+[7m52[0m     return await prisma.individual.findFirst({
+[7m  [0m [91m                        ~~~~~~~~~~[0m
+
+TSError: ⨯ Unable to compile TypeScript:
+[96msrc/services/account.service.ts[0m:[93m1[0m:[93m10[0m - [91merror[0m[90m TS2305: [0mModule '"@prisma/client"' has no exported member 'Individual'.
+
+[7m1[0m import { Individual, PasswordResetToken, User } from "@prisma/client"
+[7m [0m [91m         ~~~~~~~~~~[0m
+[96msrc/services/account.service.ts[0m:[93m42[0m:[93m25[0m - [91merror[0m[90m TS2339: [0mProperty 'individual' does not exist on type 'PrismaClient<PrismaClientOptions, never, DefaultArgs>'.
+
+[7m42[0m     return await prisma.individual.create({
+[7m  [0m [91m                        ~~~~~~~~~~[0m
+[96msrc/services/account.service.ts[0m:[93m52[0m:[93m25[0m - [91merror[0m[90m TS2339: [0mProperty 'individual' does not exist on type 'PrismaClient<PrismaClientOptions, never, DefaultArgs>'.
+
+[7m52[0m     return await prisma.individual.findFirst({
+[7m  [0m [91m                        ~~~~~~~~~~[0m
+
+    at createTSError (/Users/sfteam/Documents/nodeApps/Identity Provider/node_modules/ts-node/src/index.ts:859:12)
+    at reportTSError (/Users/sfteam/Documents/nodeApps/Identity Provider/node_modules/ts-node/src/index.ts:863:19)
+    at getOutput (/Users/sfteam/Documents/nodeApps/Identity Provider/node_modules/ts-node/src/index.ts:1077:36)
+    at Object.compile (/Users/sfteam/Documents/nodeApps/Identity Provider/node_modules/ts-node/src/index.ts:1433:41)
+    at Module.m._compile (/Users/sfteam/Documents/nodeApps/Identity Provider/node_modules/ts-node/src/index.ts:1617:30)
+    at node:internal/modules/cjs/loader:1905:10
+    at Object.require.extensions.<computed> [as .ts] (/Users/sfteam/Documents/nodeApps/Identity Provider/node_modules/ts-node/src/index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1474:32)
+    at Function._load (node:internal/modules/cjs/loader:1286:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+2025-04-06 14:28:25 [ERROR]: uncaughtException: ⨯ Unable to compile TypeScript:
+[96msrc/validations/form_validations.ts[0m:[93m35[0m:[93m5[0m - [91merror[0m[90m TS2353: [0mObject literal may only specify known properties, and 'email_address' does not exist in type 'PartialSchemaMap<IndividualPayload>'.
+
+[7m35[0m     email_address: Joi.string().required().messages({
+[7m  [0m [91m    ~~~~~~~~~~~~~[0m
+
+TSError: ⨯ Unable to compile TypeScript:
+[96msrc/validations/form_validations.ts[0m:[93m35[0m:[93m5[0m - [91merror[0m[90m TS2353: [0mObject literal may only specify known properties, and 'email_address' does not exist in type 'PartialSchemaMap<IndividualPayload>'.
+
+[7m35[0m     email_address: Joi.string().required().messages({
+[7m  [0m [91m    ~~~~~~~~~~~~~[0m
+
+    at createTSError (/Users/sfteam/Documents/nodeApps/Identity Provider/node_modules/ts-node/src/index.ts:859:12)
+    at reportTSError (/Users/sfteam/Documents/nodeApps/Identity Provider/node_modules/ts-node/src/index.ts:863:19)
+    at getOutput (/Users/sfteam/Documents/nodeApps/Identity Provider/node_modules/ts-node/src/index.ts:1077:36)
+    at Object.compile (/Users/sfteam/Documents/nodeApps/Identity Provider/node_modules/ts-node/src/index.ts:1433:41)
+    at Module.m._compile (/Users/sfteam/Documents/nodeApps/Identity Provider/node_modules/ts-node/src/index.ts:1617:30)
+    at node:internal/modules/cjs/loader:1905:10
+    at Object.require.extensions.<computed> [as .ts] (/Users/sfteam/Documents/nodeApps/Identity Provider/node_modules/ts-node/src/index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1474:32)
+    at Function._load (node:internal/modules/cjs/loader:1286:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+2025-04-06 22:10:27 [ERROR]: uncaughtException: ⨯ Unable to compile TypeScript:
+[96msrc/routes/main.router.ts[0m:[93m174[0m:[93m25[0m - [91merror[0m[90m TS2304: [0mCannot find name 'saml'.
+
+[7m174[0m     const { extract } = saml;
+[7m   [0m [91m                        ~~~~[0m
+[96msrc/routes/main.router.ts[0m:[93m186[0m:[93m31[0m - [91merror[0m[90m TS2304: [0mCannot find name 'idp'.
+
+[7m186[0m     const { context } = await idp.createLogoutResponse(sp, {
+[7m   [0m [91m                              ~~~[0m
+[96msrc/routes/main.router.ts[0m:[93m186[0m:[93m56[0m - [91merror[0m[90m TS2304: [0mCannot find name 'sp'.
+
+[7m186[0m     const { context } = await idp.createLogoutResponse(sp, {
+[7m   [0m [91m                                                       ~~[0m
+[96msrc/routes/main.router.ts[0m:[93m192[0m:[93m20[0m - [91merror[0m[90m TS2304: [0mCannot find name 'fs'.
+
+[7m192[0m       signingCert: fs.readFileSync(path.join(__dirname, '../certs/public.crt')),
+[7m   [0m [91m                   ~~[0m
+[96msrc/routes/main.router.ts[0m:[93m192[0m:[93m36[0m - [91merror[0m[90m TS2304: [0mCannot find name 'path'.
+
+[7m192[0m       signingCert: fs.readFileSync(path.join(__dirname, '../certs/public.crt')),
+[7m   [0m [91m                                   ~~~~[0m
+
+TSError: ⨯ Unable to compile TypeScript:
+[96msrc/routes/main.router.ts[0m:[93m174[0m:[93m25[0m - [91merror[0m[90m TS2304: [0mCannot find name 'saml'.
+
+[7m174[0m     const { extract } = saml;
+[7m   [0m [91m                        ~~~~[0m
+[96msrc/routes/main.router.ts[0m:[93m186[0m:[93m31[0m - [91merror[0m[90m TS2304: [0mCannot find name 'idp'.
+
+[7m186[0m     const { context } = await idp.createLogoutResponse(sp, {
+[7m   [0m [91m                              ~~~[0m
+[96msrc/routes/main.router.ts[0m:[93m186[0m:[93m56[0m - [91merror[0m[90m TS2304: [0mCannot find name 'sp'.
+
+[7m186[0m     const { context } = await idp.createLogoutResponse(sp, {
+[7m   [0m [91m                                                       ~~[0m
+[96msrc/routes/main.router.ts[0m:[93m192[0m:[93m20[0m - [91merror[0m[90m TS2304: [0mCannot find name 'fs'.
+
+[7m192[0m       signingCert: fs.readFileSync(path.join(__dirname, '../certs/public.crt')),
+[7m   [0m [91m                   ~~[0m
+[96msrc/routes/main.router.ts[0m:[93m192[0m:[93m36[0m - [91merror[0m[90m TS2304: [0mCannot find name 'path'.
+
+[7m192[0m       signingCert: fs.readFileSync(path.join(__dirname, '../certs/public.crt')),
+[7m   [0m [91m                                   ~~~~[0m
+
+    at createTSError (/Users/sfteam/Documents/nodeApps/Identity Provider/node_modules/ts-node/src/index.ts:859:12)
+    at reportTSError (/Users/sfteam/Documents/nodeApps/Identity Provider/node_modules/ts-node/src/index.ts:863:19)
+    at getOutput (/Users/sfteam/Documents/nodeApps/Identity Provider/node_modules/ts-node/src/index.ts:1077:36)
+    at Object.compile (/Users/sfteam/Documents/nodeApps/Identity Provider/node_modules/ts-node/src/index.ts:1433:41)
+    at Module.m._compile (/Users/sfteam/Documents/nodeApps/Identity Provider/node_modules/ts-node/src/index.ts:1617:30)
+    at node:internal/modules/cjs/loader:1905:10
+    at Object.require.extensions.<computed> [as .ts] (/Users/sfteam/Documents/nodeApps/Identity Provider/node_modules/ts-node/src/index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1474:32)
+    at Function._load (node:internal/modules/cjs/loader:1286:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+2025-04-06 22:11:44 [ERROR]: uncaughtException: ⨯ Unable to compile TypeScript:
+[96msrc/routes/main.router.ts[0m:[93m173[0m:[93m25[0m - [91merror[0m[90m TS2304: [0mCannot find name 'saml'.
+
+[7m173[0m     const { extract } = saml;
+[7m   [0m [91m                        ~~~~[0m
+[96msrc/routes/main.router.ts[0m:[93m185[0m:[93m31[0m - [91merror[0m[90m TS2304: [0mCannot find name 'idp'.
+
+[7m185[0m     const { context } = await idp.createLogoutResponse(sp, {
+[7m   [0m [91m                              ~~~[0m
+[96msrc/routes/main.router.ts[0m:[93m185[0m:[93m56[0m - [91merror[0m[90m TS2304: [0mCannot find name 'sp'.
+
+[7m185[0m     const { context } = await idp.createLogoutResponse(sp, {
+[7m   [0m [91m                                                       ~~[0m
+[96msrc/routes/main.router.ts[0m:[93m191[0m:[93m20[0m - [91merror[0m[90m TS2304: [0mCannot find name 'fs'.
+
+[7m191[0m       signingCert: fs.readFileSync(path.join(__dirname, '../certs/public.crt')),
+[7m   [0m [91m                   ~~[0m
+[96msrc/routes/main.router.ts[0m:[93m191[0m:[93m36[0m - [91merror[0m[90m TS2304: [0mCannot find name 'path'.
+
+[7m191[0m       signingCert: fs.readFileSync(path.join(__dirname, '../certs/public.crt')),
+[7m   [0m [91m                                   ~~~~[0m
+
+TSError: ⨯ Unable to compile TypeScript:
+[96msrc/routes/main.router.ts[0m:[93m173[0m:[93m25[0m - [91merror[0m[90m TS2304: [0mCannot find name 'saml'.
+
+[7m173[0m     const { extract } = saml;
+[7m   [0m [91m                        ~~~~[0m
+[96msrc/routes/main.router.ts[0m:[93m185[0m:[93m31[0m - [91merror[0m[90m TS2304: [0mCannot find name 'idp'.
+
+[7m185[0m     const { context } = await idp.createLogoutResponse(sp, {
+[7m   [0m [91m                              ~~~[0m
+[96msrc/routes/main.router.ts[0m:[93m185[0m:[93m56[0m - [91merror[0m[90m TS2304: [0mCannot find name 'sp'.
+
+[7m185[0m     const { context } = await idp.createLogoutResponse(sp, {
+[7m   [0m [91m                                                       ~~[0m
+[96msrc/routes/main.router.ts[0m:[93m191[0m:[93m20[0m - [91merror[0m[90m TS2304: [0mCannot find name 'fs'.
+
+[7m191[0m       signingCert: fs.readFileSync(path.join(__dirname, '../certs/public.crt')),
+[7m   [0m [91m                   ~~[0m
+[96msrc/routes/main.router.ts[0m:[93m191[0m:[93m36[0m - [91merror[0m[90m TS2304: [0mCannot find name 'path'.
+
+[7m191[0m       signingCert: fs.readFileSync(path.join(__dirname, '../certs/public.crt')),
+[7m   [0m [91m                                   ~~~~[0m
+
+    at createTSError (/Users/sfteam/Documents/nodeApps/Identity Provider/node_modules/ts-node/src/index.ts:859:12)
+    at reportTSError (/Users/sfteam/Documents/nodeApps/Identity Provider/node_modules/ts-node/src/index.ts:863:19)
+    at getOutput (/Users/sfteam/Documents/nodeApps/Identity Provider/node_modules/ts-node/src/index.ts:1077:36)
+    at Object.compile (/Users/sfteam/Documents/nodeApps/Identity Provider/node_modules/ts-node/src/index.ts:1433:41)
+    at Module.m._compile (/Users/sfteam/Documents/nodeApps/Identity Provider/node_modules/ts-node/src/index.ts:1617:30)
+    at node:internal/modules/cjs/loader:1905:10
+    at Object.require.extensions.<computed> [as .ts] (/Users/sfteam/Documents/nodeApps/Identity Provider/node_modules/ts-node/src/index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1474:32)
+    at Function._load (node:internal/modules/cjs/loader:1286:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+2025-04-06 22:15:55 [ERROR]: uncaughtException: ⨯ Unable to compile TypeScript:
+[96msrc/routes/main.router.ts[0m:[93m173[0m:[93m12[0m - [91merror[0m[90m TS2339: [0mProperty 'parse_logout_request' does not exist on type '{ entityId: string; audience: string; certificate: string; callbackUrl: string; logoutCallbackUrl: string; }'.
+
+[7m173[0m   spConfig.parse_logout_request(idpConfig, { request_body: req.body }, (err: Error, logoutRequest: string) => {
+[7m   [0m [91m           ~~~~~~~~~~~~~~~~~~~~[0m
+[96msrc/routes/main.router.ts[0m:[93m179[0m:[93m67[0m - [91merror[0m[90m TS2339: [0mProperty 'user' does not exist on type 'string'.
+
+[7m179[0m     console.log("Received LogoutRequest for user:", logoutRequest.user.name_id);
+[7m   [0m [91m                                                                  ~~~~[0m
+[96msrc/routes/main.router.ts[0m:[93m185[0m:[93m5[0m - [91merror[0m[90m TS2304: [0mCannot find name 'sp'.
+
+[7m185[0m     sp.create_logout_response_url(idpConfig, logoutRequest, { relay_state: relayState }, (err, logoutUrl) => {
+[7m   [0m [91m    ~~[0m
+
+TSError: ⨯ Unable to compile TypeScript:
+[96msrc/routes/main.router.ts[0m:[93m173[0m:[93m12[0m - [91merror[0m[90m TS2339: [0mProperty 'parse_logout_request' does not exist on type '{ entityId: string; audience: string; certificate: string; callbackUrl: string; logoutCallbackUrl: string; }'.
+
+[7m173[0m   spConfig.parse_logout_request(idpConfig, { request_body: req.body }, (err: Error, logoutRequest: string) => {
+[7m   [0m [91m           ~~~~~~~~~~~~~~~~~~~~[0m
+[96msrc/routes/main.router.ts[0m:[93m179[0m:[93m67[0m - [91merror[0m[90m TS2339: [0mProperty 'user' does not exist on type 'string'.
+
+[7m179[0m     console.log("Received LogoutRequest for user:", logoutRequest.user.name_id);
+[7m   [0m [91m                                                                  ~~~~[0m
+[96msrc/routes/main.router.ts[0m:[93m185[0m:[93m5[0m - [91merror[0m[90m TS2304: [0mCannot find name 'sp'.
+
+[7m185[0m     sp.create_logout_response_url(idpConfig, logoutRequest, { relay_state: relayState }, (err, logoutUrl) => {
+[7m   [0m [91m    ~~[0m
+
+    at createTSError (/Users/sfteam/Documents/nodeApps/Identity Provider/node_modules/ts-node/src/index.ts:859:12)
+    at reportTSError (/Users/sfteam/Documents/nodeApps/Identity Provider/node_modules/ts-node/src/index.ts:863:19)
+    at getOutput (/Users/sfteam/Documents/nodeApps/Identity Provider/node_modules/ts-node/src/index.ts:1077:36)
+    at Object.compile (/Users/sfteam/Documents/nodeApps/Identity Provider/node_modules/ts-node/src/index.ts:1433:41)
+    at Module.m._compile (/Users/sfteam/Documents/nodeApps/Identity Provider/node_modules/ts-node/src/index.ts:1617:30)
+    at node:internal/modules/cjs/loader:1905:10
+    at Object.require.extensions.<computed> [as .ts] (/Users/sfteam/Documents/nodeApps/Identity Provider/node_modules/ts-node/src/index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1474:32)
+    at Function._load (node:internal/modules/cjs/loader:1286:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+2025-04-06 22:16:34 [ERROR]: uncaughtException: ⨯ Unable to compile TypeScript:
+[96msrc/routes/main.router.ts[0m:[93m173[0m:[93m12[0m - [91merror[0m[90m TS2339: [0mProperty 'parse_logout_request' does not exist on type '{ entityId: string; audience: string; certificate: string; callbackUrl: string; logoutCallbackUrl: string; }'.
+
+[7m173[0m   spConfig.parse_logout_request(idpConfig, { request_body: req.body }, (err: Error, logoutRequest: string) => {
+[7m   [0m [91m           ~~~~~~~~~~~~~~~~~~~~[0m
+[96msrc/routes/main.router.ts[0m:[93m179[0m:[93m67[0m - [91merror[0m[90m TS2339: [0mProperty 'user' does not exist on type 'string'.
+
+[7m179[0m     console.log("Received LogoutRequest for user:", logoutRequest.user.name_id);
+[7m   [0m [91m                                                                  ~~~~[0m
+[96msrc/routes/main.router.ts[0m:[93m185[0m:[93m14[0m - [91merror[0m[90m TS2339: [0mProperty 'create_logout_response_url' does not exist on type '{ entityId: string; audience: string; certificate: string; callbackUrl: string; logoutCallbackUrl: string; }'.
+
+[7m185[0m     spConfig.create_logout_response_url(idpConfig, logoutRequest, { relay_state: relayState }, (err, logoutUrl) => {
+[7m   [0m [91m             ~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+
+TSError: ⨯ Unable to compile TypeScript:
+[96msrc/routes/main.router.ts[0m:[93m173[0m:[93m12[0m - [91merror[0m[90m TS2339: [0mProperty 'parse_logout_request' does not exist on type '{ entityId: string; audience: string; certificate: string; callbackUrl: string; logoutCallbackUrl: string; }'.
+
+[7m173[0m   spConfig.parse_logout_request(idpConfig, { request_body: req.body }, (err: Error, logoutRequest: string) => {
+[7m   [0m [91m           ~~~~~~~~~~~~~~~~~~~~[0m
+[96msrc/routes/main.router.ts[0m:[93m179[0m:[93m67[0m - [91merror[0m[90m TS2339: [0mProperty 'user' does not exist on type 'string'.
+
+[7m179[0m     console.log("Received LogoutRequest for user:", logoutRequest.user.name_id);
+[7m   [0m [91m                                                                  ~~~~[0m
+[96msrc/routes/main.router.ts[0m:[93m185[0m:[93m14[0m - [91merror[0m[90m TS2339: [0mProperty 'create_logout_response_url' does not exist on type '{ entityId: string; audience: string; certificate: string; callbackUrl: string; logoutCallbackUrl: string; }'.
+
+[7m185[0m     spConfig.create_logout_response_url(idpConfig, logoutRequest, { relay_state: relayState }, (err, logoutUrl) => {
+[7m   [0m [91m             ~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+
+    at createTSError (/Users/sfteam/Documents/nodeApps/Identity Provider/node_modules/ts-node/src/index.ts:859:12)
+    at reportTSError (/Users/sfteam/Documents/nodeApps/Identity Provider/node_modules/ts-node/src/index.ts:863:19)
+    at getOutput (/Users/sfteam/Documents/nodeApps/Identity Provider/node_modules/ts-node/src/index.ts:1077:36)
+    at Object.compile (/Users/sfteam/Documents/nodeApps/Identity Provider/node_modules/ts-node/src/index.ts:1433:41)
+    at Module.m._compile (/Users/sfteam/Documents/nodeApps/Identity Provider/node_modules/ts-node/src/index.ts:1617:30)
+    at node:internal/modules/cjs/loader:1905:10
+    at Object.require.extensions.<computed> [as .ts] (/Users/sfteam/Documents/nodeApps/Identity Provider/node_modules/ts-node/src/index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1474:32)
+    at Function._load (node:internal/modules/cjs/loader:1286:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+2025-04-06 22:19:42 [ERROR]: uncaughtException: ⨯ Unable to compile TypeScript:
+[96msrc/routes/main.router.ts[0m:[93m173[0m:[93m12[0m - [91merror[0m[90m TS2339: [0mProperty 'parse_logout_request' does not exist on type '{ entityId: string; audience: string; certificate: string; callbackUrl: string; logoutCallbackUrl: string; }'.
+
+[7m173[0m   spConfig.parse_logout_request(idpConfig, { request_body: req.body }, (err: Error, logoutRequest: string) => {
+[7m   [0m [91m           ~~~~~~~~~~~~~~~~~~~~[0m
+[96msrc/routes/main.router.ts[0m:[93m179[0m:[93m67[0m - [91merror[0m[90m TS2339: [0mProperty 'user' does not exist on type 'string'.
+
+[7m179[0m     console.log("Received LogoutRequest for user:", logoutRequest.user.name_id);
+[7m   [0m [91m                                                                  ~~~~[0m
+[96msrc/routes/main.router.ts[0m:[93m185[0m:[93m5[0m - [91merror[0m[90m TS2552: [0mCannot find name 'sspConfigp'. Did you mean 'spConfig'?
+
+[7m185[0m     sspConfigp.create_logout_response_url(idpConfig, logoutRequest, { relay_state: relayState }, (err, logoutUrl) => {
+[7m   [0m [91m    ~~~~~~~~~~[0m
+
+TSError: ⨯ Unable to compile TypeScript:
+[96msrc/routes/main.router.ts[0m:[93m173[0m:[93m12[0m - [91merror[0m[90m TS2339: [0mProperty 'parse_logout_request' does not exist on type '{ entityId: string; audience: string; certificate: string; callbackUrl: string; logoutCallbackUrl: string; }'.
+
+[7m173[0m   spConfig.parse_logout_request(idpConfig, { request_body: req.body }, (err: Error, logoutRequest: string) => {
+[7m   [0m [91m           ~~~~~~~~~~~~~~~~~~~~[0m
+[96msrc/routes/main.router.ts[0m:[93m179[0m:[93m67[0m - [91merror[0m[90m TS2339: [0mProperty 'user' does not exist on type 'string'.
+
+[7m179[0m     console.log("Received LogoutRequest for user:", logoutRequest.user.name_id);
+[7m   [0m [91m                                                                  ~~~~[0m
+[96msrc/routes/main.router.ts[0m:[93m185[0m:[93m5[0m - [91merror[0m[90m TS2552: [0mCannot find name 'sspConfigp'. Did you mean 'spConfig'?
+
+[7m185[0m     sspConfigp.create_logout_response_url(idpConfig, logoutRequest, { relay_state: relayState }, (err, logoutUrl) => {
+[7m   [0m [91m    ~~~~~~~~~~[0m
+
+    at createTSError (/Users/sfteam/Documents/nodeApps/Identity Provider/node_modules/ts-node/src/index.ts:859:12)
+    at reportTSError (/Users/sfteam/Documents/nodeApps/Identity Provider/node_modules/ts-node/src/index.ts:863:19)
+    at getOutput (/Users/sfteam/Documents/nodeApps/Identity Provider/node_modules/ts-node/src/index.ts:1077:36)
+    at Object.compile (/Users/sfteam/Documents/nodeApps/Identity Provider/node_modules/ts-node/src/index.ts:1433:41)
+    at Module.m._compile (/Users/sfteam/Documents/nodeApps/Identity Provider/node_modules/ts-node/src/index.ts:1617:30)
+    at node:internal/modules/cjs/loader:1905:10
+    at Object.require.extensions.<computed> [as .ts] (/Users/sfteam/Documents/nodeApps/Identity Provider/node_modules/ts-node/src/index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1474:32)
+    at Function._load (node:internal/modules/cjs/loader:1286:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+2025-04-06 22:20:00 [ERROR]: uncaughtException: ⨯ Unable to compile TypeScript:
+[96msrc/routes/main.router.ts[0m:[93m174[0m:[93m12[0m - [91merror[0m[90m TS2339: [0mProperty 'parse_logout_request' does not exist on type '{ entityId: string; audience: string; certificate: string; callbackUrl: string; logoutCallbackUrl: string; }'.
+
+[7m174[0m   spConfig.parse_logout_request(idpConfig, { request_body: req.body }, (err: Error, logoutRequest: string) => {
+[7m   [0m [91m           ~~~~~~~~~~~~~~~~~~~~[0m
+[96msrc/routes/main.router.ts[0m:[93m180[0m:[93m67[0m - [91merror[0m[90m TS2339: [0mProperty 'user' does not exist on type 'string'.
+
+[7m180[0m     console.log("Received LogoutRequest for user:", logoutRequest.user.name_id);
+[7m   [0m [91m                                                                  ~~~~[0m
+[96msrc/routes/main.router.ts[0m:[93m186[0m:[93m5[0m - [91merror[0m[90m TS2552: [0mCannot find name 'sspConfigp'. Did you mean 'spConfig'?
+
+[7m186[0m     sspConfigp.create_logout_response_url(idpConfig, logoutRequest, { relay_state: relayState }, (err, logoutUrl) => {
+[7m   [0m [91m    ~~~~~~~~~~[0m
+
+TSError: ⨯ Unable to compile TypeScript:
+[96msrc/routes/main.router.ts[0m:[93m174[0m:[93m12[0m - [91merror[0m[90m TS2339: [0mProperty 'parse_logout_request' does not exist on type '{ entityId: string; audience: string; certificate: string; callbackUrl: string; logoutCallbackUrl: string; }'.
+
+[7m174[0m   spConfig.parse_logout_request(idpConfig, { request_body: req.body }, (err: Error, logoutRequest: string) => {
+[7m   [0m [91m           ~~~~~~~~~~~~~~~~~~~~[0m
+[96msrc/routes/main.router.ts[0m:[93m180[0m:[93m67[0m - [91merror[0m[90m TS2339: [0mProperty 'user' does not exist on type 'string'.
+
+[7m180[0m     console.log("Received LogoutRequest for user:", logoutRequest.user.name_id);
+[7m   [0m [91m                                                                  ~~~~[0m
+[96msrc/routes/main.router.ts[0m:[93m186[0m:[93m5[0m - [91merror[0m[90m TS2552: [0mCannot find name 'sspConfigp'. Did you mean 'spConfig'?
+
+[7m186[0m     sspConfigp.create_logout_response_url(idpConfig, logoutRequest, { relay_state: relayState }, (err, logoutUrl) => {
+[7m   [0m [91m    ~~~~~~~~~~[0m
+
+    at createTSError (/Users/sfteam/Documents/nodeApps/Identity Provider/node_modules/ts-node/src/index.ts:859:12)
+    at reportTSError (/Users/sfteam/Documents/nodeApps/Identity Provider/node_modules/ts-node/src/index.ts:863:19)
+    at getOutput (/Users/sfteam/Documents/nodeApps/Identity Provider/node_modules/ts-node/src/index.ts:1077:36)
+    at Object.compile (/Users/sfteam/Documents/nodeApps/Identity Provider/node_modules/ts-node/src/index.ts:1433:41)
+    at Module.m._compile (/Users/sfteam/Documents/nodeApps/Identity Provider/node_modules/ts-node/src/index.ts:1617:30)
+    at node:internal/modules/cjs/loader:1905:10
+    at Object.require.extensions.<computed> [as .ts] (/Users/sfteam/Documents/nodeApps/Identity Provider/node_modules/ts-node/src/index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1474:32)
+    at Function._load (node:internal/modules/cjs/loader:1286:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14)
