@@ -6,54 +6,9 @@
     "auditLog": "/Users/sfteam/Documents/nodeApps/Identity Provider/src/logs/.bdf7ef1fcf98c2f4cf29af7554e90d3eba0ab476-audit.json",
     "files": [
         {
-            "date": 1742853056007,
-            "name": "/Users/sfteam/Documents/nodeApps/Identity Provider/src/logs/app-log-2025-03-24.txt",
-            "hash": "b5161d00ba22a12c02fc305e98912a4203a2d8430435b00cb57cf04ec10b6f2a"
-        },
-        {
-            "date": 1742857208815,
-            "name": "/Users/sfteam/Documents/nodeApps/Identity Provider/src/logs/app-log-2025-03-25.txt",
-            "hash": "ea9888e34cbf3a17e2c9c920deaf67a516e707d6f0d8dbe31ae74e66abe94744"
-        },
-        {
-            "date": 1743030151466,
-            "name": "/Users/sfteam/Documents/nodeApps/Identity Provider/src/logs/app-log-2025-03-27.txt",
-            "hash": "b4c35255e1e3aff6891dce0613c3f5b6466d2377a276213ba8aa9c7cdb3d7717"
-        },
-        {
-            "date": 1743122629032,
-            "name": "/Users/sfteam/Documents/nodeApps/Identity Provider/src/logs/app-log-2025-03-28.txt",
-            "hash": "b8b9a829689fab8af07f4897d8160b7e6c53a03afb149ee5c58d3e9a45667c5d"
-        },
-        {
-            "date": 1743283679891,
-            "name": "/Users/sfteam/Documents/nodeApps/Identity Provider/src/logs/app-log-2025-03-29.txt",
-            "hash": "c17bfa2678d4eb44417ab12135458974a2f2edc5472f6bbd1e0dbd5878a60a13"
-        },
-        {
-            "date": 1743292598195,
-            "name": "/Users/sfteam/Documents/nodeApps/Identity Provider/src/logs/app-log-2025-03-30.txt",
-            "hash": "f3e47a017684ab577c7f7f0cdd4bf8ac1e1db3657a58a364ff1eb4b51e10145f"
-        },
-        {
-            "date": 1743484408926,
-            "name": "/Users/sfteam/Documents/nodeApps/Identity Provider/src/logs/app-log-2025-04-01.txt",
-            "hash": "c480fe0b18c274101f53a0bc94c011813d24fe3e586fafda7720a00f9dba63ad"
-        },
-        {
-            "date": 1743663735769,
-            "name": "/Users/sfteam/Documents/nodeApps/Identity Provider/src/logs/app-log-2025-04-03.txt",
-            "hash": "36c88349a25e7bdc84b9b7761122ff0a30543238bdc1818f7facbcdb3f05809f"
-        },
-        {
-            "date": 1743721256414,
-            "name": "/Users/sfteam/Documents/nodeApps/Identity Provider/src/logs/app-log-2025-04-04.txt",
-            "hash": "469fb6307f0a04db73bcbce3c53de6e71d6facb1596a5f580dc1783df8aab447"
-        },
-        {
-            "date": 1743836450104,
+            "date": 1743884203576,
             "name": "/Users/sfteam/Documents/nodeApps/Identity Provider/src/logs/app-log-2025-04-05.txt",
-            "hash": "65ec24bdb29e0a1862b6554a556885c03f3ba65434e76ead33b841930b6e2487"
+            "hash": "9018c05896e3535f52fd5333e22b0a321426d28e9c589257fa83e603b7268b3f"
         }
     ],
     "hashType": "sha256"

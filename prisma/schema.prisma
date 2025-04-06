@@ -21,40 +21,9 @@ model User {
   created_at           DateTime            @default(now())
   updated_at           DateTime            @updatedAt
 
-  individual         Individual?
   passwordResetToken PasswordResetToken?
 
   @@map(name: "users")
-}
-
-model Individual {
-  id                Int           @id @default(autoincrement())
-  tax_id            String
-  firstname         String        @db.VarChar(155)
-  surname           String        @db.VarChar(155)
-  othernames        String?       @db.VarChar(155)
-  gender            GenderTypes
-  marital_status    MaritalStatus
-  email_address     String        @unique
-  phone_number      String        @unique
-  date_of_birth     DateTime?     @db.Date
-  kaadi_igbeayo_no  String?
-  is_public_servant Options
-  nationality       String        @db.VarChar(100)
-  occupation        String        @db.VarChar(155)
-  state_of_origin   String        @db.VarChar(100)
-  lga_of_origin     String        @db.VarChar(100)
-  business_type     String        @db.VarChar(255)
-  tax_lga_area      String
-  tax_station       String
-
-  created_at DateTime @default(now())
-  updated_at DateTime @updatedAt
-
-  user User @relation(fields: [tax_id], references: [tax_id])
-
-  @@unique([tax_id])
-  @@map(name: "individuals")
 }
 
 model PasswordResetToken {
@@ -75,22 +44,6 @@ enum UserRoles {
   Individual
   Business
   Admin
-}
-
-enum GenderTypes {
-  Male
-  Female
-}
-
-enum MaritalStatus {
-  Single
-  Married
-  Divorced
-}
-
-enum Options {
-  Yes
-  No
 }
 
 enum IdentificationType {

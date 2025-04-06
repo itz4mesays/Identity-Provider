@@ -1,9 +1,10 @@
 import { IdentityProvider } from 'saml2-js';
-import { idpConfig, knownServiceProviders } from './config';
+import { idpConfig, knownServiceProviders, loadFile } from './config';
 import envVars from '../validations/validateEnv';
 import { Buffer } from 'buffer';
-import crypto from 'crypto';
+import * as crypto from 'crypto';
 import { SamlParser } from '../utils/samlParser';
+import * as xmlcrypto from 'xml-crypto';
 
 interface CustomIdentityProviderOptions {
   sso_login_url: string;
@@ -19,7 +20,6 @@ interface CustomIdentityProviderOptions {
     wantAssertionsSigned: boolean;
   }[];
 }
-
 
 // Helper function to decode base64 and clean certificate
 function prepareCertificate(certB64: string): string {
@@ -106,19 +106,6 @@ const idpOptions = {
 // Create the parser instance
 const idp = new IdentityProvider(idpOptions as CustomIdentityProviderOptions);
 const parseSml = new SamlParser(idp);
-
-// Create a type-safe wrapper that matches xml-crypto@3.2.1 API
-interface XmlCryptoV3 {
-  new(options?: {
-    signatureAlgorithm?: string;
-    canonicalizationAlgorithm?: string;
-  }): {
-    signingKey: string;
-    addReference(xpath: string, transforms: string[], digestAlgorithm: string): void;
-    computeSignature(xml: string): void;
-    getSignedXml(): string;
-  };
-}
 
 export interface SamlUserAttributes {
   email_address: string;
@@ -210,11 +197,33 @@ export async function createLoginResponse(
   };
 }
 
-
 // Helper function to generate unique IDs
 function generateId(): string {
   return 'id' + crypto.randomBytes(16).toString('hex');
 }
 
+export const signSAMLResponse = (responseXml: string): string => {
+  // Create a new SignedXml object
+  const doc = new xmlcrypto.SignedXml();
+
+  // Define the XPath to reference the Assertion in the XML
+  const assertionXPath = "/*[local-name(.)='Response']/*[local-name(.)='Assertion']";
+
+  // Add a reference to the Assertion element to be signed
+  doc.addReference(assertionXPath, [
+    'http://www.w3.org/2001/10/xml-exc-c14n#',  // Use exclusive canonicalization
+  ]);
+
+  // Specify the key to be used for signing (the private key)
+  doc.signingKey = privateKey;
+
+  // Compute the signature (this will add the <Signature> element to the XML)
+  doc.computeSignature(responseXml);
+
+  // Return the signed XML (it will now include the <Signature> element)
+  const signedXml = doc.getSignedXml();
+
+  return signedXml;
+};
 
 export { idp, parseSml };

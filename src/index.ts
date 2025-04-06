@@ -12,10 +12,8 @@ import { encrypt } from 'xml-encryption';
 import { promisify } from 'util';
 const encryptAsync = promisify(encrypt)
 import path from 'path'
-import accountRoute from './routes/account.router'
 import authRoute from './routes/auth.router'
 import mainRoute from './routes/main.router'
-
 
 const app: Application = express();
 
@@ -47,53 +45,6 @@ app.use(bodyParser.urlencoded({ extended: true }));
 
 app.use(morgan('combined'));
 
-const swaggerOptions = {
-  definition: {
-    openapi: "3.0.0",
-    info: {
-      title: "IdP Api Documentation",
-      version: "1.0.0",
-      description: "Identity Provider API documentation with Swagger",
-      license: {
-        name: "MIT",
-        url: "https://spdx.org/licenses/MIT.html",
-      },
-      contact: {
-        name: "Oyedele Olufemi",
-        email: "oyedele.phemy@gmail.com",
-      },
-    },
-    schemes: ['http', 'https'],
-    securitySchemes: {
-      bearerAuth: {
-        type: 'http',
-        in: 'header',
-        name: 'Authorization',
-        description: 'Bearer token to access these api endpoints',
-        scheme: 'bearer',
-        bearerFormat: 'JWT',
-      },
-    },
-    security: [
-      {
-        bearerAuth: [],
-      },
-    ],
-    servers: [
-      {
-        url: `http://localhost:${envVars.APP_PORT}`,
-        description: 'Local Server'
-      },
-    ],
-  },
-  apis: ['./src/routes/*.ts'], // Path to your API files
-};
-
-const swaggerSpecs = swaggerJsdoc(swaggerOptions);
-
-// Serve Swagger UI
-app.use('/docs', swaggerUi.serve, swaggerUi.setup(swaggerSpecs, { explorer: true }));
-
 //logger
 logger;
 
@@ -116,8 +67,7 @@ try {
   process.exit(1); // Exit the application if files are missing or invalid
 }
 
-app.use('/', mainRoute)
-app.use('/api/v1/account', accountRoute)
+app.use('/saml', mainRoute)
 app.use('/api/v1/auth', authRoute)
 
 // Start the server

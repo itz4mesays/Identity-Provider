@@ -1,13 +1,16 @@
+import { SamlResponse } from './../utils/types';
 import express, { Request, Response, Router } from 'express'
 import { handleError, successResponse } from '../utils/responseHandler'
 import { generateIdpMetadata } from '../config/metadata'
-import { identityProvider, idpConfig } from '../config/config'
-import { createLoginResponse, idp, SamlUserAttributes } from '../config/saml'
+import { idpConfig } from '../config/config'
 import bodyParser from 'body-parser'
 import { getUserByTaxId } from '../services/account.service'
 import envVars from '../validations/validateEnv'
-import { parseSml } from '../config/saml'
 import { parseStringPromise } from 'xml2js';
+import bcrypt from 'bcrypt'
+import { signSAMLResponse } from '../config/saml'
+import crypto from 'crypto';
+import xml2js from 'xml2js';
 
 
 const router: Router = express.Router()
@@ -29,7 +32,7 @@ router.get('/', (req: Request, res: Response): Response => {
 
 
 // Metadata - XML descriptor of IdP capabilities(entityID, certs, endpoints)
-router.get('/saml/idp', (req, res) => {
+router.get('/idp', (req, res) => {
   try {
     const metadata = generateIdpMetadata(
       idpConfig.entity_id,
@@ -44,7 +47,7 @@ router.get('/saml/idp', (req, res) => {
   }
 })
 
-router.post('/saml/idp/login', express.urlencoded({ extended: true }), async (req, res) => {
+router.post('/idp/login', express.urlencoded({ extended: true }), async (req, res) => {
   try {
     console.log('I just got here');
     console.log('Raw SAMLRequest:', req.body.SAMLRequest);
@@ -88,44 +91,74 @@ router.post('/saml/idp/login', express.urlencoded({ extended: true }), async (re
 });
 
 //route to process user data after SAML Request has been processed
-router.post('/saml/idp/login/submit',
-  express.urlencoded({ extended: true }),
-  async (req, res) => {
-    const { username, password, SAMLRequest, RelayState } = req.body;
+router.post('/idp/login/submit', async (req, res) => {
+  const { taxid, password, RelayState } = req.body;
 
-    // Lookup user in DB
-    const user = await UserModel.findOne({ username });
-
-    if (!user || !(await user.comparePassword(password))) {
-      return res.status(401).send('Invalid username or password');
-    }
-
-    // If valid, send SAML Response
-    idp.create_login_response(sp, {
-      relay_state: RelayState,
-      sign_get_request: false,
-      name_identifier: user.email, // or user.id
-    }, (err, response) => {
-      if (err) {
-        console.error('SAML Response Error:', err);
-        return res.status(500).send('Failed to create SAML response');
-      }
-
-      // Auto-post the SAML response to the SP
-      res.send(`
-        <form method="POST" action="${sp.assert_endpoint}">
-          <input type="hidden" name="SAMLResponse" value="${response}">
-          <input type="hidden" name="RelayState" value="${RelayState}">
-          <button type="submit">Continue</button>
-        </form>
-        <script>document.forms[0].submit();</script>
-      `);
-    });
+  if (!taxid || !password) {
+    return handleError(res, 422, 'Tax ID and password are required')
   }
-);
 
+  // Get user by tax ID
+  const user = await getUserByTaxId(taxid);
+  if (!user) {
+    return handleError(res, 404, 'Tax ID does not exist')
+  }
 
-router.get('/saml/health', (req, res) => {
+  // Verify password
+  const passwordMatch = await bcrypt.compare(password, user.password);
+  if (!passwordMatch) {
+    return handleError(res, 400, 'Invalid Tax ID or Password')
+  }
+
+  // Manually create the SAML response
+  const samlResponse = {
+    Response: {
+      $: {
+        Version: '2.0',
+        ID: '_' + crypto.randomBytes(16).toString('hex'), // Unique ID for Response
+        IssueInstant: new Date().toISOString(),
+        Destination: `${envVars.SERVICE_PROVIDER_URL}/saml/sp/acs`, // ACS URL of the SP
+      },
+      Assertion: {
+        $: {
+          ID: '_' + crypto.randomBytes(16).toString('hex'), // Unique ID for Assertion
+          IssueInstant: new Date().toISOString(),
+          // Subject, Conditions, and other elements might be needed depending on your requirements
+        },
+        AttributeStatement: {
+          Attribute: [
+            { $: { Name: 'TaxId' }, _: user.tax_id }, // The primary identifier (e.g., tax_id)
+            { $: { Name: 'EmailAddress' }, _: user.email_address }, // Email address of the user
+            { $: { Name: 'Role' }, _: user.role }, // Role (or any other relevant attribute)
+            // Add any other required attributes here
+          ],
+        },
+      },
+    },
+  };
+
+  // Convert the SAML Response to XML
+  const builder = new xml2js.Builder();
+  const xmlResponse = builder.buildObject(samlResponse);
+
+  // Sign the response (simplified, you can use xml-crypto for signing)
+  const signedResponse = signSAMLResponse(xmlResponse);
+
+  // Encode the response in base64
+  const encodedResponse = Buffer.from(signedResponse).toString('base64');
+
+  // Send the response to the Service Provider
+  res.send(`
+    <form method="POST" action="${envVars.SERVICE_PROVIDER_URL}/saml/sp/acs">
+      <input type="hidden" name="SAMLResponse" value="${encodedResponse}">
+      <input type="hidden" name="RelayState" value="${RelayState}">
+      <button type="submit">Continue</button>
+    </form>
+    <script>document.forms[0].submit();</script>
+  `);
+});
+
+router.get('/idp/health', (req, res) => {
   res.json({
     status: 'ok',
     parserAvailable: true, // Now guaranteed to be true
@@ -133,7 +166,7 @@ router.get('/saml/health', (req, res) => {
   });
 });
 
-router.post('/saml/idp/acs', (req, res) => {
+router.post('/idp/acs', (req, res) => {
   res.send('Assertion received by IdP')
 })
 
