@@ -45,6 +45,57 @@ app.use(bodyParser.urlencoded({ extended: true }));
 
 app.use(morgan('combined'));
 
+const swaggerOptions = {
+  definition: {
+    openapi: "3.0.0",
+    info: {
+      title: "API Documentation",
+      version: "1.0.0",
+      description: "API documentation with Swagger",
+      license: {
+        name: "MIT",
+        url: "https://spdx.org/licenses/MIT.html",
+      },
+      contact: {
+        name: "Oyedele Olufemi",
+        email: "oyedele.phemy@gmail.com",
+      },
+    },
+    schemes: ['http', 'https'],
+    securitySchemes: {
+      bearerAuth: {
+        type: 'http',
+        in: 'header',
+        name: 'Authorization',
+        description: 'Bearer token to access these api endpoints',
+        scheme: 'bearer',
+        bearerFormat: 'JWT',
+      },
+    },
+    security: [
+      {
+        bearerAuth: [],
+      },
+    ],
+    servers: [
+      {
+        url: `http://localhost:${envVars.APP_PORT}`,
+        description: 'Local Server'
+      }, {
+        url: `http://214.134.167.72.host.secureserver.net:${envVars.APP_PORT}`,
+        description: "Staging Server"
+      }
+    ],
+  },
+  apis: ['./src/routes/*.ts'], // Path to your API files
+};
+
+const swaggerSpecs = swaggerJsdoc(swaggerOptions);
+
+// Serve Swagger UI
+app.use('/docs', swaggerUi.serve, swaggerUi.setup(swaggerSpecs, { explorer: true }));
+
+
 //logger
 logger;
 

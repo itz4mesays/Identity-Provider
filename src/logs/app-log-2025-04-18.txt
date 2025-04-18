@@ -1,0 +1,74 @@
+2025-04-18 14:39:02 [ERROR]: uncaughtException: ⨯ Unable to compile TypeScript:
+[96msrc/utils/helpers.ts[0m:[93m4[0m:[93m17[0m - [91merror[0m[90m TS2307: [0mCannot find module 'jsonwebtoken' or its corresponding type declarations.
+
+[7m4[0m import jwt from 'jsonwebtoken'
+[7m [0m [91m                ~~~~~~~~~~~~~~[0m
+
+TSError: ⨯ Unable to compile TypeScript:
+[96msrc/utils/helpers.ts[0m:[93m4[0m:[93m17[0m - [91merror[0m[90m TS2307: [0mCannot find module 'jsonwebtoken' or its corresponding type declarations.
+
+[7m4[0m import jwt from 'jsonwebtoken'
+[7m [0m [91m                ~~~~~~~~~~~~~~[0m
+
+    at createTSError (/Users/sfteam/Documents/nodeApps/Identity Provider/node_modules/ts-node/src/index.ts:859:12)
+    at reportTSError (/Users/sfteam/Documents/nodeApps/Identity Provider/node_modules/ts-node/src/index.ts:863:19)
+    at getOutput (/Users/sfteam/Documents/nodeApps/Identity Provider/node_modules/ts-node/src/index.ts:1077:36)
+    at Object.compile (/Users/sfteam/Documents/nodeApps/Identity Provider/node_modules/ts-node/src/index.ts:1433:41)
+    at Module.m._compile (/Users/sfteam/Documents/nodeApps/Identity Provider/node_modules/ts-node/src/index.ts:1617:30)
+    at node:internal/modules/cjs/loader:1905:10
+    at Object.require.extensions.<computed> [as .ts] (/Users/sfteam/Documents/nodeApps/Identity Provider/node_modules/ts-node/src/index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1474:32)
+    at Function._load (node:internal/modules/cjs/loader:1286:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+2025-04-18 14:39:39 [ERROR]: uncaughtException: ⨯ Unable to compile TypeScript:
+[96msrc/utils/helpers.ts[0m:[93m4[0m:[93m17[0m - [91merror[0m[90m TS2307: [0mCannot find module 'jsonwebtoken' or its corresponding type declarations.
+
+[7m4[0m import jwt from 'jsonwebtoken'
+[7m [0m [91m                ~~~~~~~~~~~~~~[0m
+[96msrc/utils/helpers.ts[0m:[93m146[0m:[93m31[0m - [91merror[0m[90m TS2304: [0mCannot find name 'JWT'.
+
+[7m146[0m export const signJwt = (user: JWT) => {
+[7m   [0m [91m                              ~~~[0m
+
+TSError: ⨯ Unable to compile TypeScript:
+[96msrc/utils/helpers.ts[0m:[93m4[0m:[93m17[0m - [91merror[0m[90m TS2307: [0mCannot find module 'jsonwebtoken' or its corresponding type declarations.
+
+[7m4[0m import jwt from 'jsonwebtoken'
+[7m [0m [91m                ~~~~~~~~~~~~~~[0m
+[96msrc/utils/helpers.ts[0m:[93m146[0m:[93m31[0m - [91merror[0m[90m TS2304: [0mCannot find name 'JWT'.
+
+[7m146[0m export const signJwt = (user: JWT) => {
+[7m   [0m [91m                              ~~~[0m
+
+    at createTSError (/Users/sfteam/Documents/nodeApps/Identity Provider/node_modules/ts-node/src/index.ts:859:12)
+    at reportTSError (/Users/sfteam/Documents/nodeApps/Identity Provider/node_modules/ts-node/src/index.ts:863:19)
+    at getOutput (/Users/sfteam/Documents/nodeApps/Identity Provider/node_modules/ts-node/src/index.ts:1077:36)
+    at Object.compile (/Users/sfteam/Documents/nodeApps/Identity Provider/node_modules/ts-node/src/index.ts:1433:41)
+    at Module.m._compile (/Users/sfteam/Documents/nodeApps/Identity Provider/node_modules/ts-node/src/index.ts:1617:30)
+    at node:internal/modules/cjs/loader:1905:10
+    at Object.require.extensions.<computed> [as .ts] (/Users/sfteam/Documents/nodeApps/Identity Provider/node_modules/ts-node/src/index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1474:32)
+    at Function._load (node:internal/modules/cjs/loader:1286:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+2025-04-18 14:39:53 [ERROR]: uncaughtException: ⨯ Unable to compile TypeScript:
+[96msrc/utils/helpers.ts[0m:[93m4[0m:[93m17[0m - [91merror[0m[90m TS2307: [0mCannot find module 'jsonwebtoken' or its corresponding type declarations.
+
+[7m4[0m import jwt from 'jsonwebtoken'
+[7m [0m [91m                ~~~~~~~~~~~~~~[0m
+
+TSError: ⨯ Unable to compile TypeScript:
+[96msrc/utils/helpers.ts[0m:[93m4[0m:[93m17[0m - [91merror[0m[90m TS2307: [0mCannot find module 'jsonwebtoken' or its corresponding type declarations.
+
+[7m4[0m import jwt from 'jsonwebtoken'
+[7m [0m [91m                ~~~~~~~~~~~~~~[0m
+
+    at createTSError (/Users/sfteam/Documents/nodeApps/Identity Provider/node_modules/ts-node/src/index.ts:859:12)
+    at reportTSError (/Users/sfteam/Documents/nodeApps/Identity Provider/node_modules/ts-node/src/index.ts:863:19)
+    at getOutput (/Users/sfteam/Documents/nodeApps/Identity Provider/node_modules/ts-node/src/index.ts:1077:36)
+    at Object.compile (/Users/sfteam/Documents/nodeApps/Identity Provider/node_modules/ts-node/src/index.ts:1433:41)
+    at Module.m._compile (/Users/sfteam/Documents/nodeApps/Identity Provider/node_modules/ts-node/src/index.ts:1617:30)
+    at node:internal/modules/cjs/loader:1905:10
+    at Object.require.extensions.<computed> [as .ts] (/Users/sfteam/Documents/nodeApps/Identity Provider/node_modules/ts-node/src/index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1474:32)
+    at Function._load (node:internal/modules/cjs/loader:1286:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14)

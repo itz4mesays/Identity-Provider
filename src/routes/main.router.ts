@@ -49,9 +49,6 @@ router.get('/idp', (req, res) => {
 
 router.post('/idp/login', express.urlencoded({ extended: true }), async (req, res) => {
   try {
-    console.log('I just got here');
-    console.log('Raw SAMLRequest:', req.body.SAMLRequest);
-
     if (!req.body.SAMLRequest) {
       return res.status(400).json({ error: 'Missing SAMLRequest' });
     }
@@ -131,12 +128,14 @@ router.post('/idp/login/submit', async (req, res) => {
             { $: { Name: 'TaxId' }, _: user.tax_id }, // The primary identifier (e.g., tax_id)
             { $: { Name: 'EmailAddress' }, _: user.email_address }, // Email address of the user
             { $: { Name: 'Role' }, _: user.role }, // Role (or any other relevant attribute)
+            { $: { Name: 'NameId' }, _: user.email_address }, // Role (or any other relevant attribute)
             // Add any other required attributes here
           ],
         },
       },
     },
   };
+
 
   // Convert the SAML Response to XML
   const builder = new xml2js.Builder();

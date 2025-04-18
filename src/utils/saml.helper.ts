@@ -19,58 +19,58 @@ interface SamlEncryptOptions {
 
 export const generateSamlResponse = (user: any): string => {
     return `
-        <samlp:Response xmlns:samlp="urn:oasis:names:tc:SAML:2.0:protocol"
-                        ID="_${crypto.randomBytes(16).toString('hex')}"
-                        Version="2.0"
-                        IssueInstant="${new Date().toISOString()}"
-                        Destination="${envVars.SERVICE_PROVIDER_ACS_URL}">
-            <saml:Issuer xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion">
-          ${envVars.IDP_PROVIDER_URL}
-        </saml:Issuer>
-        <samlp:Status>
-          <samlp:StatusCode Value="urn:oasis:names:tc:SAML:2.0:status:Success"/>
-        </samlp:Status>
-        <saml:Assertion xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion"
-                        ID="_1234567890"
-                        IssueInstant="${new Date().toISOString()}"
-                        Version="2.0">
-          <saml:Issuer>${envVars.IDP_PROVIDER_URL}</saml:Issuer>
-          <saml:Subject>
-            <saml:NameID Format="urn:oasis:names:tc:SAML:1.1:nameid-format:emailAddress">
-              ${user.tax_id}
-            </saml:NameID>
-            <saml:SubjectConfirmation Method="urn:oasis:names:tc:SAML:2.0:cm:bearer">
-              <saml:SubjectConfirmationData NotOnOrAfter="${new Date(Date.now() + 5 * 60 * 1000).toISOString()}"
-                                            Recipient="${envVars.SERVICE_PROVIDER_URL}/sso/acs"/>
-            </saml:SubjectConfirmation>
-          </saml:Subject>
-          <saml:Conditions NotBefore="${new Date().toISOString()}"
-                           NotOnOrAfter="${new Date(Date.now() + 5 * 60 * 1000).toISOString()}">
-            <saml:AudienceRestriction>
-              <saml:Audience>${envVars.SERVICE_PROVIDER_URL}</saml:Audience>
-            </saml:AudienceRestriction>
-          </saml:Conditions>
-          <saml:AuthnStatement AuthnInstant="${new Date().toISOString()}"
-                               SessionIndex="_1234567890">
-            <saml:AuthnContext>
-              <saml:AuthnContextClassRef>
-                urn:oasis:names:tc:SAML:2.0:ac:classes:PasswordProtectedTransport
-              </saml:AuthnContextClassRef>
-            </saml:AuthnContext>
-          </saml:AuthnStatement>
-          <saml:AttributeStatement>
-            <saml:Attribute Name="email"
-                            NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:basic">
-              <saml:AttributeValue>${user.tax_id}</saml:AttributeValue>
-            </saml:Attribute>
-            <saml:Attribute Name="role"
-                            NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:basic">
-              <saml:AttributeValue>${user.role}</saml:AttributeValue>
-            </saml:Attribute>
-          </saml:AttributeStatement>
-        </saml:Assertion>
-        </samlp:Response>
-    `;
+    <samlp:Response xmlns:samlp="urn:oasis:names:tc:SAML:2.0:protocol"
+                    ID="_${crypto.randomBytes(16).toString('hex')}"
+                    Version="2.0"
+                    IssueInstant="${new Date().toISOString()}"
+                    Destination="${envVars.SERVICE_PROVIDER_ACS_URL}">
+      <saml:Issuer xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion">
+        ${envVars.IDP_PROVIDER_URL}
+      </saml:Issuer>
+      <samlp:Status>
+        <samlp:StatusCode Value="urn:oasis:names:tc:SAML:2.0:status:Success"/>
+      </samlp:Status>
+      <saml:Assertion xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion"
+                      ID="_1234567890"
+                      IssueInstant="${new Date().toISOString()}"
+                      Version="2.0">
+        <saml:Issuer>${envVars.IDP_PROVIDER_URL}</saml:Issuer>
+        <saml:Subject>
+          <saml:NameID Format="urn:oasis:names:tc:SAML:1.1:nameid-format:emailAddress">
+            ${user.email_address}
+          </saml:NameID>
+          <saml:SubjectConfirmation Method="urn:oasis:names:tc:SAML:2.0:cm:bearer">
+            <saml:SubjectConfirmationData NotOnOrAfter="${new Date(Date.now() + 5 * 60 * 1000).toISOString()}"
+                                          Recipient="${envVars.SERVICE_PROVIDER_URL}/sso/acs"/>
+          </saml:SubjectConfirmation>
+        </saml:Subject>
+        <saml:Conditions NotBefore="${new Date().toISOString()}"
+                         NotOnOrAfter="${new Date(Date.now() + 5 * 60 * 1000).toISOString()}">
+          <saml:AudienceRestriction>
+            <saml:Audience>${envVars.SERVICE_PROVIDER_URL}</saml:Audience>
+          </saml:AudienceRestriction>
+        </saml:Conditions>
+        <saml:AuthnStatement AuthnInstant="${new Date().toISOString()}"
+                             SessionIndex="_1234567890">
+          <saml:AuthnContext>
+            <saml:AuthnContextClassRef>
+              urn:oasis:names:tc:SAML:2.0:ac:classes:PasswordProtectedTransport
+            </saml:AuthnContextClassRef>
+          </saml:AuthnContext>
+        </saml:AuthnStatement>
+        <saml:AttributeStatement>
+          <saml:Attribute Name="email"
+                          NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:basic">
+            <saml:AttributeValue>${user.email_address}</saml:AttributeValue>
+          </saml:Attribute>
+          <saml:Attribute Name="role"
+                          NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:basic">
+            <saml:AttributeValue>${user.role}</saml:AttributeValue>
+          </saml:Attribute>
+        </saml:AttributeStatement>
+      </saml:Assertion>
+    </samlp:Response>
+  `;
 }
 
 export const encryptXml = async (xml: string, options: xmlenc.EncryptOptions): Promise<string> => {
