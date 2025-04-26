@@ -26,12 +26,27 @@ interface AuthnRequest {
 router.use(bodyParser.text({ type: ['application/xml', 'text/xml'] }));
 router.use(bodyParser.urlencoded({ extended: true }));
 
-router.get('/', (req: Request, res: Response): Response => {
-  return successResponse(res, 200, {}, "Identity Provider Service")
-})
-
 
 // Metadata - XML descriptor of IdP capabilities(entityID, certs, endpoints)
+/**
+ * @swagger
+ * /saml/idp:
+ *   get:
+ *     summary: Generate SAML Metadata
+ *     description: Returns the metadata for the Identity Provider (IdP) configuration.
+ *     tags: [Identity Provider]
+ *     responses:
+ *       200:
+ *         description: SAML metadata generated successfully
+ *         content:
+ *           application/xml:
+ *             schema:
+ *               type: string
+ *               example: "<EntityDescriptor entityID='your-entity-id' xmlns='urn:oasis:names:tc:SAML:2.0:metadata'>...</EntityDescriptor>"
+ *       500:
+ *         description: Failed to generate SAML metadata
+ */
+
 router.get('/idp', (req, res) => {
   try {
     const metadata = generateIdpMetadata(
@@ -46,6 +61,37 @@ router.get('/idp', (req, res) => {
     return handleError(res, 500, "Metadata generation failed")
   }
 })
+
+/**
+ * @swagger
+ * /saml/idp/login:
+ *   post:
+ *     summary: Process SAML Request
+ *     tags:
+ *       - Identity Provider
+ *     description: Process the incoming SAMLRequest and authenticate the user.
+ *     requestBody:
+ *       required: true
+ *       content:
+ *         application/x-www-form-urlencoded:
+ *           schema:
+ *             type: object
+ *             properties:
+ *               SAMLRequest:
+ *                 type: string
+ *                 description: The encoded SAML authentication request.
+ *             required:
+ *               - SAMLRequest
+ *     responses:
+ *       200:
+ *         description: Successful authentication
+ *       400:
+ *         description: Invalid SAML request
+ *       401:
+ *         description: Unauthorized
+ *       500:
+ *         description: Internal server error
+ */
 
 router.post('/idp/login', express.urlencoded({ extended: true }), async (req, res) => {
   try {
@@ -89,6 +135,55 @@ router.post('/idp/login', express.urlencoded({ extended: true }), async (req, re
 });
 
 //route to process user data after SAML Request has been processed
+/**
+ * @swagger
+ * /saml/idp/login/submit:
+ *   post:
+ *     summary: Process Login
+ *     description: Endpoint to process user login via Identity Provider (IdP)
+ *     tags: [Identity Provider]
+ *     requestBody:
+ *       required: true
+ *       content:
+ *         application/json:
+ *           schema:
+ *             type: object
+ *             required:
+ *               - taxid
+ *               - password
+ *             properties:
+ *               taxid:
+ *                 type: string
+ *                 description: The user's tax identification number
+ *               password:
+ *                 type: string
+ *                 format: password
+ *                 description: The user's password
+ *     responses:
+ *       200:
+ *         description: Login successful
+ *         content:
+ *           application/json:
+ *             schema:
+ *               type: object
+ *               properties:
+ *                 status:
+ *                   type: string
+ *                   example: success
+ *                 message:
+ *                   type: string
+ *                   example: "Login successful"
+ *                 data:
+ *                   type: object
+ *                   example: {}
+ *       400:
+ *         description: Invalid credentials or missing fields
+ *       401:
+ *         description: Unauthorized
+ *       500:
+ *         description: Internal server error
+ */
+
 router.post('/idp/login/submit', async (req, res) => {
   const { taxid, password, RelayState } = req.body;
 

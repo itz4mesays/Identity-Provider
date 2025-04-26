@@ -8,12 +8,10 @@ import { logger } from './utils/logger'
 import bodyParser from 'body-parser'
 import swaggerUi from 'swagger-ui-express'
 import swaggerJsdoc from 'swagger-jsdoc'
-import { encrypt } from 'xml-encryption';
-import { promisify } from 'util';
-const encryptAsync = promisify(encrypt)
 import path from 'path'
 import authRoute from './routes/auth.router'
 import mainRoute from './routes/main.router'
+import { successResponse } from './utils/responseHandler'
 
 const app: Application = express();
 
@@ -95,6 +93,9 @@ const swaggerSpecs = swaggerJsdoc(swaggerOptions);
 // Serve Swagger UI
 app.use('/docs', swaggerUi.serve, swaggerUi.setup(swaggerSpecs, { explorer: true }));
 
+app.get('/', (req: Request, res: Response) => {
+  return successResponse(res, 200, {}, "Identity Provider Service is up and running")
+})
 
 //logger
 logger;
